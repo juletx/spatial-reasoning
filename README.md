@@ -24,14 +24,9 @@ You can get `<YOUR USER ACCESS TOKEN>` by following these steps:
 Model notebooks include necessary code to run Winoground evaluation with different versions of ViLT, CLIP, FLAVA and BLIP. ViLT, CLIP and FLAVA are also included in the Winoground paper. More versions of ViLT and CLIP are tested here. BLIP evaluation is not included in the Winoground paper. All versions of BLIP are tested here. These includes models of different sizes. Some models are pre-trained checkpoints and others have been finetuned on COCO and Flickr30k for retrieval.
 
 ## Model Predictions and Statistics
-The image-caption model scores from our paper are saved in `statistics/model_scores`. To compute many of the tables and graphs from our paper, run the following commands:
+The image-caption model scores from Winoground paper are saved in `model_scores`. To compute many of the tables and graphs from the paper, run `statistics/compute_statistics.ipynb`.
 
-```
-pip install -r statistics/requirements.txt
-python statistics/compute_statistics.py
-```
-
-The new results are saved in `results`. To compute similar tables from the paper run `winoground_statistics.ipynb`.
+The new results are saved in `results`. To compute similar tables from the paper run `statistics/winoground_statistics.ipynb`.
 
 ## Citation Information
 Tristan Thrush and Candace Ross contributed equally.

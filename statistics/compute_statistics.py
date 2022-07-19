@@ -35,7 +35,7 @@ def load_results(filename):
 
 def get_ordered_caption_lengths():
     ordered_list = []
-    examples = sorted([json.loads(line) for line in open("data/examples.jsonl").readlines()], key=lambda example: example["id"])
+    examples = sorted([json.loads(line) for line in open("../data/examples.jsonl").readlines()], key=lambda example: example["id"])
     for example in tqdm(examples):
         length = statistics.mean([len(example["caption_0"].split()), len(example["caption_1"].split())])
         ordered_list.append(length)
@@ -45,7 +45,7 @@ def get_ordered_gpt2_perplexities():
     model = AutoModelForCausalLM.from_pretrained("gpt2")
     tokenizer = AutoTokenizer.from_pretrained("gpt2", pad_token="<PAD>")
     ordered_list = []
-    examples = sorted([json.loads(line) for line in open("data/examples.jsonl").readlines()], key=lambda example: example["id"])
+    examples = sorted([json.loads(line) for line in open("../data/examples.jsonl").readlines()], key=lambda example: example["id"])
 
     def get_perplexity(text):
         encodings = tokenizer([text], padding=True, return_tensors="pt", return_special_tokens_mask=True)
@@ -102,14 +102,14 @@ def get_ordered_gpt2_perplexities():
 
 def get_ordered_model_group_correct(results):
     ordered_list = []
-    examples = sorted([json.loads(line) for line in open("data/examples.jsonl").readlines()], key=lambda example: example["id"])
+    examples = sorted([json.loads(line) for line in open("../data/examples.jsonl").readlines()], key=lambda example: example["id"])
     for i in range(len(examples)):
         ordered_list.append(group_correct(results[i]))
     return ordered_list
 
 def get_ordered_model_scores_for_perplexity_comparison(results):
     ordered_list = []
-    examples = sorted([json.loads(line) for line in open("data/examples.jsonl").readlines()], key=lambda example: example["id"])
+    examples = sorted([json.loads(line) for line in open("../data/examples.jsonl").readlines()], key=lambda example: example["id"])
     for i in range(len(examples)):
         ordered_list.append(results[i]["c0_i0"])
         ordered_list.append(results[i]["c0_i1"])
@@ -118,7 +118,7 @@ def get_ordered_model_scores_for_perplexity_comparison(results):
     return ordered_list
 
 def filter_examples(filter_dict):
-    examples = [json.loads(line) for line in open("data/examples.jsonl").readlines()]
+    examples = [json.loads(line) for line in open("../data/examples.jsonl").readlines()]
     def filter_criteria(example):
         for key, value in filter_dict.items():
             if example[key] != value:
@@ -217,27 +217,29 @@ def get_caption_length_table_dict(models):
         table_dict["P-value"].append(p_value)
     return table_dict
 
+path = "../model_scores/"
+
 models = [
-    ("statistics/model_scores/human.jsonl", "MTurk Human", None, None, None),
-    ("statistics/model_scores/vinvl.jsonl", "VinVL", 1.89, 4.87, "single-stream"),
-    ("statistics/model_scores/uniter_large.jsonl", "UNITER$_{large}$", 4.197, 9.583, "single-stream"),
-    ("statistics/model_scores/uniter_base.jsonl", "UNITER$_{base}$", 4.197, 9.583, "single-stream"),
-    ("statistics/model_scores/villa_large.jsonl", "ViLLA$_{large}$", 4.197, 9.583, "single-stream"),
-    ("statistics/model_scores/villa_base.jsonl", "ViLLA$_{base}$", 4.197, 9.583, "single-stream"),
-    ("statistics/model_scores/visualbert.jsonl", "VisualBERT$_{base}$", 0.296, 0.517, "single-stream"),
-    ("statistics/model_scores/vilt.jsonl", "ViLT (ViT-B/32)", 4.098, 9.854, "single-stream"),
-    ("statistics/model_scores/lxmert.jsonl", "LXMERT", 0.18, 9.18, "dual-stream"),
-    ("statistics/model_scores/vilbert.jsonl", "ViLBERT$_{base}$", 3.3, 3.3, "dual-stream"),
-    ("statistics/model_scores/unit.jsonl", "UniT$_{ITM Finetuned}$", 0.688, 1.91, "dual-stream"),
-    ("statistics/model_scores/flava_itm.jsonl", "FLAVA$_{ITM}$", 70, 70, "dual-stream"),
-    ("statistics/model_scores/flava_zero_shot.jsonl", "FLAVA$_{Contrastive}$", 70, 70, "dual-stream"),
-    ("statistics/model_scores/clip.jsonl", "CLIP (ViT-B/32)", 400, 400, "dual-stream"),
-    ("statistics/model_scores/vse_coco_resnet_ft.jsonl", "VSE++$_{COCO}$ (ResNet)", 0.113, 0.565, "rnn"),
-    ("statistics/model_scores/vse_coco_vgg_ft.jsonl", "VSE++$_{COCO}$ (VGG)", 0.113, 0.565, "rnn"),
-    ("statistics/model_scores/vse_f30k_resnet_ft.jsonl", "VSE++$_{Flickr30k}$ (ResNet)", 0.031, 0.155, "rnn"),
-    ("statistics/model_scores/vse_f30k_vgg_ft.jsonl", "VSE++$_{Flickr30k}$ (VGG)", 0.031, 0.155, "rnn"),
-    ("statistics/model_scores/vsrn_coco.jsonl", "VSRN$_{COCO}$", 0.113, 0.565, "rnn"),
-    ("statistics/model_scores/vsrn_flickr.jsonl", "VSRN$_{Flickr30k}$", 0.031, 0.155, "rnn"),
+    (path + "human.jsonl", "MTurk Human", None, None, None),
+    (path + "vinvl.jsonl", "VinVL", 1.89, 4.87, "single-stream"),
+    (path + "uniter_large.jsonl", "UNITER$_{large}$", 4.197, 9.583, "single-stream"),
+    (path + "uniter_base.jsonl", "UNITER$_{base}$", 4.197, 9.583, "single-stream"),
+    (path + "villa_large.jsonl", "ViLLA$_{large}$", 4.197, 9.583, "single-stream"),
+    (path + "villa_base.jsonl", "ViLLA$_{base}$", 4.197, 9.583, "single-stream"),
+    (path + "visualbert.jsonl", "VisualBERT$_{base}$", 0.296, 0.517, "single-stream"),
+    (path + "vilt.jsonl", "ViLT (ViT-B/32)", 4.098, 9.854, "single-stream"),
+    (path + "lxmert.jsonl", "LXMERT", 0.18, 9.18, "dual-stream"),
+    (path + "vilbert.jsonl", "ViLBERT$_{base}$", 3.3, 3.3, "dual-stream"),
+    (path + "unit.jsonl", "UniT$_{ITM Finetuned}$", 0.688, 1.91, "dual-stream"),
+    (path + "flava_itm.jsonl", "FLAVA$_{ITM}$", 70, 70, "dual-stream"),
+    (path + "flava_zero_shot.jsonl", "FLAVA$_{Contrastive}$", 70, 70, "dual-stream"),
+    (path + "clip.jsonl", "CLIP (ViT-B/32)", 400, 400, "dual-stream"),
+    (path + "vse_coco_resnet_ft.jsonl", "VSE++$_{COCO}$ (ResNet)", 0.113, 0.565, "rnn"),
+    (path + "vse_coco_vgg_ft.jsonl", "VSE++$_{COCO}$ (VGG)", 0.113, 0.565, "rnn"),
+    (path + "vse_f30k_resnet_ft.jsonl", "VSE++$_{Flickr30k}$ (ResNet)", 0.031, 0.155, "rnn"),
+    (path + "vse_f30k_vgg_ft.jsonl", "VSE++$_{Flickr30k}$ (VGG)", 0.031, 0.155, "rnn"),
+    (path + "vsrn_coco.jsonl", "VSRN$_{COCO}$", 0.113, 0.565, "rnn"),
+    (path + "vsrn_flickr.jsonl", "VSRN$_{Flickr30k}$", 0.031, 0.155, "rnn"),
 ]
 
 models_without_data_size_outliers = [model for model in models if model[1] not in ("MTurk Human", "CLIP (ViT-B/32)", "FLAVA$_{ITM}$", "FLAVA$_{Contrastive}$")]
@@ -404,5 +406,3 @@ ax2.text(7.82, 16.87, 'Random (Group)')
 fig2.subplots_adjust(bottom=0.2)
 
 plt.show()
-
-
