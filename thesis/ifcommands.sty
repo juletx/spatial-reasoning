@@ -1,0 +1,154 @@
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+\ProvidesPackage{ifcommands}[2012/05/21 v0.1]
+\RequirePackage{float}
+
+\let\proof\relax
+\let\endproof\relax
+
+\RequirePackage{amsthm}
+
+\def\@axiomname{Axiom}
+\def\@theoname{Theorem}
+\def\@lemmname{Lemma}
+\def\@propname{Proposition}
+\def\@coroname{Corollary}
+\def\@defname{Definition}
+\def\@exampname{Example}
+\def\@remarkname{Remark}
+\def\@probname{Problem}
+\def\@solname{Solution}
+\def\@proofname{Proof}
+\def\@algorithm{Algorithm}
+\def\@listofalgorithmsname{List of algorithms}
+
+\DeclareOption{en}{}
+
+\DeclareOption{es}
+{
+\def\@axiomname{Axioma}
+\def\@theoname{Teorema}
+\def\@lemmname{Lema}
+\def\@propname{Proposici\'on}
+\def\@defname{Definici\'on}
+\def\@exampname{Ejemplo}
+\def\@remarkname{Comentario}
+\def\@probname{Problema}
+\def\@solname{Soluci\'on}
+\def\@proofname{Prueba}
+\def\@algorithm{Algoritmo}
+\def\@listofalgorithmsname{Índice de algoritmos}
+}
+
+\DeclareOption{eu}
+{
+\def\@axiomname{Axioma}
+\def\@theoname{Teorema}
+\def\@lemmname{Lema}
+\def\@propname{Proposizioa}
+\def\@defname{Definizioa}
+\def\@exampname{Adibidea}
+\def\@remarkname{Oharra}
+\def\@probname{Ariketa}
+\def\@solname{Ebazpena}
+\def\@proofname{Froga}
+\def\@algorithm{Algoritmoa}
+\def\@listofalgorithmsname{Algoritmoen aurkibidea}
+\renewcommand{\fnum@ifalgorithm}{\theifalgorithm\nobreakspace\@algorithm}
+}
+
+\@ifundefined{thechapter}{
+\swapnumbers
+\newtheorem{ifaxiom}{\@axiomname}[section]
+\newtheorem{iftheorem}{\@theoname}[section]
+\newtheorem{iflemma}{\@lemmname}[section]
+\newtheorem{ifproposition}{\@propname}[section]
+\newtheorem{ifcorollary}{\@coroname}[section]
+\newtheorem{ifdefinition}{\@defname}[section]
+\newtheorem{ifexample}{\@exampname}[section]
+\newtheorem{ifremark}{\@remarkname}[section]
+\newtheorem{ifproblem}{\@probname}[section]
+\newtheorem{ifsolution}{\@solname}[section]
+\newfloat{ifalgorithm}{th}{alg}[section]
+}{
+\swapnumbers
+\newtheorem{ifaxiom}{\@axiomname}[chapter]
+\newtheorem{iftheorem}{\@theoname}[chapter]
+\newtheorem{iflemma}{\@lemmname}[chapter]
+\newtheorem{ifproposition}{\@propname}[chapter]
+\newtheorem{ifcorollary}{\@coroname}[chapter]
+\newtheorem{ifdefinition}{\@defname}[chapter]
+\newtheorem{ifexample}{\@exampname}[chapter]
+\newtheorem{ifremark}{\@remarkname}[chapter]
+\newtheorem{ifproblem}{\@probname}[chapter]
+\newtheorem{ifsolution}{\@solname}[chapter]
+\newfloat{ifalgorithm}{th}{alg}[chapter]
+}
+
+\floatname{ifalgorithm}{\@algorithm}
+
+\newenvironment{ifproof}[1][\@proofname]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries \textit{#1}}]}{\end{trivlist}}
+
+\newcommand{\iqed}{\nobreak \ifvmode \relax \else
+\ifdim\lastskip<1.5em \hskip-\lastskip \hskip1.5em plus0em minus0.5em \fi \nobreak
+\vrule height0.75em width0.5em depth0.25em\fi}
+
+\newcommand{\mb}[1]{\mathbf{#1}}
+
+\newcommand{\listofalgorithms}{\listof{ifalgorithm}{\@listofalgorithmsname}}
+
+\ProcessOptions
+%Entorno para los algoritmos
+
+\newlength{\TTL}
+\newlength{\TMPL}
+\newcounter{AlgoStepCnt}
+
+
+\newenvironment{ifpseudo}[1]{
+%  \newcommand*{\Let}[2]{##1\Leftarrow##2}
+
+  \newcommand*{\For}[2]{\textbf{for} $##1$ \textbf{to} $##2$}
+  \newcommand*{\CFor}{\textbf{for}}
+  \newcommand*{\EFor}{\textbf{rof}}
+  \newcommand*{\If}{\textbf{if }}
+  \newcommand*{\EIf}{\textbf{fi}}
+  \newcommand*{\Then}{\textbf{then }}
+  \newcommand*{\Else}{\textbf{else }}
+  \newcommand*{\Do}{\textbf{do}}
+  \newcommand*{\Return}{\textbf{return}\xspace}
+  \newcommand*{\Until}[1]{\textbf{until} ##1}
+  \newcommand*{\While}[1]{\textbf{while} ##1}
+  \newcommand*{\WhileDo}[1]{\textbf{while} ##1 \Do}
+  \newcommand*{\Done}{\textbf{done}}
+  \newcommand*{\In}{\textbf{input:}}
+  \newcommand*{\Out}{\textbf{output:}}
+  \newcommand*{\T}[1]{\rule{3ex}{0pt}\setlength{\TMPL}{\TTL}\addtolength{\TMPL}{
+-3ex}\parbox[t]{\TMPL}{\setlength{\baselineskip}{0pt}{##1}}}
+  \newcommand*{\TT}[1]{\rule{6ex}{0pt}\setlength{\TMPL}{\TTL}\addtolength{\TMPL}
+{-6ex}\parbox[t]{\TMPL}{\setlength{\baselineskip}{0pt}##1}}
+  \newcommand*{\TTT}[1]{\rule{9ex}{0pt}\setlength{\TMPL}{\TTL}\addtolength{\TMPL
+}{-9ex}\parbox[t]{\TMPL}{\setlength{\baselineskip}{0pt}##1}}
+   % \setlength{\columnwidth}{8.6cm}%
+  \begin{minipage}{\textwidth}%
+       \centerline{#1}
+       \vspace{0.25em}
+       \centerline{\rule{0.93\textwidth}{0.5pt}}%
+      \begin{list}{}{\setlength{\itemsep}{0pt}\setlength{\parsep}{3pt}%
+          \setlength{\topsep}{0pt}\setlength{\parskip}{0pt}\setlength{\partopsep
+}{0pt}%
+          \setlength{\baselineskip}{0pt}%
+          \setlength{\leftmargin}{2em}%
+          \setcounter{AlgoStepCnt}{1}%
+          \setlength{\rightmargin}{1em}%
+          \setlength{\TTL}{\columnwidth}%
+          \addtolength{\TTL}{-3em}
+          \renewcommand{\makelabel}{\hfill\textit{\footnotesize{\arabic{AlgoStepCnt}}}\stepcounter{AlgoStepCnt}~\vspace{-10pt}}%
+          } }%
+      {\end{list}
+
+      \centerline{\rule[1ex]{0.93\columnwidth}{0.5pt}}
+      \end{minipage}}
+
+\endinput
+%end of file isgcommands.sty

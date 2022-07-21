@@ -1,0 +1,136 @@
+%% KODIFIKAZIOA %%
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+
+%% FONTS %%
+\usepackage{libertine}
+\usepackage{inconsolata}
+
+%% HYPERREFERENCES %%
+\usepackage[hyperindex,bookmarks,colorlinks=true,citecolor=blue,urlcolor=blue,linkcolor=blue,pagebackref]{hyperref}
+\renewcommand*{\backref}[1]{}
+\renewcommand\backreftwosep{, }
+\renewcommand\backrefsep{, }
+
+%% MISC. %%
+\usepackage{appendix}
+\usepackage{placeins}
+\usepackage[figuresright]{rotating}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{float}
+\floatstyle{boxed}
+\restylefloat{figure}
+\usepackage{xcolor, graphicx}
+\usepackage{multirow}
+\usepackage{pdfpages}
+\usepackage{xspace}
+\usepackage{microtype}
+\usepackage{longtable}
+\setsecnumdepth{subsubsection}
+\maxtocdepth {subsection}
+\setlength{\parskip}{5pt}
+\usepackage{enumerate}
+\makeatletter
+\renewcommand{\counterwithin}{\@ifstar{\@csinstar}{\@csin}}
+\makeatother
+\usepackage{doi}
+\usepackage{amsmath, amssymb, mathrsfs, mathtools}
+\usepackage[capitalise]{cleveref}
+
+
+
+
+
+\ifdefined\euskaraz
+\newcommand{\upvehu}{Euskal Herriko Unibertsitatea UPV/EHU}
+\newcommand{\gapizenburua}{Gradu Amaierako Lana}
+\newcommand{\informatikafakultatea}{Informatika Fakultatea}
+\renewcommand{\abstract}{Laburpena}
+\newcommand{\zuzendariaktestua}{Zuzendariak}
+\fi
+\ifdefined\castellano
+\newcommand{\upvehu}{Universidad del País Vasco UPV/EHU}
+\newcommand{\gapizenburua}{Trabajo de Fin de Grado}
+\newcommand{\informatikafakultatea}{Facultad de Informática}
+\renewcommand{\abstract}{Resumen}
+\newcommand{\zuzendariaktestua}{Dirección}
+\fi
+\ifdefined\english
+\newcommand{\upvehu}{University of the Basque Country UPV/EHU}
+\newcommand{\gapizenburua}{Bachelor's Thesis}
+\newcommand{\informatikafakultatea}{Computer Science Faculty}
+\renewcommand{\abstract}{Abstract}
+\newcommand{\zuzendariaktestua}{Advisors}
+\fi
+
+\usepackage[font=small,labelfont=bf]{caption}
+
+\ifdefined\euskaraz
+\usepackage[basque]{babel}
+% \hyphenation{Ko-man-do-in-ter-pre-ta-tzailea ba-te-ra-ga-rri-ta-suna ezau-garri}
+
+\addto\captionsbasque{
+	\renewcommand{\contentsname}{Gaien aurkibidea}
+	\renewcommand{\listfigurename}{Irudien aurkibidea}
+	\renewcommand{\listtablename}{Taulen aurkibidea}
+	\renewcommand{\appendixname}{Eranskina}%
+	\renewcommand{\appendixpagename}{Eranskinak}
+	\renewcommand{\appendixtocname}{Eranskinak}
+	\renewcommand{\bibname}{Bibliografia}
+	\renewcommand{\tablename}{Taula}
+	\renewcommand{\figurename}{Irudia}
+}
+
+\renewcommand*{\backrefalt}[4]{%
+	\ifcase #1%
+	\or Ikusi #2 orrialdea.%
+	\else Ikusi #2 orrialdeak.%
+	\fi%
+}
+
+%% Captionak euskarazko ordenean
+\DeclareCaptionLabelFormat{euskaraz}{#2\bothIfSecond{\nobreakspace}{#1}}
+\captionsetup{labelformat=euskaraz}
+\fi
+
+\ifdefined\castellano
+\usepackage[spanish]{babel}
+\addto\captionsspanish{
+	\renewcommand{\contentsname}{Índice de contenidos}
+	\renewcommand{\listfigurename}{Índice de figuras}
+	\renewcommand{\listtablename}{Índice de tablas}
+	\renewcommand{\appendixname}{Apéndice}%
+	\renewcommand{\appendixpagename}{Apéndices}
+	\renewcommand{\appendixtocname}{Apéndices}
+	\renewcommand{\bibname}{Bibliografía}
+	\renewcommand{\tablename}{Tabla}
+	\renewcommand{\figurename}{Figura}
+}
+\renewcommand*{\backrefalt}[4]{%
+\ifcase #1%
+\or Ver página #2.%
+\else Ver páginas #2.%
+\fi%
+}
+\fi
+
+\ifdefined\english
+\usepackage[english]{babel}
+\renewcommand*{\backrefalt}[4]{%
+	\ifcase #1%
+	\or See page #2.%
+	\else See pages #2.%
+	\fi%
+}
+\fi
+
+\let\theoldbibliography\thebibliography
+\renewcommand\thebibliography[1]{
+	\theoldbibliography{#1}
+	\setlength{\parskip}{0pt}
+	\setlength{\itemsep}{4pt plus 0.3ex}
+	\small
+}
+

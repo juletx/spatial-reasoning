@@ -1,0 +1,152 @@
+\documentclass[a4paper, 11pt, twoside]{memoir}
+\semiisopage
+\chapterstyle{tandh}
+\pdfobjcompresslevel 0
+
+\usepackage[en]{ifcommands}
+
+\usepackage{geometry}
+% PDF VIEW
+ \geometry{
+ left=25mm,right=25mm,%
+ bindingoffset=0mm, top=25mm,bottom=25mm}
+% PRINT
+% \geometry{
+% left=20mm,right=20mm,
+% bindingoffset=10mm, top=25mm,bottom=25mm}
+
+%% INFORMAZIOA / INFORMACIÓN %%
+\newcommand{\egilea}{Julen Etxaniz}
+\newcommand{\zuzendariak}{
+	Oier Lopez de Lacalle\\
+	Aitor Soroa
+}
+\newcommand{\izenburua}{Grounding Language Models for Spatial Reasoning}
+\newcommand{\data}{2023}
+
+
+%% BAKARRIK BAT DESKOMENTATU, GRADU AMAIERAKO LANA BADA. BESTELA, DENAK KOMENTATU%%
+%% DESCOMENTAR SOLO UNO SI ES UN TRABAJO FIN DE GRADO. SINO, COMENTAR TODOS%%
+
+%\newcommand{\ikasketak}{Informatika Ingeniaritzako Gradua}
+%\newcommand{\ikasketak}{Grado en Ingeniería Informática}
+%\newcommand{\ikasketak}{Adimen Artifizialeko Gradua}
+%\newcommand{\ikasketak}{Grado en Inteligencia Artificial}
+
+
+%% BAKARRIK BAT DESKOMENTATU, INGENIARITZA INFORMATIKAKOA BADA. BESTELA, DENAK KOMENTATU %%
+%% DESCOMENTAR SOLO UNO SI ES EN INGENIERÍA INFORMÁTICA. SINO, COMENTAR TODOS %%
+
+%\newcommand{\espezialitatea}{Konputazioa}
+%\newcommand{\espezialitatea}{Computación}
+%\newcommand{\espezialitatea}{Software Ingeniaritza}
+%\newcommand{\espezialitatea}{Ingeniería de Software}
+%\newcommand{\espezialitatea}{Konputagailuen Ingeniaritza}
+%\newcommand{\espezialitatea}{Ingeniería de Computadores}
+
+
+%% BAKARRIK BAT DESKOMENTATU MASTER AMAIERAKO LANA BADA. BESTELA, DENAK KOMENTATU%%
+%% DESCOMENTAR SOLO UNO SI ES UN TRABAJO FIN DE MASTER. SINO, COMENTAR TODOS%%
+
+\newcommand{\ikasketak}{Master in Language Analysis and Processing}
+%\newcommand{\ikasketak}{Konputazio Ingeniaritza eta Sistema Adimentsuak Unibertsitate Masterra}
+
+
+%% DOKUMENTUAREN HIZKUNTZA / IDIOMA DEL DOCUMENTO %%
+%% BAKARRIK BAT DESKOMENTATU / DESCOMENTAR SOLO UNO %%
+%\newcommand{\euskaraz}
+%\newcommand{\castellano}
+\newcommand{\english}
+
+
+\input config/macros
+
+\title{\izenburua}
+\author{\egilea}
+\date{\data}
+
+\begin{document}
+	
+%% AZALA BEREZIRIK EZ BADAGO, KOMENTATU%%
+%% COMENTAR SI NO HAY UNA PORTADA ESPECIAL%%
+	
+%\includepdf[pages={1-}]{cover.pdf}
+
+\cleardoublepage
+
+
+%% AUKERATU DAGOKIONA. AZALA BEREZIA GEHITUZ GERO, KOMENTATU DAITEKE, BETIERE HEMENGOAN AGERTZEN DEN INFORMAZIOA AGERTZEN BADA %%
+%% SELECCIONA LA QUE CORRESPONDA. EN CASO DE TENER UNA PORTADA ESPECIAL SE PUEDE COMENTAR, SIEMPRE Y CUANDO DICHA PORTADA INCLUYA LA INFORMACIÓN QUE APARECE EN ESTA%%
+
+%\input config/cover_informatika
+%\input config/cover_adimen_artifiziala
+\input config/cover
+
+
+
+\cleardoublepage
+\frontmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ESKER ONAK / AGRADECIMIENTOS %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% KOMENTATU HIRU LERRO HAUEK ATALA NAHI EZ BADUZU
+%% COMENTA ESTAS TRES LÍNEAS SI NO QUIERES ESTE APARTADO
+\chapter*{Acknowledgements}
+\input chapters/acknowledgements
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% LABURPENA / RESUMEN %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{Abstract}
+\input chapters/abstract
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EDUKIEN ZERRENDA / ÍNIDCES %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+\clearpage
+\listofalgorithms
+\addcontentsline{toc}{chapter}{List of Algorithms}
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+% EDUKIA / CONTENIDO %
+%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+\mainmatter
+\pagestyle{ruled}
+
+\chapter{Txatiloiaren erabilera} \label{ch:txantiloia}
+\input chapters/chap1
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ERANSKINAK / APENDICES %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\backmatter
+\appendix
+
+\chapter{Appendix} \label{ch:eranskina}
+\input chapters/appendix
+
+%%%%%%%%%%%%%%%%%%
+%% BIBLIOGRAFIA %%
+%%%%%%%%%%%%%%%%%%
+\bibliographystyle{unsrt}
+\bibliography{references}
+%% ALDATU HEMEN EDUKIEN ZERRENDAN AGERTUKO DEN 
+\addcontentsline{tof}{chapter}{\bibname}
+
+\end{document}
