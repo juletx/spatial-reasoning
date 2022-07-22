@@ -1,4 +1,4 @@
-\documentclass[a4paper, 11pt, twoside]{memoir}
+\documentclass[a4paper, 11pt]{memoir}
 \semiisopage
 \chapterstyle{tandh}
 \pdfobjcompresslevel 0
@@ -93,7 +93,7 @@
 
 %% KOMENTATU HIRU LERRO HAUEK ATALA NAHI EZ BADUZU
 %% COMENTA ESTAS TRES LÍNEAS SI NO QUIERES ESTE APARTADO
-\chapter*{Acknowledgements}
+\chapter*{Acknowledgements} \label{cha:acknowledgements}
 \input chapters/acknowledgements
 \cleardoublepage
 
@@ -101,7 +101,7 @@
 % LABURPENA / RESUMEN %
 %%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter*{Abstract}
+\chapter*{Abstract} \label{cha:abstract}
 \input chapters/abstract
 \cleardoublepage
 
@@ -127,8 +127,32 @@
 \mainmatter
 \pagestyle{ruled}
 
-\chapter{Txatiloiaren erabilera} \label{ch:txantiloia}
-\input chapters/chap1
+\chapter{Introduction} \label{cha:1_introduction}
+\input chapters/1_introduction
+\cleardoublepage
+
+\chapter{Related Work} \label{cha:2_related_work}
+\input chapters/2_related_work
+\cleardoublepage
+
+\chapter{Datasets} \label{cha:3_datasets}
+\input chapters/3_datasets
+\cleardoublepage
+
+\chapter{Methods} \label{cha:4_methods}
+\input chapters/4_methods
+\cleardoublepage
+
+\chapter{Results} \label{cha:5_results}
+\input chapters/5_results
+\cleardoublepage
+
+\chapter{Discussion} \label{cha:6_discussion}
+\input chapters/6_discussion
+\cleardoublepage
+
+\chapter{Conclusions} \label{cha:7_conclusions}
+\input chapters/7_conclusions
 \cleardoublepage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -138,7 +162,7 @@
 \backmatter
 \appendix
 
-\chapter{Appendix} \label{ch:eranskina}
+\chapter{Appendix} \label{cha:appendix}
 \input chapters/appendix
 
 %%%%%%%%%%%%%%%%%%
