@@ -8,12 +8,12 @@ This chapter introduces the datasets and metrics we used.
 
 \subsubsection{Score}
 
-Performance on Winoground is computed according to three different metrics that evaluate different aspects of the models' visio-linguistic reasoning abilities.
+Performance on Winoground \cite{thrush2022winoground} is computed according to three different metrics that evaluate different aspects of the models' visio-linguistic reasoning abilities.
 
 The first metric is the \textbf{text score}, which measures whether a model can select the correct caption, given an image. 
 Given images $I_0$ and $I_{1}$ and captions $C_{0}$ and $C_{1}$, the text score for an example $(C_{0},I_{0},C_{1},I_{1})$ is computed according to:
 \begin{equation}\label{eq:text-score}
-        f(C_{0},I_{0},C_{1},I_{1})= 
+        ts(C_{0},I_{0},C_{1},I_{1})= 
     \begin{cases}
         1 & \text{if}\  s(C_{0}, I_{0}) > s(C_{1}, I_{0}) \\
         & \ \ \text{and}\ s(C_{1}, I_{1}) > s(C_{0}, I_{1}) \\
@@ -23,9 +23,9 @@ Given images $I_0$ and $I_{1}$ and captions $C_{0}$ and $C_{1}$, the text score 
 where $s(\cdot)$ is the model's score for the image/caption pair.
 
 The second metric is the \textbf{image score}, which measures whether a model can select the correct image, given a caption.
-Given images $I_0$ and $I_{1}$ and captions $C_{0}$ and $C_{1}$, the image score for an example is computed according to:
+The image score for an example is computed according to:
 \begin{equation}\label{eq:image-score}
-        g(C_{0},I_{0},C_{1},I_{1})= 
+        is(C_{0},I_{0},C_{1},I_{1})= 
     \begin{cases}
         1 & \text{if}\  s(C_{0}, I_{0}) > s(C_{0}, I_{1})\\
         & \ \ \text{and}\ s(C_{1}, I_{1}) > s(C_{1}, I_{0}) \\
@@ -33,21 +33,24 @@ Given images $I_0$ and $I_{1}$ and captions $C_{0}$ and $C_{1}$, the image score
     \end{cases}
 \end{equation}
 
-The group score in our framework is computed according to:
+Our final metric \textbf{group score} combines the previous two, which measures if every combination for a given example is correctly scored by the model.
+The group score for an example is computed according to:
 \begin{equation}\label{eq:group-score}
-        h(C_{0},I_{0},C_{1},I_{1})= 
+        gs(C_{0},I_{0},C_{1},I_{1})= 
     \begin{cases}
-        1 & \text{if}\  f(C_{0},I_{0},C_{1},I_{1})  \\
-         & \ \ \text{and}\ g(C_{0},I_{0},C_{1},I_{1})\\
+        1 & \text{if}\  ts(C_{0},I_{0},C_{1},I_{1})  \\
+         & \ \ \text{and}\ is(C_{0},I_{0},C_{1},I_{1})\\
         0              & \text{otherwise}
     \end{cases}
 \end{equation}
 
 \subsubsection{Accuracy}
 
-Given images $I_0$ and $I_{1}$ and captions $C_{0}$ and $C_{1}$, the text accuracy for an example $(C_{0},I_{0},C_{1},I_{1})$ is computed according to:
+We also add three additional accuracy metrics. These are similar to the previous ones, but accuracy is 0.5 when one of the pairs is correct.
+
+Given images $I_0$ and $I_{1}$ and captions $C_{0}$ and $C_{1}$, the \textbf{text accuracy} for an example $(C_{0},I_{0},C_{1},I_{1})$ is computed according to:
 \begin{equation}\label{eq:text-accuracy}
-        f(C_{0},I_{0},C_{1},I_{1})= 
+        ta(C_{0},I_{0},C_{1},I_{1})= 
     \begin{cases}
         1 & \text{if}\  s(C_{0}, I_{0}) > s(C_{1}, I_{0}) \\
         & \ \ \text{and}\ s(C_{1}, I_{1}) > s(C_{0}, I_{1}) \\
@@ -58,9 +61,9 @@ Given images $I_0$ and $I_{1}$ and captions $C_{0}$ and $C_{1}$, the text accura
 \end{equation}
 where $s(\cdot)$ is the model's score for the image/caption pair.
 
-Given images $I_0$ and $I_{1}$ and captions $C_{0}$ and $C_{1}$, the image accuracy for an example is computed according to:
+The \textbf{image accuracy} for an example is computed according to:
 \begin{equation}\label{eq:image-accuracy}
-        g(C_{0},I_{0},C_{1},I_{1})= 
+        ia(C_{0},I_{0},C_{1},I_{1})= 
     \begin{cases}
         1 & \text{if}\  s(C_{0}, I_{0}) > s(C_{0}, I_{1})\\
         & \ \ \text{and}\ s(C_{1}, I_{1}) > s(C_{1}, I_{0}) \\
@@ -70,8 +73,8 @@ Given images $I_0$ and $I_{1}$ and captions $C_{0}$ and $C_{1}$, the image accur
     \end{cases}
 \end{equation}
 
-The group score in our framework is computed according to:
+The \textbf{group accuracy} in our framework is computed according to:
 \begin{equation}\label{eq:group-accuracy}
-        h(C_{0},I_{0},C_{1},I_{1})= 
-        (f(C_{0},I_{0},C_{1},I_{1}) + g(C_{0},I_{0},C_{1},I_{1})) / 2\\
+        ga(C_{0},I_{0},C_{1},I_{1})= 
+        (ta(C_{0},I_{0},C_{1},I_{1}) + ia(C_{0},I_{0},C_{1},I_{1})) / 2\\
 \end{equation}

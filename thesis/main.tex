@@ -111,13 +111,27 @@
 % EDUKIEN ZERRENDA / ÍNIDCES %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\tableofcontents
+\begin{KeepFromToc}
+{
+  \hypersetup{linkcolor=black}
+  \tableofcontents
+}
+\end{KeepFromToc}
 \clearpage
-\listoffigures
+{
+  \hypersetup{linkcolor=black}
+  \listoffigures
+}
 \clearpage
-\listoftables
+{
+  \hypersetup{linkcolor=black}
+  \listoftables
+}
 \clearpage
-\listofalgorithms
+{
+  \hypersetup{linkcolor=black}
+  \listofalgorithms
+}
 \addcontentsline{toc}{chapter}{List of Algorithms}
 
 
@@ -171,7 +185,7 @@
 %% BIBLIOGRAFIA %%
 %%%%%%%%%%%%%%%%%%
 \bibliographystyle{unsrt}
-\bibliography{references}
+\bibliography{references, winoground}
 %% ALDATU HEMEN EDUKIEN ZERRENDAN AGERTUKO DEN 
 \addcontentsline{tof}{chapter}{\bibname}
 
