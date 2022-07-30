@@ -4,7 +4,7 @@ This chapter explains the methods we used for evaluation.
 
 \subsection{Models}
 
-We evaluate various configurations of the following multimodal transformers: BLIP \cite{li2022blip}, CLIP \cite{radford2021clip}, FLAVA \cite{singh2022flava}, LXMERT \cite{tan2020lxmert}, UniT \cite{hu2021unit}, UNITER \cite{chen2020uniter}, VILLA \cite{gan2020villa}, VinVL \cite{zhang2021vinvl}, ViLT \cite{kim2021vilt}, VisualBERT \cite{li2019visualbert} and ViLBERT \cite{lu2019vilbert}. We also evaluate several configurations of two types of RNN-based models: VSE++ \cite{faghri2018vse} and VSRN \cite{li2019vsrn}.
+We evaluate various configurations of the following multimodal transformers: OFA \cite{wang2022unifying}, BLIP \cite{li2022blip}, CLIP \cite{radford2021clip}, FLAVA \cite{singh2022flava}, LXMERT \cite{tan2020lxmert}, UniT \cite{hu2021unit}, UNITER \cite{chen2020uniter}, VILLA \cite{gan2020villa}, VinVL \cite{zhang2021vinvl}, ViLT \cite{kim2021vilt}, VisualBERT \cite{li2019visualbert} and ViLBERT \cite{lu2019vilbert}. We also evaluate several configurations of two types of RNN-based models: VSE++ \cite{faghri2018vse} and VSRN \cite{li2019vsrn}.
 
 We provide a high-level overview of the differences between the models in \cref{tab:model-types} which includes pretraining datasets, architecture, and attention mechanisms between the modalities. We omit datasets that were only used to train backbones. We exclude the language embedding from this table as every model uses a pretrained BERT tokenizer, except CLIP, VSE++, and VSRN. The pretraining datasets include COCO \cite{lin2014microsoft}, Visual Genome (VG) \cite{krishna2016visual}, Conceptual Captions (CC) \cite{sharma2018conceptual}, SBU Captions \cite{ordonez2011im2text}, Flickr30k \cite{young2014image}, VQA 2.0 \cite{goyal2017making}, VCR \cite{zellers2019recognition}, NLVR2 \cite{suhr2017corpus}, SNLI-VE \cite{xie2018visual}, QNLI \cite{rajpurkar2016squad}, MLNI-mm \cite{williams2017broad}, QQP \cite{QQPDataset}, Localized Narratives (LN) \cite{pont-tuset2020localized-narratives}, Wikipedia Image Text (WIT) \cite{srinivasan2021wit}, Conceptual Captions 12M (CC 12M) \cite{changpinyo2021conceptual12m}, Red Caps (RC) \cite{desai2021redcaps}, YFCC100M \cite{thomee2016yfcc100m}, SST-2 \cite{Socher2013RecursiveDM}, and LAION \cite{schuhmann2021laion}. CLIP uses their own dataset for pretraining.
 
@@ -30,6 +30,7 @@ We provide a high-level overview of the differences between the models in \cref{
     VSE++ and VSRN $_{COCO}$ \cite{faghri2018vse, li2019vsrn} & COCO & 0.11, 0.57 & dual-stream & $-$\\
     VSE++ and VSRN $_{Flickr30k}$ \cite{faghri2018vse, li2019vsrn} & Flickr30k & 0.03, 0.16 & dual-stream & $-$\\
     \midrule
+    OFA \cite{wang2022unifying} &  CC 12M, CC 3M, SBU, COCO, VG-Cap  &  20.00, 20.00 &   single-stream & modality-specific, merged \\
     BLIP$_{ITM}$ 14M \cite{li2022blip} &  COCO, VG, SBU, CC, CC 12M  &  14.00, 15.00 &   dual-stream & modality-specific, merged \\
     BLIP$_{ITC}$ 14M \cite{li2022blip} &  COCO, VG, SBU, CC, CC 12M & 14.00, 15.00 &   dual-stream &         modality-specific \\
     BLIP$_{ITM}$ 129M \cite{li2022blip} & COCO, VG, SBU, CC, CC 12M, LAION & 129.00,   130.00 &   dual-stream & modality-specific, merged \\

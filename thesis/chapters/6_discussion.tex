@@ -57,12 +57,18 @@ MTurk Human                         & 0.05           & 0.07          & \textbf{0
  ViLT (ViT-B/32)                     & -0.04          & 0.08          & \textbf{-0.12} & \textbf{0.02} & -0.07          & 0.17          & -0.05          & 0.35          \\
  ViLT$_{COCO}$ (ViT-B/32)            & -0.05          & 0.06          & \textbf{-0.21} & \textbf{0.00} & \textbf{-0.16} & \textbf{0.00} & \textbf{-0.17} & \textbf{0.00} \\
  ViLT$_{Flickr30k}$ (ViT-B/32)       & \textbf{-0.05} & \textbf{0.03} & \textbf{-0.11} & \textbf{0.03} & \textbf{-0.17} & \textbf{0.00} & \textbf{-0.14} & \textbf{0.01} \\
+ ViLT$_{NLVR2}$ (ViT-B/32)           & 0.00           & 0.95          & \textbf{-0.13} & \textbf{0.01} & \textbf{-0.11} & \textbf{0.03} & \textbf{-0.12} & \textbf{0.02} \\
  FLAVA$_{ITM}$                       & -0.03          & 0.22          & \textbf{-0.21} & \textbf{0.00} & \textbf{-0.22} & \textbf{0.00} & \textbf{-0.23} & \textbf{0.00} \\
  FLAVA$_{ITC}$                       & \textbf{-0.06} & \textbf{0.01} & \textbf{-0.15} & \textbf{0.00} & \textbf{-0.25} & \textbf{0.00} & \textbf{-0.19} & \textbf{0.00} \\
  CLIP (ViT-B/32)                     & -0.04          & 0.10          & \textbf{-0.28} & \textbf{0.00} & \textbf{-0.21} & \textbf{0.00} & \textbf{-0.23} & \textbf{0.00} \\
  CLIP (ViT-B/16)                     & -0.04          & 0.11          & \textbf{-0.26} & \textbf{0.00} & \textbf{-0.22} & \textbf{0.00} & \textbf{-0.23} & \textbf{0.00} \\
  CLIP (ViT-L/14)                     & -0.03          & 0.22          & \textbf{-0.22} & \textbf{0.00} & \textbf{-0.17} & \textbf{0.00} & \textbf{-0.18} & \textbf{0.00} \\
  CLIP (ViT-L/14-336)                 & -0.04          & 0.11          & \textbf{-0.23} & \textbf{0.00} & \textbf{-0.22} & \textbf{0.00} & \textbf{-0.23} & \textbf{0.00} \\
+ OFA$_{Tiny}$                        & -0.01          & 0.66          & \textbf{-0.17} & \textbf{0.00} & -0.06          & 0.24          & \textbf{-0.12} & \textbf{0.02} \\
+ OFA$_{Base}$                        & -0.02          & 0.43          & \textbf{-0.15} & \textbf{0.00} & \textbf{-0.12} & \textbf{0.02} & \textbf{-0.10} & \textbf{0.05} \\
+ OFA$_{Medium}$                      & -0.01          & 0.77          & \textbf{-0.11} & \textbf{0.03} & \textbf{-0.14} & \textbf{0.00} & \textbf{-0.12} & \textbf{0.01} \\
+ OFA$_{Large}$                       & \textbf{-0.16} & \textbf{0.00} & \textbf{-0.18} & \textbf{0.00} & \textbf{-0.20} & \textbf{0.00} & \textbf{-0.17} & \textbf{0.00} \\
+ OFA$_{Huge}$                        & 0.01           & 0.75          & \textbf{-0.15} & \textbf{0.00} & \textbf{-0.17} & \textbf{0.00} & \textbf{-0.16} & \textbf{0.00} \\
  BLIP$_{ITM 14M}$ (ViT-B/16)         & -0.00          & 0.85          & \textbf{-0.22} & \textbf{0.00} & \textbf{-0.23} & \textbf{0.00} & \textbf{-0.21} & \textbf{0.00} \\
  BLIP$_{ITC 14M}$ (ViT-B/16)         & -0.00          & 0.97          & \textbf{-0.24} & \textbf{0.00} & \textbf{-0.17} & \textbf{0.00} & \textbf{-0.17} & \textbf{0.00} \\
  BLIP$_{ITM}$ (ViT-B/16)             & \textbf{-0.05} & \textbf{0.04} & \textbf{-0.24} & \textbf{0.00} & \textbf{-0.23} & \textbf{0.00} & \textbf{-0.22} & \textbf{0.00} \\
@@ -126,12 +132,12 @@ See \cref{tab:data-size-correlations-ours}  and \cref{fig:pretraining_images_our
 \begin{tabular}{llrr}
 \toprule
 Pretraining & Score & Corr. & p-value\\\midrule
-               & Text    & \textbf{-0.44} & \textbf{0.04} \\
- Image              & Image   & \textbf{-0.49} & \textbf{0.02} \\
-               & Group   & \textbf{-0.46} & \textbf{0.03} \\
-             & Text    & \textbf{-0.44} & \textbf{0.04} \\
- Caption            & Image   & \textbf{-0.49} & \textbf{0.02} \\
-             & Group   & \textbf{-0.46} & \textbf{0.03} \\
+               & Text    &  -0.09 &      0.65 \\
+ Image              & Image   &  -0.16 &      0.44 \\
+               & Group   &  -0.13 &      0.53 \\
+             & Text    &  -0.09 &      0.66 \\
+ Caption            & Image   &  -0.15 &      0.44 \\
+             & Group   &  -0.12 &      0.54 \\
 \bottomrule
 \end{tabular}
 \caption{Correlations between the number of pretraining images and captions and the model text, image, and group scores. Only BLIP, CLIP and FLAVA are included.}

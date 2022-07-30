@@ -6,7 +6,7 @@ This chapter introduces baseline results and our results.
 
 \subsubsection{Baseline}
 
-See \cref{tab:results_aggr_baseline}
+We show baseline results in \cref{tab:results_aggr_baseline}, which includes the following multimodal transformers: CLIP \cite{radford2021clip}, FLAVA \cite{singh2022flava}, LXMERT \cite{tan2020lxmert}, UniT \cite{hu2021unit}, UNITER \cite{chen2020uniter}, VILLA \cite{gan2020villa}, VinVL \cite{zhang2021vinvl}, ViLT \cite{kim2021vilt}, VisualBERT \cite{li2019visualbert} and ViLBERT \cite{lu2019vilbert}. They also evaluate several configurations of two types of RNN-based models: VSE++ \cite{faghri2018vse} and VSRN \cite{li2019vsrn}.
 
 \begin{table}[ht]
 \centering
@@ -47,7 +47,17 @@ See \cref{tab:results_aggr_baseline}
 
 \subsubsection{Ours}
 
-See \cref{tab:results_aggr_ours}
+We show our results in \cref{tab:results_aggr_ours}, which includes various configurations of the following multimodal transformers: OFA \cite{wang2022unifying}, BLIP \cite{li2022blip}, CLIP \cite{radford2021clip}, FLAVA \cite{singh2022flava} and ViLT \cite{kim2021vilt}.
+
+We test 4 different versions of ViLT. The first one is the pre-trained only version, without finetuning. Two others are finetuned for retrieval on COCO and Flickr30k. The last one is finetuned for visual reasoning on NLVR2. The best one is the one trained on NLVR2, which shows that finetuning on that task helps perform better on Winoground. Finetuning for retrieval is also helpful and improves the results of the pre-trained model. The score of the pre-trained model is lower than the baseline one.
+
+For FLAVA and CLIP we manage to replicate baseline results. We also test 3 other CLIP models with different configurations and find that they all perform similar to the baseline configuration.
+
+We test the 5 model sizes of OFA. Taking into account that this model gets state-of-the-art performance on many tasks, the performance is not very good. Even the biggest model is not better than the best baseline model. OFA is trained to generate "yes" or "no" when given an image and the text "Does the image describe <caption>?". This might explain why it does not perform that well on retrieval and Winoground.
+
+We test many configurations of BLIP, which include different training sizes, scoring, vision transformer sizes and finetuning datasets. ITM score is better than ITC score in all the cases. Even the 14M pretrained only model is better than all the previously tested models. Finetuning for retrieval on COCO and Flickr30k improves the results even more, reaching nearly above random performance in text, image and group scores.
+
+However, even the best model is still far from human performance in text, image and group scores. If we look at accuracy metrics, the gap is reduced, but the difference is still very big. Image score remains much lower than text score for all the models.
 
 \begin{table}[ht]
 \centering
@@ -64,12 +74,18 @@ See \cref{tab:results_aggr_ours}
   ViLT (ViT-B/32)                     & \textbf{27.50} & 8.75           & 6.00           & \textbf{56.88} & \textbf{53.12} & \textbf{55.00} \\
  ViLT$_{COCO}$ (ViT-B/32)            & \textbf{32.75} & 13.50          & 11.25          & \textbf{61.88} & \textbf{56.00} & \textbf{58.94} \\
  ViLT$_{Flickr30k}$ (ViT-B/32)       & \textbf{35.00} & 11.50          & 9.75           & \textbf{61.62} & \textbf{54.50} & \textbf{58.06} \\
+ ViLT$_{NLVR2}$ (ViT-B/32)           & \textbf{38.00} & 15.25          & 12.00          & \textbf{58.75} & \textbf{55.62} & \textbf{57.19} \\
  FLAVA$_{ITM}$                       & \textbf{32.25} & 20.50          & 14.25          & \textbf{62.75} & \textbf{59.13} & \textbf{60.94} \\
  FLAVA$_{ITC}$                       & \textbf{25.25} & 13.50          & 9.00           & \textbf{59.25} & \textbf{55.12} & \textbf{57.19} \\
  CLIP (ViT-B/32)                     & \textbf{30.75} & 10.25          & 8.25           & \textbf{60.38} & \textbf{53.12} & \textbf{56.75} \\
  CLIP (ViT-B/16)                     & 25.00          & 10.25          & 7.00           & \textbf{57.88} & \textbf{53.75} & \textbf{55.81} \\
  CLIP (ViT-L/14)                     & \textbf{28.50} & 11.00          & 8.00           & \textbf{60.38} & \textbf{54.62} & \textbf{57.50} \\
  CLIP (ViT-L/14-336)                 & \textbf{27.50} & 12.00          & 8.00           & \textbf{59.38} & \textbf{55.12} & \textbf{57.25} \\
+ OFA$_{Tiny}$                        & 20.50          & 8.00           & 3.75           & \textbf{53.50} & \textbf{52.00} & \textbf{52.75} \\
+ OFA$_{Base}$                        & \textbf{26.50} & 10.50          & 7.00           & \textbf{58.88} & \textbf{54.00} & \textbf{56.44} \\
+ OFA$_{Medium}$                      & 22.75          & 9.00           & 5.50           & \textbf{54.25} & \textbf{52.75} & \textbf{53.50} \\
+ OFA$_{Large}$                       & \textbf{26.00} & 8.75           & 5.75           & \textbf{58.38} & \textbf{52.88} & \textbf{55.62} \\
+ OFA$_{Huge}$                        & \textbf{36.25} & 15.50          & 13.50          & \textbf{64.38} & \textbf{56.62} & \textbf{60.50} \\
  BLIP$_{ITM 14M}$ (ViT-B/16)         & \textbf{39.25} & 19.00          & 15.00          & \textbf{65.88} & \textbf{58.25} & \textbf{62.06} \\
  BLIP$_{ITC 14M}$ (ViT-B/16)         & \textbf{32.25} & 13.75          & 10.50          & \textbf{62.25} & \textbf{56.50} & \textbf{59.38} \\
  BLIP$_{ITM}$ (ViT-B/16)             & \textbf{40.50} & 20.50          & 16.50          & \textbf{66.25} & \textbf{59.00} & \textbf{62.62} \\
@@ -154,15 +170,21 @@ See \cref{tab:results-by-ling-tag-ours}
       \multicolumn{3}{c}{2 Main Preds}\\
     Model & Text & Image & Group & Text & Image & Group & Text & Image & Group & Text & Image & Group & Text & Image & Group \\\midrule
  MTurk Human                  & \textbf{92.20} & \textbf{90.78} & \textbf{88.65} & \textbf{89.27} & \textbf{90.56} & \textbf{86.70} & \textbf{76.92} & \textbf{57.69} & \textbf{57.69} & \textbf{87.33} & \textbf{85.62} & \textbf{82.53} & \textbf{95.37} & \textbf{96.30} & \textbf{93.52} \\
- ViLT (ViT-B/32)                     & \textbf{29.08} & 10.64          & 4.96           & \textbf{26.18} & 7.73           & 6.44           & \textbf{30.77} & 7.69           & 7.69           & \textbf{30.14} & 10.62          & 7.53           & 20.37          & 3.70           & 1.85           \\
+  ViLT (ViT-B/32)                     & \textbf{29.08} & 10.64          & 4.96           & \textbf{26.18} & 7.73           & 6.44           & \textbf{30.77} & 7.69           & 7.69           & \textbf{30.14} & 10.62          & 7.53           & 20.37          & 3.70           & 1.85           \\
  ViLT$_{COCO}$ (ViT-B/32)            & \textbf{33.33} & 15.60          & 12.77          & \textbf{30.90} & 10.73          & 9.01           & \textbf{46.15} & \textbf{26.92} & \textbf{23.08} & \textbf{36.64} & 15.75          & 14.04          & 22.22          & 7.41           & 3.70           \\
  ViLT$_{Flickr30k}$ (ViT-B/32)       & \textbf{32.62} & 14.89          & 11.35          & \textbf{35.62} & 8.15           & 7.73           & \textbf{42.31} & 23.08          & \textbf{19.23} & \textbf{36.99} & 14.38          & 11.99          & \textbf{29.63} & 3.70           & 3.70           \\
+ ViLT$_{NLVR2}$ (ViT-B/32)           & \textbf{39.01} & 16.31          & 14.18          & \textbf{36.48} & 14.59          & 10.30          & \textbf{46.15} & 15.38          & 15.38          & \textbf{39.73} & 18.15          & 15.07          & \textbf{33.33} & 7.41           & 3.70           \\
  FLAVA$_{ITM}$                       & \textbf{31.91} & 23.40          & 14.89          & \textbf{30.04} & 16.31          & 12.02          & \textbf{53.85} & \textbf{42.31} & \textbf{30.77} & \textbf{36.30} & 24.66          & \textbf{17.81} & 21.30          & 9.26           & 4.63           \\
  FLAVA$_{ITC}$                       & 23.40          & 19.15          & 11.35          & 23.61          & 8.58           & 5.58           & \textbf{50.00} & \textbf{26.92} & \textbf{26.92} & \textbf{26.37} & 16.44          & 10.62          & 22.22          & 5.56           & 4.63           \\
  CLIP (ViT-B/32)                     & \textbf{35.46} & 7.80           & 6.38           & 22.32          & 7.73           & 5.58           & \textbf{80.77} & \textbf{46.15} & \textbf{42.31} & \textbf{35.62} & 13.01          & 10.62          & 17.59          & 2.78           & 1.85           \\
  CLIP (ViT-B/16)                     & \textbf{27.66} & 10.64          & 5.67           & 19.31          & 6.44           & 4.29           & \textbf{61.54} & \textbf{42.31} & \textbf{38.46} & \textbf{30.14} & 11.99          & 8.90           & 11.11          & 5.56           & 1.85           \\
  CLIP (ViT-L/14)                     & \textbf{27.66} & 8.51           & 5.67           & \textbf{25.75} & 9.87           & 6.44           & \textbf{57.69} & \textbf{34.62} & \textbf{34.62} & \textbf{30.14} & 13.01          & 9.93           & 24.07          & 5.56           & 2.78           \\
  CLIP (ViT-L/14-336)                 & \textbf{32.62} & 12.77          & 9.22           & 21.03          & 8.15           & 4.29           & \textbf{57.69} & \textbf{42.31} & \textbf{34.62} & \textbf{30.48} & 14.04          & 10.62          & 19.44          & 6.48           & 0.93           \\
+ OFA$_{Tiny}$                        & 22.70          & 6.38           & 2.13           & 17.17          & 6.87           & 3.43           & \textbf{38.46} & \textbf{26.92} & 15.38          & 23.97          & 8.22           & 4.45           & 11.11          & 7.41           & 1.85           \\
+ OFA$_{Base}$                        & \textbf{25.53} & 14.18          & 7.09           & 24.46          & 6.87           & 5.15           & \textbf{50.00} & 23.08          & \textbf{23.08} & \textbf{28.77} & 12.67          & 8.56           & 20.37          & 4.63           & 2.78           \\
+ OFA$_{Medium}$                      & 19.86          & 7.80           & 4.26           & 22.32          & 7.73           & 4.72           & \textbf{42.31} & \textbf{26.92} & \textbf{19.23} & 24.32          & 10.96          & 6.85           & 18.52          & 3.70           & 1.85           \\
+ OFA$_{Large}$                       & \textbf{26.24} & 10.64          & 5.67           & 24.03          & 5.15           & 3.86           & \textbf{42.31} & \textbf{30.77} & \textbf{23.08} & \textbf{29.45} & 10.96          & 7.53           & 16.67          & 2.78           & 0.93           \\
+ OFA$_{Huge}$                        & \textbf{40.43} & 18.44          & 15.60          & \textbf{30.90} & 11.59          & 9.87           & \textbf{61.54} & \textbf{34.62} & \textbf{34.62} & \textbf{39.73} & 19.18          & \textbf{16.78} & \textbf{26.85} & 5.56           & 4.63           \\
  BLIP$_{ITM 14M}$ (ViT-B/16)         & \textbf{41.84} & 23.40          & \textbf{17.73} & \textbf{36.05} & 14.59          & 11.59          & \textbf{53.85} & \textbf{34.62} & \textbf{30.77} & \textbf{43.84} & 23.63          & \textbf{18.49} & \textbf{26.85} & 6.48           & 5.56           \\
  BLIP$_{ITC 14M}$ (ViT-B/16)         & \textbf{34.04} & 13.48          & 9.93           & \textbf{28.33} & 12.02          & 9.44           & \textbf{57.69} & \textbf{30.77} & \textbf{23.08} & \textbf{37.67} & 16.44          & 13.01          & 17.59          & 6.48           & 3.70           \\
  BLIP$_{ITM}$ (ViT-B/16)             & \textbf{46.10} & 22.70          & \textbf{17.73} & \textbf{35.62} & 17.60          & 14.16          & \textbf{53.85} & \textbf{34.62} & \textbf{30.77} & \textbf{45.89} & \textbf{25.34} & \textbf{20.55} & \textbf{25.93} & 7.41           & 5.56           \\
@@ -244,15 +266,21 @@ See \cref{tab:results-by-visual-tag-ours}
       \multicolumn{3}{c}{Same Image Series} \\
     Model & Text & Image & Group & Text & Image & Group & Text & Image & Group \\\midrule
  MTurk Human                  & \textbf{96.43} & \textbf{92.86} & \textbf{92.86} & \textbf{58.82} & \textbf{41.18} & \textbf{41.18} & \textbf{95.65} & \textbf{91.30} & \textbf{91.30} \\
- ViLT (ViT-B/32)                     & 21.43          & 7.14           & 3.57           & 17.65          & 5.88           & 5.88           & 17.39          & 8.70           & 4.35           \\
+ViLT (ViT-B/32)                     & 21.43          & 7.14           & 3.57           & 17.65          & 5.88           & 5.88           & 17.39          & 8.70           & 4.35           \\
  ViLT$_{COCO}$ (ViT-B/32)            & 21.43          & 10.71          & 10.71          & \textbf{29.41} & 17.65          & 5.88           & 21.74          & 8.70           & 4.35           \\
  ViLT$_{Flickr30k}$ (ViT-B/32)       & \textbf{28.57} & 7.14           & 7.14           & 23.53          & 0.00           & 0.00           & \textbf{26.09} & 4.35           & 4.35           \\
+ ViLT$_{NLVR2}$ (ViT-B/32)           & \textbf{42.86} & 10.71          & 10.71          & \textbf{41.18} & 0.00           & 0.00           & 17.39          & 13.04          & 4.35           \\
  FLAVA$_{ITM}$                       & 25.00          & \textbf{28.57} & \textbf{17.86} & 17.65          & \textbf{29.41} & 11.76          & 17.39          & 8.70           & 0.00           \\
  FLAVA$_{ITC}$                       & 17.86          & 10.71          & 10.71          & 11.76          & 23.53          & 5.88           & 17.39          & 4.35           & 4.35           \\
  CLIP (ViT-B/32)                     & \textbf{35.71} & 3.57           & 3.57           & \textbf{35.29} & 5.88           & 5.88           & 13.04          & 0.00           & 0.00           \\
  CLIP (ViT-B/16)                     & 21.43          & 3.57           & 3.57           & \textbf{29.41} & 11.76          & 11.76          & 4.35           & 4.35           & 0.00           \\
  CLIP (ViT-L/14)                     & \textbf{28.57} & 10.71          & 3.57           & 23.53          & 17.65          & 11.76          & 13.04          & 8.70           & 4.35           \\
  CLIP (ViT-L/14-336)                 & \textbf{28.57} & 14.29          & 7.14           & 17.65          & 17.65          & 5.88           & 13.04          & 4.35           & 0.00           \\
+ OFA$_{Tiny}$                        & 21.43          & 7.14           & 7.14           & 11.76          & 17.65          & 0.00           & 21.74          & 8.70           & 0.00           \\
+ OFA$_{Base}$                        & \textbf{28.57} & 10.71          & 10.71          & 23.53          & 5.88           & 5.88           & 21.74          & 13.04          & 4.35           \\
+ OFA$_{Medium}$                      & \textbf{28.57} & 10.71          & 7.14           & 17.65          & 5.88           & 5.88           & 13.04          & 8.70           & 4.35           \\
+ OFA$_{Large}$                       & \textbf{28.57} & 14.29          & 10.71          & \textbf{29.41} & 0.00           & 0.00           & 13.04          & 0.00           & 0.00           \\
+ OFA$_{Huge}$                        & \textbf{39.29} & 14.29          & 14.29          & 11.76          & 11.76          & 5.88           & 17.39          & 4.35           & 4.35           \\
  BLIP$_{ITM 14M}$ (ViT-B/16)         & \textbf{46.43} & 17.86          & \textbf{17.86} & \textbf{35.29} & 11.76          & 11.76          & 17.39          & 4.35           & 0.00           \\
  BLIP$_{ITC 14M}$ (ViT-B/16)         & \textbf{32.14} & 14.29          & 10.71          & \textbf{29.41} & 0.00           & 0.00           & 13.04          & 0.00           & 0.00           \\
  BLIP$_{ITM}$ (ViT-B/16)             & \textbf{50.00} & 17.86          & \textbf{17.86} & \textbf{29.41} & 5.88           & 5.88           & 13.04          & 4.35           & 0.00           \\
