@@ -1,0 +1,48 @@
+id,age,Country of Birth,Current Country of Residence,Employment Status,First Language,Highest education level completed,Nationality,Sex,Student Status
+1,26,China,United Kingdom,Student,Chinese,Graduate degree (MA/MSc/MPhil/other),China,Male,Yes
+2,52,China,China,full-time,Chinese,Graduate degree (MA/MSc/MPhil/other),China,Female,No
+3,26,China,Finland,Student,Chinese,Graduate degree (MA/MSc/MPhil/other),China,Male,Yes
+4,29,China,United Kingdom,full-time,Chinese,Doctorate degree (PhD/other),China,Female,No
+5,30,Sigapore,United Kingdom,full-time,English,Doctorate degree (PhD/other),United Kingdom,Male,No
+6,36,Ireland,Ireland,Part-Time,English,Graduate degree (MA/MSc/MPhil/other),Ireland,Female,No
+7,49,United Kingdom,Spain,Other,English,Doctorate degree (PhD/other),United Kingdom,Female,No
+8,34,United Kingdom,United Kingdom,Part-Time,English,Doctorate degree (PhD/other),United Kingdom,Female,No
+9,25,South Africa,South Africa,Other,English,Graduate degree (MA/MSc/MPhil/other),South Africa,Female,Yes
+10,33,Ireland,Ireland,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),Ireland,Female,Yes
+11,28,India,United States,DATA EXPIRED,English,Doctorate degree (PhD/other),India,Male,DATA EXPIRED
+12,39,South Africa,South Africa,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),South Africa,Female,No
+13,49,Canada,Canada,DATA EXPIRED,English,Graduate degree (MA/MSc/MPhil/other),Canada,Female,No
+14,30,United Kingdom,United Kingdom,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Female,No
+15,43,United Kingdom,United Kingdom,Part-Time,English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Male,No
+16,23,United States,Poland,Unemployed (and job seeking),English,Graduate degree (MA/MSc/MPhil/other),United States,Male,No
+17,54,United Kingdom,United Kingdom,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Female,No
+18,31,United Kingdom,United Kingdom,DATA EXPIRED,English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Male,DATA EXPIRED
+19,25,South Africa,South Africa,Other,English,Graduate degree (MA/MSc/MPhil/other),South Africa,Female,Yes
+20,58,United Kingdom,United Kingdom,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Male,No
+21,31,Ireland,Ireland,Part-Time,English,Graduate degree (MA/MSc/MPhil/other),Ireland,Male,No
+22,57,United Kingdom,United Kingdom,"Not in paid work (e.g. homemaker', 'retired or disabled)",English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Female,No
+23,31,Saudi Arabia,Japan,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),Egypt,Male,No
+24,42,Canada,Canada,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),Canada,Male,No
+25,44,Cook Islands,New Zealand,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),New Zealand,Female,No
+26,24,United States,United States,DATA EXPIRED,English,Graduate degree (MA/MSc/MPhil/other),United States,Female,DATA EXPIRED
+27,29,United Kingdom,United Kingdom,Part-Time,English,DATA EXPIRED,United Kingdom,Male,No
+28,22,South Africa,South Africa,DATA EXPIRED,English,Graduate degree (MA/MSc/MPhil/other),South Africa,Female,DATA EXPIRED
+29,26,United Kingdom,United Kingdom,Part-Time,English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Female,Yes
+30,32,Canada,Canada,Full-Time,English,DATA EXPIRED,Canada,Female,No
+31,35,United Kingdom,United Kingdom,Unemployed (and job seeking),English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Male,No
+32,36,United Kingdom,United Kingdom,DATA EXPIRED,English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Female,DATA EXPIRED
+33,25,Chile,Chile,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),Chile,Male,Yes
+34,24,United States,Japan,DATA EXPIRED,English,Undergraduate degree (BA/BSc/other),United States,Male,DATA EXPIRED
+35,27,United Kingdom,United Kingdom,DATA EXPIRED,English,Undergraduate degree (BA/BSc/other),United Kingdom,Male,DATA EXPIRED
+36,23,Hungary,Hungary,Part-Time,English,Graduate degree (MA/MSc/MPhil/other),Hungary,Male,Yes
+37,30,South Africa,South Africa,Part-Time,English,Undergraduate degree (BA/BSc/other),South Africa,Female,No
+38,34,United Kingdom,United Kingdom,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Female,No
+39,22,Ireland,Ireland,Unemployed (and job seeking),English,DATA EXPIRED,Ireland,Female,No
+40,26,United Kingdom,United Kingdom,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Female,Yes
+41,41,South Africa,South Africa,DATA EXPIRED,English,Undergraduate degree (BA/BSc/other),South Africa,Male,Yes
+42,23,South Africa,South Africa,Full-Time,English,Undergraduate degree (BA/BSc/other),South Africa,Female,Yes
+43,36,Canada,Canada,Part-Time,English,Doctorate degree (PhD/other),Canada,Female,No
+44,26,Poland,United Kingdom,Unemployed (and job seeking),English,Graduate degree (MA/MSc/MPhil/other),Poland,Male,DATA EXPIRED
+45,44,United Kingdom,United Kingdom,Full-Time,English,Undergraduate degree (BA/BSc/other),United Kingdom,Male,No
+46,23,South Africa,South Africa,Due to start a new job within the next month,English,Undergraduate degree (BA/BSc/other),South Africa,Female,Yes
+47,30,Canada,Canada,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),Canada,Female,DATA EXPIRED
