@@ -13,7 +13,7 @@ mv train2017 trainval2017 && mv val2017/* trainval2017 && rm -r val2017
 Copy only relevant images to `images/`.
 ```
 mkdir images
-python select_only_revlevant_images.py data_files/all_vsr_validated_data.jsonl/  trainval2017/ images/
+python select_only_relevant_images.py data_files/all_vsr_validated_data.jsonl/  trainval2017/ images/
 ```
 
 Alternatively, you could also download the used images from dropbox [here](https://www.dropbox.com/s/0s3bj25s62crjh2/vsr_images.zip?dl=0) and put them under the `images/` folder.
@@ -49,4 +49,3 @@ Each line is an individual data point.
 
 ### Other data files
 [`data_files/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data/data_files) contain the major data collected for creating VSR. [`data_files/all_vsr_raw_data.jsonl`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data/data_files/all_vsr_raw_data.jsonl) contains all 12,809 raw data points and [`data_files/all_vsr_validated_data.jsonl`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data/data_files/all_vsr_validated_data.jsonl) contains the 10,119 data points that passed the second-round validation (and is used for creating the random and zeroshot splits). [`data_files/meta_data.csv`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data/data_files/meta_data.jsonl) contains meta data of annotators.
-
