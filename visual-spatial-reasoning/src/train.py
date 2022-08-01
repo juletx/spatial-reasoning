@@ -17,7 +17,7 @@ from data import ImageTextClassificationDataset
 from eval import evaluate
 from lxmert_for_classification import LxmertForBinaryClassification
 
-wandb.init(project="visual-spatial-reasoning", entity="hardyqr")
+wandb.init(project="visual-spatial-reasoning", entity="juletxara")
 
 
 def train(args, train_loader, val_loader, model, scaler=None, step_global=0, epoch=-1, \
@@ -262,4 +262,3 @@ if __name__ == "__main__":
         loss, global_step, val_best_score = train(args, train_loader, val_loader, model, scaler=scaler, \
                 step_global=global_step, epoch=epoch, val_best_score=val_best_score, processor=processor)
         print (f"epoch: {epoch}, global step: {global_step}, loss: {loss}")
-
