@@ -24,7 +24,7 @@ class ImageTextClassificationDataset(Dataset):
             self.img_name2index = {}
             for i, name in enumerate(self.img_names):
                 self.img_name2index[name] = i # the i-th vector in img_features
-        elif self.model_type == "vilt":
+        elif self.model_type in ("vilt", "vilt_nlvr2"):
             self.imgs = {}
             img_paths = glob.glob(img_feature_path+"/*.jpg")
             print (f"load images...")
@@ -55,7 +55,7 @@ class ImageTextClassificationDataset(Dataset):
         elif self.model_type == "lxmert":
             img_index = self.img_name2index[data_point["image"]]
             return data_point["caption"], self.boxes[img_index], self.img_features[img_index], data_point["label"]
-        elif self.model_type == "vilt":
+        elif self.model_type in ("vilt", "vilt_nlvr2"):
             """
             try:
                 inputs = self.vilt_processor(images=self.imgs[data_point["image"]], text=data_point["caption"], 
@@ -70,5 +70,3 @@ class ImageTextClassificationDataset(Dataset):
 
     def __len__(self):
         return len(self.data_json)
-
-

@@ -38,13 +38,13 @@ def evaluate(data_loader, model, model_type="visualbert"):
                 "visual_feats": batch_img.cuda(),
                 "visual_pos": batch_box.cuda(),
                 })
-        elif model_type == "vilt":
+        elif model_type in ("vilt", "vilt_nlvr2"):
             input_ids, pixel_values, y = data
         y = y.cuda()
         with torch.no_grad():
             if model_type in ["visualbert", "lxmert"]:
                 outputs = model(**batch_inputs, labels=y)
-            elif model_type == "vilt":
+            elif model_type in ("vilt", "vilt_nlvr2"):
                 batch_cap = input_ids.cuda()
                 batch_img = pixel_values.cuda()
                 outputs = model(input_ids=batch_cap, 
@@ -71,6 +71,7 @@ if __name__ == "__main__":
     
     parser = argparse.ArgumentParser(description='eval')
     parser.add_argument('--checkpoint_path', type=str, required=True)
+    parser.add_argument('--result_path', type=str, required=True)
     parser.add_argument('--model_type', type=str, default='visualbert')
     parser.add_argument('--img_feature_path', type=str, required=True)
     parser.add_argument('--test_json_path', type=str, required=True)
@@ -89,7 +90,7 @@ if __name__ == "__main__":
         model = LxmertForBinaryClassification(model)
         tokenizer = LxmertTokenizer.from_pretrained("unc-nlp/lxmert-base-uncased") 
 
-    elif model_type == "vilt":
+    elif model_type in ("vilt", "vilt_nlvr2"):
         from transformers import ViltProcessor, ViltForImagesAndTextClassification
         processor = ViltProcessor.from_pretrained(args.checkpoint_path)
         model = ViltForImagesAndTextClassification.from_pretrained(args.checkpoint_path)
@@ -127,13 +128,19 @@ if __name__ == "__main__":
         inputs = processor(list(imgs), list(captions), return_tensors="pt", padding=True, truncation=True)
         labels = torch.tensor(labels)
         return inputs.input_ids, inputs.pixel_values.unsqueeze(1), labels
+
+    def collate_fn_batch_vilt_nlvr2(batch):
+        imgs, captions, labels = zip(*batch)
+        inputs = processor(list(imgs), list(captions), return_tensors="pt", padding=True, truncation=True)
+        labels = torch.tensor(labels)
+        return inputs.input_ids, inputs.pixel_values.unsqueeze(1).repeat(1, 2, 1, 1, 1), labels
         
 
     img_feature_path = args.img_feature_path
     json_path = args.test_json_path
     if model_type in ["visualbert", "lxmert"]:
         dataset = ImageTextClassificationDataset(img_feature_path, json_path, model_type=model_type)
-    elif model_type == "vilt":
+    elif model_type in ("vilt", "vilt_nlvr2"):
         dataset = ImageTextClassificationDataset(img_feature_path, json_path, model_type=model_type, vilt_processor=processor)
     if model_type == "visualbert":
         collate_fn_batch = collate_fn_batch_visualbert
@@ -141,6 +148,8 @@ if __name__ == "__main__":
         collate_fn_batch = collate_fn_batch_lxmert
     elif model_type == "vilt":
         collate_fn_batch = collate_fn_batch_vilt
+    elif model_type == "vilt_nlvr2":
+        collate_fn_batch = collate_fn_batch_vilt_nlvr2
 
     test_loader = torch.utils.data.DataLoader(
         dataset,
@@ -153,9 +162,7 @@ if __name__ == "__main__":
 
     # save preds
     if args.output_preds:
-        with open(os.path.join(args.checkpoint_path, "preds.txt"), "w") as f:
+        with open(os.path.join(args.result_path), "w") as f:
             for i in range(len(preds)):
                 f.write(str(preds[i])+"\n")
         
-
-
