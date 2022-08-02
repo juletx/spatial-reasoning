@@ -36,15 +36,16 @@ with open(sys.argv[3], "r") as f:
         for rel in rel_list:
             rel2cat[rel] = cat
         cats.append(cat)
-print (f"# rel: {rel_count}")
+#print (f"# rel: {rel_count}")
 cats = list(set(cats))
 
-cat_dict, cat_acc = {}, {}
+cat_dict, cat_acc = {"All": []}, {}
 for cat in cats:
     cat_dict[cat] = []
 for i, instance in enumerate(data_json):
     correct = 1 if preds[i] == instance["label"] else 0
     if instance["relation"] in rel2cat.keys():
+        cat_dict["All"].append(correct)
         cat_dict[rel2cat[instance["relation"]]].append(correct)
     else:
         print ("no availible meta cat:")

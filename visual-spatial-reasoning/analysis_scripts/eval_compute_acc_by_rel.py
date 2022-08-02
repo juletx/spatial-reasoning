@@ -21,7 +21,7 @@ with open(sys.argv[2], "r") as f:
     for line in lines:
         preds.append(int(line.strip()))
 
-rel_dict = {}
+rel_dict = {"all": []}
 rel_acc = {}
 for i, instance in enumerate(data_json):
     correct = 1 if preds[i] == instance["label"] else 0
@@ -31,6 +31,7 @@ for i, instance in enumerate(data_json):
         rel_dict[instance["relation"]].append(correct)
     else:
         rel_dict[instance["relation"]] = [correct]
+    rel_dict["all"].append(correct)
 
 for k,v in rel_dict.items():
     rel_acc[k] = (sum(v)/len(v), len(v))
