@@ -1,6 +1,4 @@
 desktop.ini
-data/images/
-token.txt
 __pycache__/
 venv/
 .ipynb_checkpoints/
