@@ -1,0 +1,12 @@
+tabulate
+numpy
+scipy
+transformers
+datasets
+torch
+tqdm
+matplotlib
+pandas
+min-dalle
+timm
+fairscale

@@ -1,7 +1,0 @@
-tabulate
-numpy
-scipy
-transformers
-torch
-tqdm
-matplotlib
