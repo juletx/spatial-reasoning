@@ -119,7 +119,7 @@ def train(args, train_loader, val_loader, model, scaler=None, step_global=0, epo
                 val_best_score = acc
             else:
                 continue
-            checkpoint_dir = os.path.join(args.output_dir, f"best_checkpoint")
+            checkpoint_dir = args.output_dir
             if not os.path.exists(checkpoint_dir):
                 os.makedirs(checkpoint_dir)
             if model_type == "visualbert":

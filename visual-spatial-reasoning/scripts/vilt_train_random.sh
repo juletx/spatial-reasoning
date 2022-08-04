@@ -2,7 +2,7 @@ CUDA_VISIBLE_DEVICES=$1 python src/train.py \
 	--img_feature_path data/images/ \
 	--train_json_path data/splits/random/train.jsonl \
 	--amp \
-	--output_dir "tmp/vilt_random_split" \
+	--output_dir "tmp/vilt-vsr-random" \
 	--checkpoint_step 9999999 \
 	--epoch 30 \
 	--batch_size 12 \

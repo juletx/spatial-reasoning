@@ -2,7 +2,7 @@ CUDA_VISIBLE_DEVICES=$1 python src/train.py \
 	--img_feature_path data/features/lxmert/ \
 	--train_json_path data/splits/zeroshot/train.jsonl \
 	--amp \
-	--output_dir "tmp/lxmert_zeroshot_split" \
+	--output_dir "tmp/lxmert-vsr-zeroshot" \
 	--checkpoint_step 9999999 \
 	--epoch 100 \
 	--batch_size 32 \
@@ -11,4 +11,3 @@ CUDA_VISIBLE_DEVICES=$1 python src/train.py \
 	--model_type lxmert \
 	--val_json_path data/splits/zeroshot/dev.jsonl \
 	--eval_step 100
-
