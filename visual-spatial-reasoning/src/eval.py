@@ -1,12 +1,13 @@
-
 import os
 import argparse
 from tqdm.auto import tqdm
 import torch
-from transformers import BertTokenizer, VisualBertModel, \
+from transformers import BertTokenizer, \
         VisualBertForVisualReasoning, LxmertForPreTraining, LxmertTokenizer
 from lxmert_for_classification import LxmertForBinaryClassification
 from data import ImageTextClassificationDataset
+import sys
+sys.path.insert(1, os.path.join(sys.path[0], '../..'))
 
 def evaluate(data_loader, model, model_type="visualbert"):
     model.cuda()
@@ -40,6 +41,8 @@ def evaluate(data_loader, model, model_type="visualbert"):
                 })
         elif model_type in ("vilt", "vilt_nlvr2"):
             input_ids, pixel_values, y = data
+        elif model_type == "blip_nlvr2":
+            images, text, y = data
         y = y.cuda()
         with torch.no_grad():
             if model_type in ["visualbert", "lxmert"]:
@@ -52,12 +55,19 @@ def evaluate(data_loader, model, model_type="visualbert"):
                 #logits = outputs.logits
                 #idx = logits.argmax(-1).item()
                 #model.config.id2label[idx]
+            elif model_type == "blip_nlvr2":
+                batch_cap = text
+                batch_img = images.cuda()
+                outputs = model(batch_img, batch_cap, targets=y, train=False)  
 
-        scores = outputs.logits
+        if model_type == "blip_nlvr2":
+            scores = outputs
+        else:
+            scores = outputs.logits
         preds_current = torch.argmax(scores, dim=1)
         correct += sum(y == preds_current)
         preds += preds_current.cpu().numpy().tolist()
-        total+=batch_img.shape[0]
+        total += len(batch_cap)
         all_true += sum(y)
 
         # print errors
@@ -94,6 +104,18 @@ if __name__ == "__main__":
         from transformers import ViltProcessor, ViltForImagesAndTextClassification
         processor = ViltProcessor.from_pretrained(args.checkpoint_path)
         model = ViltForImagesAndTextClassification.from_pretrained(args.checkpoint_path)
+
+    elif model_type == "blip_nlvr2":
+        from BLIP.models.blip_nlvr import blip_nlvr
+        from torchvision import transforms
+        from torchvision.transforms.functional import InterpolationMode 
+        transform = transforms.Compose([
+            transforms.ToPILImage(),
+            transforms.Resize((384, 384), interpolation=InterpolationMode.BICUBIC),
+            transforms.ToTensor(),
+            transforms.Normalize((0.48145466, 0.4578275, 0.40821073), (0.26862954, 0.26130258, 0.27577711))
+            ])
+        model = blip_nlvr(pretrained=args.checkpoint_path, image_size=384, vit='base')
     
     # load data
     def collate_fn_batch_visualbert(batch):
@@ -134,11 +156,18 @@ if __name__ == "__main__":
         inputs = processor(list(imgs), list(captions), return_tensors="pt", padding=True, truncation=True)
         labels = torch.tensor(labels)
         return inputs.input_ids, inputs.pixel_values.unsqueeze(1).repeat(1, 2, 1, 1, 1), labels
-        
+
+    def collate_fn_batch_blip_nlvr2(batch):
+        imgs, captions, labels = zip(*batch)
+        imgs = [transform(img) for img in list(imgs)]
+        imgs = torch.stack(imgs)
+        images = torch.cat([imgs, imgs], dim=0)
+        labels = torch.tensor(labels)
+        return images, captions, labels
 
     img_feature_path = args.img_feature_path
     json_path = args.test_json_path
-    if model_type in ["visualbert", "lxmert"]:
+    if model_type in ["visualbert", "lxmert", "blip_nlvr2"]:
         dataset = ImageTextClassificationDataset(img_feature_path, json_path, model_type=model_type)
     elif model_type in ("vilt", "vilt_nlvr2"):
         dataset = ImageTextClassificationDataset(img_feature_path, json_path, model_type=model_type, vilt_processor=processor)
@@ -150,6 +179,8 @@ if __name__ == "__main__":
         collate_fn_batch = collate_fn_batch_vilt
     elif model_type == "vilt_nlvr2":
         collate_fn_batch = collate_fn_batch_vilt_nlvr2
+    elif model_type == "blip_nlvr2":
+        collate_fn_batch = collate_fn_batch_blip_nlvr2
 
     test_loader = torch.utils.data.DataLoader(
         dataset,

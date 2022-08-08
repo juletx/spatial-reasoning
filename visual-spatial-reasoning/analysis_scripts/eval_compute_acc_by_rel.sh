@@ -13,3 +13,7 @@ python analysis_scripts/eval_compute_acc_by_rel.py data/splits/random/test.jsonl
 python analysis_scripts/eval_compute_acc_by_rel.py data/splits/zeroshot/test.jsonl results/vilt_zeroshot.txt > results/vilt_zeroshot_rel.tsv
 
 python analysis_scripts/eval_compute_acc_by_rel.py data/splits/zeroshot/test.jsonl results/vilt_nlvr2_zeroshot.txt > results/vilt_nlvr2_zeroshot_rel.tsv
+
+python analysis_scripts/eval_compute_acc_by_rel.py data/splits/random/test.jsonl results/blip_nlvr2_random.txt > results/blip_nlvr2_random_rel.tsv
+
+python analysis_scripts/eval_compute_acc_by_rel.py data/splits/zeroshot/test.jsonl results/blip_nlvr2_zeroshot.txt > results/blip_nlvr2_zeroshot_rel.tsv
