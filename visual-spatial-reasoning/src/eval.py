@@ -7,7 +7,7 @@ from transformers import BertTokenizer, \
 from lxmert_for_classification import LxmertForBinaryClassification
 from data import ImageTextClassificationDataset
 import sys
-sys.path.insert(1, os.path.join(sys.path[0], '../..'))
+sys.path.insert(1, os.path.join(sys.path[0], '../../BLIP'))
 
 def evaluate(data_loader, model, model_type="visualbert"):
     model.cuda()
@@ -106,7 +106,7 @@ if __name__ == "__main__":
         model = ViltForImagesAndTextClassification.from_pretrained(args.checkpoint_path)
 
     elif model_type == "blip_nlvr2":
-        from BLIP.models.blip_nlvr import blip_nlvr
+        from models.blip_nlvr import blip_nlvr
         from torchvision import transforms
         from torchvision.transforms.functional import InterpolationMode 
         transform = transforms.Compose([
