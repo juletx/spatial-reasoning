@@ -303,3 +303,188 @@ ViLT (ViT-B/32)                     & 21.43          & 7.14           & 3.57    
   \caption{The results by visual tag. Results above chance are in \textbf{bold}.}
     \label{tab:results-by-visual-tag-ours}
 \end{table}
+
+\section{Visual Spatial Reasoning}
+
+\subsection{Results By Relation}
+
+See \cref{fig:performance_by_rel}
+
+\begin{figure}[ht]
+    \centering
+\begin{subfigure}[b]{\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/performance_rel_random.png}
+    \vspace{-1cm}
+    \caption{random split}
+\end{subfigure}
+\begin{subfigure}[b]{\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/performance_rel_zeroshot.png}
+    \vspace{-1cm}
+    \caption{zero-shot split}
+\end{subfigure}
+\caption{Performance by relation on the random (upper) and zero-shot (lower) split test sets. Relation order sorted by frequency (high to low from left to right). Only relations with more than 15 and 5 occurrences on the random and zero-shot tests respectively are shown. }
+    \label{fig:performance_by_rel}
+\end{figure}
+
+See \cref{tab:results-by-relation-random} and \cref{tab:results-by-relation-zeroshot}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrrrrr}
+\toprule
+relation &  number &  VisualBERT &  LXMERT &  ViLT &  ViLT NLVR2 &  BLIP NLVR2 \\
+\midrule
+all                  &    2024 &        0.55 &    0.74 &  0.71 &        0.59
+&        0.60 \\
+\midrule
+touching             &     236 &        0.56 &    0.77 &  0.74 &        0.64 &        0.62 \\
+behind               &     136 &        0.45 &    0.75 &  0.71 &        0.53 &        0.58 \\
+on                   &     128 &        0.65 &    0.82 &  0.87 &        0.72 &        0.70 \\
+in front of          &     116 &        0.54 &    0.71 &  0.64 &        0.59 &        0.66 \\
+under                &     112 &        0.62 &    0.86 &  0.84 &        0.62 &        0.66 \\
+on top of            &      87 &        0.51 &    0.79 &  0.79 &        0.72 &        0.68 \\
+at the right side of &      85 &        0.52 &    0.76 &  0.58 &        0.64 &        0.51 \\
+at the left side of  &      80 &        0.49 &    0.74 &  0.61 &        0.50 &        0.56 \\
+beneath              &      80 &        0.64 &    0.80 &  0.78 &        0.59 &        0.56 \\
+above                &      72 &        0.60 &    0.76 &  0.72 &        0.56 &        0.62 \\
+contains             &      57 &        0.56 &    0.81 &  0.86 &        0.56 &        0.51 \\
+in                   &      51 &        0.69 &    0.82 &  0.84 &        0.61 &        0.59 \\
+facing               &      50 &        0.50 &    0.64 &  0.62 &        0.60 &        0.62 \\
+far away from        &      49 &        0.51 &    0.78 &  0.76 &        0.41 &        0.43 \\
+inside               &      49 &        0.59 &    0.78 &  0.80 &        0.57 &        0.55 \\
+below                &      42 &        0.60 &    0.67 &  0.67 &        0.48 &        0.52 \\
+next to              &      41 &        0.56 &    0.68 &  0.76 &        0.54 &        0.66 \\
+at the edge of       &      40 &        0.42 &    0.48 &  0.60 &        0.50 &        0.62 \\
+left of              &      39 &        0.56 &    0.77 &  0.59 &        0.59 &        0.56 \\
+beside               &      34 &        0.44 &    0.74 &  0.65 &        0.79 &        0.68 \\
+facing away from     &      32 &        0.56 &    0.53 &  0.47 &        0.56 &        0.50 \\
+away from            &      31 &        0.61 &    0.71 &  0.74 &        0.42 &        0.65 \\
+right of             &      24 &        0.50 &    0.88 &  0.58 &        0.58 &        0.54 \\
+far from             &      23 &        0.48 &    0.87 &  0.87 &        0.43 &        0.57 \\
+close to             &      21 &        0.57 &    0.71 &  0.71 &        0.71 &        0.57 \\
+part of              &      21 &        0.43 &    0.76 &  0.76 &        0.43 &        0.43 \\
+near                 &      21 &        0.52 &    0.57 &  0.71 &        0.76 &        0.67 \\
+parallel to          &      19 &        0.32 &    0.37 &  0.58 &        0.53 &        0.47 \\
+at the back of       &      19 &        0.58 &    0.74 &  0.63 &        0.53 &        0.63 \\
+across from          &      18 &        0.67 &    0.72 &  0.67 &        0.44 &        0.44 \\
+over                 &      16 &        0.50 &    0.75 &  0.94 &        0.81 &        0.56 \\
+in the middle of     &      15 &        0.47 &    0.60 &  0.33 &        0.33 &        0.53 \\
+off                  &      15 &        0.33 &    0.40 &  0.40 &        0.27 &        0.47 \\
+\bottomrule
+\end{tabular}
+\caption{Number and performance by relation on the random split test. Only relations with more than 15 occurrences are shown.}
+\label{tab:results-by-relation-random}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrrrrr}
+\toprule
+relation &  number &  VisualBERT &  LXMERT &  ViLT &  ViLT NLVR2 &  BLIP NLVR2 \\
+\midrule
+all                  &     731 &        0.51 &    0.66 &  0.62 &        0.53 &        0.54 \\
+\midrule
+in front of          &      76 &        0.46 &    0.64 &  0.54 &        0.50 &        0.53 \\
+behind               &      71 &        0.49 &    0.79 &  0.69 &        0.51 &        0.49 \\
+far away from        &      57 &        0.58 &    0.60 &  0.60 &        0.40 &        0.37 \\
+at the left side of  &      32 &        0.59 &    0.72 &  0.50 &        0.59 &        0.72 \\
+next to              &      32 &        0.41 &    0.62 &  0.62 &        0.81 &        0.66 \\
+contains             &      29 &        0.48 &    0.86 &  0.76 &        0.48 &        0.55 \\
+touching             &      27 &        0.56 &    0.48 &  0.78 &        0.56 &        0.74 \\
+at the right side of &      25 &        0.44 &    0.48 &  0.68 &        0.52 &        0.72 \\
+on                   &      23 &        0.52 &    0.87 &  0.78 &        0.74 &        0.83 \\
+above                &      22 &        0.55 &    0.59 &  0.59 &        0.55 &        0.45 \\
+left of              &      22 &        0.59 &    0.86 &  0.55 &        0.55 &        0.55 \\
+on top of            &      20 &        0.40 &    0.80 &  0.90 &        0.85 &        0.85 \\
+under                &      20 &        0.45 &    0.60 &  0.45 &        0.45 &        0.40 \\
+below                &      18 &        0.67 &    0.61 &  0.61 &        0.61 &        0.67 \\
+in                   &      16 &        0.38 &    0.88 &  0.88 &        0.62 &        0.75 \\
+parallel to          &      14 &        0.36 &    0.43 &  0.50 &        0.64 &        0.43 \\
+far from             &      14 &        0.57 &    0.71 &  0.71 &        0.29 &        0.43 \\
+facing               &      14 &        0.50 &    0.43 &  0.79 &        0.71 &        0.57 \\
+at the back of       &      14 &        0.71 &    0.64 &  0.50 &        0.36 &        0.36 \\
+across from          &      14 &        0.43 &    0.57 &  0.57 &        0.29 &        0.29 \\
+ahead of             &      13 &        0.31 &    0.54 &  0.38 &        0.54 &        0.62 \\
+away from            &      12 &        0.50 &    0.42 &  0.50 &        0.33 &        0.42 \\
+beside               &      12 &        0.42 &    0.42 &  0.67 &        0.42 &        0.25 \\
+adjacent to          &      12 &        0.83 &    0.67 &  0.33 &        0.58 &        0.58 \\
+right of             &      12 &        0.58 &    0.75 &  0.58 &        0.50 &        0.33 \\
+beneath              &      11 &        0.55 &    0.64 &  0.55 &        0.55 &        0.45 \\
+facing away from     &      10 &        0.60 &    0.70 &  0.60 &        0.60 &        0.50 \\
+inside               &       8 &        0.50 &    0.62 &  0.75 &        0.38 &        0.75 \\
+close to             &       8 &        0.62 &    0.50 &  0.38 &        0.50 &        0.38 \\
+beyond               &       6 &        0.33 &    0.67 &  0.67 &        0.33 &        0.67 \\
+alongside            &       6 &        0.33 &    0.67 &  0.67 &        0.50 &        0.50 \\
+off                  &       6 &        0.67 &    0.50 &  0.50 &        0.17 &        0.33 \\
+surrounding          &       5 &        0.40 &    1.00 &  0.60 &        0.40 &        0.80 \\
+\bottomrule
+\end{tabular}
+\caption{Number and performance by relation on the zero-shot split test. Only relations with more than 5 occurrences are shown.}
+\label{tab:results-by-relation-zeroshot}
+\end{table}
+
+\subsection{Results By Relation Meta Category}
+
+See \cref{fig:performance_by_meta_cat}
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[b]{0.49\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/performance_rel_meta_cat_random.png}
+    \caption{random split}
+     \end{subfigure}
+     \begin{subfigure}[b]{0.49\linewidth}
+         \centering
+    \includegraphics[width=\linewidth]{images/performance_rel_meta_cat_zeroshot.png}
+         \caption{zero-shot split}
+     \end{subfigure}
+\caption{Performance by meta categories of relations, on the random (left) and zero-shot (right) split test sets. For legend information, see \cref{fig:performance_by_rel}.}
+    \label{fig:performance_by_meta_cat}
+\end{figure}
+
+See \cref{tab:results-by-relation-meta-category-random} and \cref{tab:results-by-relation-meta-category-zeroshot}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrrrrr}
+\toprule
+category &  number &  VisualBERT &  LXMERT &  ViLT &  ViLT NLVR2 &  BLIP NLVR2 \\
+\midrule
+All         &    2024 &        0.55 &    0.74 &  0.71 &        0.59 &        0.60 \\
+\midrule
+Adjacency   &     284 &        0.51 &    0.71 &  0.63 &        0.57 &        0.60 \\
+Directional &      90 &        0.57 &    0.69 &  0.56 &        0.48 &        0.54 \\
+Orientation &     112 &        0.51 &    0.55 &  0.54 &        0.55 &        0.56 \\
+Projective  &     773 &        0.54 &    0.77 &  0.72 &        0.60 &        0.61 \\
+Proximity   &     123 &        0.52 &    0.73 &  0.75 &        0.54 &        0.53 \\
+Topological &     591 &        0.59 &    0.77 &  0.79 &        0.63 &        0.61 \\
+Unallocated &      51 &        0.53 &    0.65 &  0.75 &        0.55 &        0.61 \\
+\bottomrule
+\end{tabular}
+\caption{Number and performance by relation meta category on the random split test.}
+\label{tab:results-by-relation-meta-category-random}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrrrrr}
+\toprule
+category &  number &  VisualBERT &  LXMERT &  ViLT &  ViLT NLVR2 &  BLIP NLVR2 \\
+\midrule
+All         &     731 &        0.51 &    0.66 &  0.62 &        0.53 &        0.54 \\
+\midrule
+Adjacency   &     114 &        0.55 &    0.62 &  0.53 &        0.55 &        0.61 \\
+Directional &      40 &        0.50 &    0.52 &  0.52 &        0.25 &        0.40 \\
+Orientation &      42 &        0.48 &    0.48 &  0.60 &        0.64 &        0.48 \\
+Projective  &     286 &        0.50 &    0.70 &  0.61 &        0.54 &        0.51 \\
+Proximity   &      83 &        0.59 &    0.59 &  0.58 &        0.41 &        0.37 \\
+Topological &     124 &        0.48 &    0.74 &  0.77 &        0.56 &        0.68 \\
+Unallocated &      42 &        0.38 &    0.64 &  0.62 &        0.71 &        0.64 \\
+\bottomrule
+\end{tabular}
+\caption{Number and performance by relation meta category on the zero-shot split test.}
+\label{tab:results-by-relation-meta-category-zeroshot}
+\end{table}
