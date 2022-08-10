@@ -54,7 +54,7 @@ for i, instance in enumerate(data_json):
 for k,v in cat_dict.items():
     cat_acc[k] = (sum(v)/len(v), len(v))
 
-cat_acc_sorted = {k: v for k, v in sorted(cat_acc.items(), key=lambda item: item[1][0], reverse=True)}
+cat_acc_sorted = {k: v for k, v in sorted(cat_acc.items(), key=lambda item: item[0][0], reverse=False)}
 
 #for k,v in cat_acc.items():
 for k,v in cat_acc_sorted.items():
