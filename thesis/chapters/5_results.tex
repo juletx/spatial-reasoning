@@ -306,7 +306,60 @@ ViLT (ViT-B/32)                     & 21.43          & 7.14           & 3.57    
 
 \section{Visual Spatial Reasoning}
 
+\subsection{Compared To Humans}
+
+\subsubsection{Baseline}
+
+See \cref{tab:vsr_results_base}. The gap between dev and tests becomes much greater on zero-shot split likely due to the smaller size of both dev and test sets.
+
+\begin{table}[ht]
+\centering
+%\setlength{\tabcolsep}{2.8pt}
+\small
+\begin{tabular}{lcccccc}
+\toprule
+& \multicolumn{2}{c}{random split} &  & \multicolumn{2}{c}{zero-shot split} \\
+\cmidrule(l){2-3} 	\cmidrule(l){4-6}
+model$\downarrow$ & dev & test & & dev & test  \\
+\midrule
+human & \multicolumn{5}{c}{95.4}   \\
+\midrule
+VisualBERT & 59.2$_{\pm0.9}$ & 57.4$_{\pm0.9}$ & & 57.4$_{\pm2.2}$  & 54.0$_{\pm1.3}$  \\ 
+LXMERT & \textbf{73.8}$_{\pm1.2}$  & \textbf{72.5}$_{\pm1.4}$ & & \textbf{69.2}$_{\pm1.0}$  & \textbf{63.2}$_{\pm1.7}$  \\ 
+ViLT & 71.9$_{\pm1.3}$  & 71.0$_{\pm0.7}$  & & 66.7$_{\pm1.7}$  & 62.4$_{\pm1.5}$ \\ 
+\bottomrule
+\end{tabular}
+\caption{Model performance on VSR. Results of both random and zero-shot splits, both validation and tests are listed.}
+\label{tab:vsr_results_base}
+\end{table}
+
+\subsubsection{Ours}
+
 \subsection{Results By Relation}
+
+\subsubsection{Baseline}
+
+See \cref{fig:performance_by_rel_base}
+
+\begin{figure*}
+    \centering
+\begin{subfigure}[b]{\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/visual-spatial-reasoning/performance_by_relation_random_split_v2.png}
+    \vspace{-1cm}
+    \caption{random split}
+\end{subfigure}
+\begin{subfigure}[b]{\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/visual-spatial-reasoning/performance_by_relation_zeroshot_split_v2.png}
+    \vspace{-1cm}
+    \caption{zero-shot split}
+\end{subfigure}
+\caption{Performance by relation on the random (upper) and zero-shot (lower) split test sets. Relation order sorted by frequency (high to low from left to right). Only relations with more than 15 and 5 occurrences on the random and zero-shot tests respectively are shown. }
+    \label{fig:performance_by_rel_base}
+\end{figure*}
+
+\subsubsection{Ours}
 
 See \cref{fig:performance_by_rel}
 
@@ -314,13 +367,13 @@ See \cref{fig:performance_by_rel}
     \centering
 \begin{subfigure}[b]{\linewidth}
     \centering
-    \includegraphics[width=\linewidth]{images/performance_rel_random.png}
+    \includegraphics[width=\linewidth]{images/visual-spatial-reasoning/performance_rel_random.png}
     \vspace{-1cm}
     \caption{random split}
 \end{subfigure}
 \begin{subfigure}[b]{\linewidth}
     \centering
-    \includegraphics[width=\linewidth]{images/performance_rel_zeroshot.png}
+    \includegraphics[width=\linewidth]{images/visual-spatial-reasoning/performance_rel_zeroshot.png}
     \vspace{-1cm}
     \caption{zero-shot split}
 \end{subfigure}
@@ -427,18 +480,40 @@ surrounding          &       5 &        0.40 &    1.00 &  0.60 &        0.40 &  
 
 \subsection{Results By Relation Meta Category}
 
+\subsubsection{Baseline}
+
+See \cref{fig:performance_by_meta_cat_base}
+
+\begin{figure*}
+    \centering
+\begin{subfigure}[b]{0.49\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/visual-spatial-reasoning/performance_by_meta_cat_random_split_v2.png}
+    \caption{random split}
+\end{subfigure}
+\begin{subfigure}[b]{0.49\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/visual-spatial-reasoning/performance_by_meta_cat_zeroshot_split_v2.png}
+    \caption{zero-shot split}
+\end{subfigure}
+\caption{Performance by meta categories of relations, on the random (left) and zero-shot (right) split test sets. For legend information, see \Cref{fig:performance_by_rel_base}.}
+    \label{fig:performance_by_meta_cat_base}
+\end{figure*}
+
+\subsubsection{Ours}
+
 See \cref{fig:performance_by_meta_cat}
 
 \begin{figure}[ht]
     \centering
     \begin{subfigure}[b]{0.49\linewidth}
     \centering
-    \includegraphics[width=\linewidth]{images/performance_rel_meta_cat_random.png}
+    \includegraphics[width=\linewidth]{images/visual-spatial-reasoning/performance_rel_meta_cat_random.png}
     \caption{random split}
      \end{subfigure}
      \begin{subfigure}[b]{0.49\linewidth}
          \centering
-    \includegraphics[width=\linewidth]{images/performance_rel_meta_cat_zeroshot.png}
+    \includegraphics[width=\linewidth]{images/visual-spatial-reasoning/performance_rel_meta_cat_zeroshot.png}
          \caption{zero-shot split}
      \end{subfigure}
 \caption{Performance by meta categories of relations, on the random (left) and zero-shot (right) split test sets. For legend information, see \cref{fig:performance_by_rel}.}
