@@ -1,7 +1,10 @@
 # Analysis scripts
 Using these scripts you can print by-relation and by-meta-category performances of the models.
 
-**Print by-relation performance:**
+## Results By Relation
+Run `eval_compute_acc_by_rel.sh` to compute and save by-relation performance of all models. Run `barplot_rel_random.py` and `barplot_rel_zeroshot.py` to create performance figures and tables.
+
+For example, to compute performance of random split LXMERT:
 ```bash
  python eval_compute_acc_by_rel.py ../data/splits/random/test.jsonl ../results/lxmert_random.txt
 ```
@@ -18,7 +21,10 @@ on top of	0.6322	87
 ...
 ```
 
-**Print per meta-category performace:**
+## Results By Relation Meta Category
+Run `eval_compute_acc_by_rel_meta_cat.sh` to compute and save by-relation performance of all models. Run `barplot_rel_meta_cat_random.py` and `barplot_rel_meta_cat_zeroshot.py` to create performance figures and tables.
+
+For example, to compute performance of random split LXMERT:
 ```
 python eval_compute_acc_by_rel_meta_cat.py ../data/splits/random/test.jsonl ../results/lxmert_random.txt rel_meta_category_dict.txt
 ```

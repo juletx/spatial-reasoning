@@ -19,11 +19,13 @@ df["BLIP NLVR2"] = df_blip_nlvr2["BLIP NLVR2"]
 
 ax = df.plot.barh(y=["VisualBERT", "LXMERT", "ViLT", "ViLT NLVR2", "BLIP NLVR2"], figsize=(5,5))
 
-df.round(2).to_csv("results/zeroshot_rel_meta_cat.tsv", sep="\t")
-df.round(2).to_latex("results/zeroshot_rel_meta_cat.tex")
+df.round(1).to_csv("results/zeroshot_rel_meta_cat.tsv", sep="\t")
+df.round(1).to_latex("results/zeroshot_rel_meta_cat.tex")
 
-plt.axvline(x=0.5, linewidth=1, color='r', linestyle="dashdot", label="random baseline")
-plt.axvline(x=0.954, linewidth=1, color='b', linestyle="dashed", label="human ceiling")
+plt.axvline(x=50, linewidth=1, color='r', linestyle="dashdot", label="random baseline")
+plt.axvline(x=75, linewidth=1, color='gray')
+plt.axvline(x=95.4, linewidth=1, color='b', linestyle="dashed", label="human ceiling")
+plt.xticks([0, 25, 50, 75, 100])
 plt.legend()
 plt.xlabel("accuracy")
 plt.ylabel("")

@@ -1,51 +1,51 @@
-all	0.6156	731
-in front of	0.5395	76
-behind	0.6901	71
-far away from	0.5965	57
-at the left side of	0.5000	32
-next to	0.6250	32
-contains	0.7586	29
-touching	0.7778	27
-at the right side of	0.6800	25
-on	0.7826	23
-above	0.5909	22
-left of	0.5455	22
-on top of	0.9000	20
-under	0.4500	20
-below	0.6111	18
-in	0.8750	16
-parallel to	0.5000	14
-far from	0.7143	14
-facing	0.7857	14
-at the back of	0.5000	14
-across from	0.5714	14
-ahead of	0.3846	13
-away from	0.5000	12
-beside	0.6667	12
-adjacent to	0.3333	12
-right of	0.5833	12
-beneath	0.5455	11
-facing away from	0.6000	10
-inside	0.7500	8
-close to	0.3750	8
-beyond	0.6667	6
-alongside	0.6667	6
-off	0.5000	6
-surrounding	0.6000	5
-at the side of	0.5000	4
-opposite to	0.5000	4
-attached to	0.7500	4
-perpendicular to	0.2500	4
-has as a part	0.7500	4
-down from	0.2500	4
-part of	1.0000	4
-near	0.2500	4
-connected to	0.0000	2
-at the edge of	0.5000	2
-across	1.0000	2
-consists of	0.5000	2
-outside	1.0000	2
-in the middle of	0.5000	2
-along	0.5000	2
-within	0.5000	2
-against	0.5000	2
+all	61.6	731
+in front of	53.9	76
+behind	69.0	71
+far away from	59.6	57
+at the left side of	50.0	32
+next to	62.5	32
+contains	75.9	29
+touching	77.8	27
+at the right side of	68.0	25
+on	78.3	23
+above	59.1	22
+left of	54.5	22
+on top of	90.0	20
+under	45.0	20
+below	61.1	18
+in	87.5	16
+parallel to	50.0	14
+far from	71.4	14
+facing	78.6	14
+at the back of	50.0	14
+across from	57.1	14
+ahead of	38.5	13
+away from	50.0	12
+beside	66.7	12
+adjacent to	33.3	12
+right of	58.3	12
+beneath	54.5	11
+facing away from	60.0	10
+inside	75.0	8
+close to	37.5	8
+beyond	66.7	6
+alongside	66.7	6
+off	50.0	6
+surrounding	60.0	5
+at the side of	50.0	4
+opposite to	50.0	4
+attached to	75.0	4
+perpendicular to	25.0	4
+has as a part	75.0	4
+down from	25.0	4
+part of	100.0	4
+near	25.0	4
+connected to	0.0	2
+at the edge of	50.0	2
+across	100.0	2
+consists of	50.0	2
+outside	100.0	2
+in the middle of	50.0	2
+along	50.0	2
+within	50.0	2
+against	50.0	2

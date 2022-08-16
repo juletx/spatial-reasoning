@@ -48,14 +48,13 @@ for i, instance in enumerate(data_json):
         cat_dict["All"].append(correct)
         cat_dict[rel2cat[instance["relation"]]].append(correct)
     else:
-        print ("no availible meta cat:")
+        print ("no available meta cat:")
         print (instance)
 
 for k,v in cat_dict.items():
     cat_acc[k] = (sum(v)/len(v), len(v))
 
-cat_acc_sorted = {k: v for k, v in sorted(cat_acc.items(), key=lambda item: item[0][0], reverse=False)}
+cat_acc_sorted = dict(sorted(cat_acc.items(), key=lambda item: item[0][0], reverse=False))
 
-#for k,v in cat_acc.items():
 for k,v in cat_acc_sorted.items():
-    print (f"{k}\t{v[0]:.4f}\t{v[1]}")
+    print(f"{k}\t{v[0]*100:.1f}\t{v[1]}")

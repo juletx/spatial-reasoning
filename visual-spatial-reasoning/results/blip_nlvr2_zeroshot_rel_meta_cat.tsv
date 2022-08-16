@@ -1,8 +1,8 @@
-All	0.5390	731
-Adjacency	0.6140	114
-Directional	0.4000	40
-Orientation	0.4762	42
-Proximity	0.3735	83
-Projective	0.5105	286
-Topological	0.6774	124
-Unallocated	0.6429	42
+All	53.9	731
+Adjacency	61.4	114
+Directional	40.0	40
+Orientation	47.6	42
+Projective	51.0	286
+Proximity	37.3	83
+Topological	67.7	124
+Unallocated	64.3	42

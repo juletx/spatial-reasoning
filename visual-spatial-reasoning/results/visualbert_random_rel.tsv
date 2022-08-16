@@ -1,63 +1,63 @@
-all	0.5514	2024
-touching	0.5593	236
-behind	0.4485	136
-on	0.6484	128
-in front of	0.5431	116
-under	0.6250	112
-on top of	0.5057	87
-at the right side of	0.5176	85
-at the left side of	0.4875	80
-beneath	0.6375	80
-above	0.5972	72
-contains	0.5614	57
-in	0.6863	51
-facing	0.5000	50
-far away from	0.5102	49
-inside	0.5918	49
-below	0.5952	42
-next to	0.5610	41
-at the edge of	0.4250	40
-left of	0.5641	39
-beside	0.4412	34
-facing away from	0.5625	32
-away from	0.6129	31
-right of	0.5000	24
-far from	0.4783	23
-close to	0.5714	21
-part of	0.4286	21
-near	0.5238	21
-parallel to	0.3158	19
-at the back of	0.5789	19
-across from	0.6667	18
-over	0.5000	16
-in the middle of	0.4667	15
-off	0.3333	15
-alongside	0.7143	14
-attached to	0.5000	12
-surrounding	0.5833	12
-against	0.6364	11
-adjacent to	0.6364	11
-perpendicular to	0.7273	11
-consists of	0.7778	9
-by	0.5556	9
-at the side of	0.2500	8
-toward	0.4286	7
-within	0.1667	6
-into	0.6667	6
-outside	0.6000	5
-has as a part	0.6000	5
-opposite to	0.6000	5
-ahead of	0.7500	4
-beyond	0.0000	4
-connected to	1.0000	4
-across	0.5000	4
-with	1.0000	3
-past	0.5000	2
-out of	0.0000	2
-along	1.0000	2
-down	1.0000	2
-detached from	0.5000	2
-around	0.0000	2
-enclosed by	1.0000	1
-between	1.0000	1
-down from	1.0000	1
+all	55.1	2024
+touching	55.9	236
+behind	44.9	136
+on	64.8	128
+in front of	54.3	116
+under	62.5	112
+on top of	50.6	87
+at the right side of	51.8	85
+at the left side of	48.8	80
+beneath	63.7	80
+above	59.7	72
+contains	56.1	57
+in	68.6	51
+facing	50.0	50
+far away from	51.0	49
+inside	59.2	49
+below	59.5	42
+next to	56.1	41
+at the edge of	42.5	40
+left of	56.4	39
+beside	44.1	34
+facing away from	56.2	32
+away from	61.3	31
+right of	50.0	24
+far from	47.8	23
+close to	57.1	21
+part of	42.9	21
+near	52.4	21
+parallel to	31.6	19
+at the back of	57.9	19
+across from	66.7	18
+over	50.0	16
+in the middle of	46.7	15
+off	33.3	15
+alongside	71.4	14
+attached to	50.0	12
+surrounding	58.3	12
+against	63.6	11
+adjacent to	63.6	11
+perpendicular to	72.7	11
+consists of	77.8	9
+by	55.6	9
+at the side of	25.0	8
+toward	42.9	7
+within	16.7	6
+into	66.7	6
+outside	60.0	5
+has as a part	60.0	5
+opposite to	60.0	5
+ahead of	75.0	4
+beyond	0.0	4
+connected to	100.0	4
+across	50.0	4
+with	100.0	3
+past	50.0	2
+out of	0.0	2
+along	100.0	2
+down	100.0	2
+detached from	50.0	2
+around	0.0	2
+enclosed by	100.0	1
+between	100.0	1
+down from	100.0	1

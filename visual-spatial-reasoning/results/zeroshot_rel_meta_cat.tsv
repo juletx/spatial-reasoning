@@ -1,9 +1,9 @@
 category	number	VisualBERT	LXMERT	ViLT	ViLT NLVR2	BLIP NLVR2
-All	731	0.51	0.66	0.62	0.53	0.54
-Adjacency	114	0.55	0.62	0.53	0.55	0.61
-Directional	40	0.5	0.52	0.52	0.25	0.4
-Orientation	42	0.48	0.48	0.6	0.64	0.48
-Projective	286	0.5	0.7	0.61	0.54	0.51
-Proximity	83	0.59	0.59	0.58	0.41	0.37
-Topological	124	0.48	0.74	0.77	0.56	0.68
-Unallocated	42	0.38	0.64	0.62	0.71	0.64
+All	731	50.8	65.5	61.6	52.8	53.9
+Adjacency	114	55.3	62.3	52.6	55.3	61.4
+Directional	40	50.0	52.5	52.5	25.0	40.0
+Orientation	42	47.6	47.6	59.5	64.3	47.6
+Proximity	83	59.0	59.0	57.8	41.0	37.3
+Projective	286	50.0	69.6	61.2	53.5	51.0
+Topological	124	48.4	74.2	76.6	55.6	67.7
+Unallocated	42	38.1	64.3	61.9	71.4	64.3
