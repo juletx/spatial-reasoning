@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.insert(1, os.path.join(sys.path[0], '../../../BLIP'))
+
 from models.med import BertConfig, BertModel
 from models.vit import interpolate_pos_embed
 from models.blip import create_vit, init_tokenizer, is_url

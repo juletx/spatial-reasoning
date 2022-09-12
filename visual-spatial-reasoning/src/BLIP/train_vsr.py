@@ -7,7 +7,7 @@
 '''
 import argparse
 import os
-import ruamel_yaml as yaml
+import ruamel.yaml as yaml
 import numpy as np
 import random
 import time
@@ -25,6 +25,9 @@ import torch.backends.cudnn as cudnn
 import torch.distributed as dist
 
 from models.blip_vsr import blip_vsr
+
+import sys
+sys.path.insert(1, os.path.join(sys.path[0], '../../../BLIP'))
 
 import utils
 from utils import cosine_lr_schedule, warmup_lr_schedule

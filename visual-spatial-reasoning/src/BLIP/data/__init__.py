@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.insert(1, os.path.join(sys.path[0], '../../../BLIP'))
+
 import torch
 from torch.utils.data import DataLoader
 from torchvision import transforms
