@@ -1,4 +1,5 @@
 desktop.ini
 __pycache__/
 venv/
+venv3.8.6/
 .ipynb_checkpoints/
