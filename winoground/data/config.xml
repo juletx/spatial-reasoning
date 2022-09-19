@@ -1,0 +1,47 @@
+<View>
+  <Header value="Select which caption describes each image" size="3"/>
+  
+  <View style="display: flex;">
+    <View style="width: 49%; margin-right: 1.99%">
+      <Header value="Caption 0"/>
+      <Text name="caption_0" value="$caption_0"/>
+      <Header value="Example Image 0"/>
+      <Image name="image_0" value="$image_0"/>
+    </View>
+
+    <View style="width: 49%;">
+      <Header value="Caption 1"/>
+      <Text name="caption_1" value="$caption_1"/>
+      <Header value="Example Image 1"/>
+      <Image name="image_1" value="$image_1"/>
+    </View>
+  </View>
+  
+  <View style="display: flex;">
+    <View style="width: 49%; margin-right: 1.99%">
+      <Header value="Generated Image 0"/>
+      <Repeater on="$images_caption_0">
+        <Image name="images_caption_0_{{idx}}" value="$images_caption_0[{{idx}}]"/>
+        <Choices name="class_0_{{idx}}" toName="images_caption_0_{{idx}}">
+            <Choice value="Caption 0"/>
+            <Choice value="Caption 1"/>
+            <Choice value="Both"/>
+            <Choice value="None"/>
+        </Choices>
+      </Repeater>
+    </View>
+
+    <View style="width: 49%;">
+      <Header value="Generated Image 1"/>
+      <Repeater on="$images_caption_1">
+        <Image name="images_caption_1_{{idx}}" value="$images_caption_1[{{idx}}]"/>
+        <Choices name="class_1_{{idx}}" toName="images_caption_1_{{idx}}">
+            <Choice value="Caption 0"/>
+            <Choice value="Caption 1"/>
+            <Choice value="Both"/>
+            <Choice value="None"/>
+        </Choices>
+      </Repeater>
+    </View>
+  </View>
+</View>
