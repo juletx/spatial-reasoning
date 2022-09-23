@@ -1,12 +1,19 @@
 import json
+import random
 
-IMAGE_DIR = "/data/local-files/?d=images/stable_diffusion/"
+random.seed(1)
 
-with open('examples.json', 'r+') as f:
+WINOGROUND_DIR = "/data/local-files/?d=data/images/"
+STABLE_DIFFUSION_DIR = "/data/local-files/?d=images/stable_diffusion/"
+
+with open('examples.json', 'r+', encoding="UTF-8") as f:
     data = json.load(f)
     for i, d in enumerate(data):
-        d['caption_0_images'] = [f'{IMAGE_DIR}ex_{i}_cap_0_img_{j}.png' for j in range(9)]
-        d['caption_1_images'] = [f'{IMAGE_DIR}ex_{i}_cap_1_img_{j}.png' for j in range(9)]
+        d['image_0'] = f"{WINOGROUND_DIR}{d['image_0']}.png"
+        d['image_1'] = f"{WINOGROUND_DIR}{d['image_1']}.png"
+        c = random.choice([0, 1])
+        d['generated_image_0'] = f"{STABLE_DIFFUSION_DIR}ex_{i}_cap_{c}_img_0.png"
+        d['generated_image_1'] = f"{STABLE_DIFFUSION_DIR}ex_{i}_cap_{1 - c}_img_0.png"
     f.seek(0)
     json.dump(data, f, indent=4)
     f.truncate()
