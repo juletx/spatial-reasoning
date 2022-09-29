@@ -7,7 +7,7 @@
       <Text name="caption_0" value="$caption_0"/>
       <Header value="Image 0"/>
       <Image name="generated_image_0" value="$generated_image_0"/>
-      <Choices name="choice_image_0" toName="generated_image_0" showInline="true">
+      <Choices name="choice_image_0" toName="generated_image_0" showInline="true" required="true">
         <Choice value="Caption 0"/>
         <Choice value="Caption 1"/>
         <Choice value="Both"/>
@@ -20,7 +20,7 @@
       <Text name="caption_1" value="$caption_1"/>
       <Header value="Image 1"/>
       <Image name="generated_image_1" value="$generated_image_1"/>
-      <Choices name="choice_image_1" toName="generated_image_1" showInline="true">
+      <Choices name="choice_image_1" toName="generated_image_1" showInline="true" required="true">
         <Choice value="Caption 0"/>
         <Choice value="Caption 1"/>
         <Choice value="Both"/>
