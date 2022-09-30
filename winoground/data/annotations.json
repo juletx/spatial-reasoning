@@ -1589,7 +1589,7 @@
                 "id": 121,
                 "user": "juletxara@gmail.com",
                 "created_username": "Julen Etxaniz juletxara@gmail.com, 1",
-                "created_ago": "1\u00a0hour, 43\u00a0minutes",
+                "created_ago": "17\u00a0hours, 50\u00a0minutes",
                 "result": [
                     {
                         "value": {
@@ -3517,7 +3517,7 @@
                 "id": 7,
                 "user": "andersalaberria@gmail.com",
                 "created_username": "andersalaberria@gmail.com, 2",
-                "created_ago": "6\u00a0days, 2\u00a0hours",
+                "created_ago": "6\u00a0days, 18\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -7076,6 +7076,3576 @@
         "updated_by": 2
     },
     {
+        "id": 101,
+        "annotations": [
+            {
+                "id": 209,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "PkSaXSgUn-",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "tggZF9qkvz",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:37:54.264716Z",
+                "updated_at": "2022-09-29T20:37:54.264748Z",
+                "lead_time": 56.428,
+                "prediction": {},
+                "result_count": 0,
+                "task": 101,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 100,
+            "caption_0": "the happy one is on the left and the upset one is on the right",
+            "caption_1": "the upset one is on the left and the happy one is on the right",
+            "image_0": "/data/local-files/?d=data/images/ex_100_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_100_img_1.png",
+            "tag": "Adjective-Animate",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_100_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_100_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.077129Z",
+        "updated_at": "2022-09-29T20:37:54.348082Z",
+        "inner_id": 101,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 102,
+        "annotations": [
+            {
+                "id": 259,
+                "completed_by": 1,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "JTCy9sUH4O",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "USTI7xUECh",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-30T07:28:52.499185Z",
+                "updated_at": "2022-09-30T07:28:52.499219Z",
+                "lead_time": 2.952,
+                "prediction": {},
+                "result_count": 0,
+                "task": 102,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 101,
+            "caption_0": "fake mustache and real hair on head",
+            "caption_1": "real mustache and fake hair on head",
+            "image_0": "/data/local-files/?d=data/images/ex_101_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_101_img_1.png",
+            "tag": "Adjective-Animate",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_101_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_101_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.077189Z",
+        "updated_at": "2022-09-30T07:28:52.617692Z",
+        "inner_id": 102,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 1
+    },
+    {
+        "id": 103,
+        "annotations": [
+            {
+                "id": 210,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "GUDmBFfuJW",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "0-zMFhif3j",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:39:03.697038Z",
+                "updated_at": "2022-09-29T20:39:03.697088Z",
+                "lead_time": 66.457,
+                "prediction": {},
+                "result_count": 0,
+                "task": 103,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 102,
+            "caption_0": "real cat with toy baby",
+            "caption_1": "toy cat with real baby",
+            "image_0": "/data/local-files/?d=data/images/ex_102_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_102_img_1.png",
+            "tag": "Adjective-Animate",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_102_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_102_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.077249Z",
+        "updated_at": "2022-09-29T20:39:04.534989Z",
+        "inner_id": 103,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 104,
+        "annotations": [
+            {
+                "id": 211,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "VHiOGBctmE",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "mx3R2PNv4s",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:39:13.952317Z",
+                "updated_at": "2022-09-29T20:39:13.952346Z",
+                "lead_time": 8.593,
+                "prediction": {},
+                "result_count": 0,
+                "task": 104,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 103,
+            "caption_0": "the lion is loud and the lionness is quiet",
+            "caption_1": "the lion is quiet and the lionness is loud",
+            "image_0": "/data/local-files/?d=data/images/ex_103_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_103_img_1.png",
+            "tag": "Adjective-Animate",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_103_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_103_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.077309Z",
+        "updated_at": "2022-09-29T20:39:14.037511Z",
+        "inner_id": 104,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 105,
+        "annotations": [
+            {
+                "id": 212,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Both"
+                            ]
+                        },
+                        "id": "5jbpVu1fyE",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "l86Rhrg3yC",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:40:01.752193Z",
+                "updated_at": "2022-09-29T20:40:01.752225Z",
+                "lead_time": 46.928,
+                "prediction": {},
+                "result_count": 0,
+                "task": 105,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 104,
+            "caption_0": "there is a pink couch with green pillows",
+            "caption_1": "there is a green couch with pink pillows",
+            "image_0": "/data/local-files/?d=data/images/ex_104_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_104_img_1.png",
+            "tag": "Adjective-Color",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_104_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_104_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.077369Z",
+        "updated_at": "2022-09-29T20:40:01.834645Z",
+        "inner_id": 105,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 106,
+        "annotations": [
+            {
+                "id": 213,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "uqM6KZSek4",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "GEcaCaMygC",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:41:54.497544Z",
+                "updated_at": "2022-09-29T20:41:54.497575Z",
+                "lead_time": 111.815,
+                "prediction": {},
+                "result_count": 0,
+                "task": 106,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 105,
+            "caption_0": "light colored dog with dark colored cat",
+            "caption_1": "dark colored dog with light colored cat",
+            "image_0": "/data/local-files/?d=data/images/ex_105_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_105_img_1.png",
+            "tag": "Adjective-Color",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_105_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_105_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.077429Z",
+        "updated_at": "2022-09-29T20:41:54.579631Z",
+        "inner_id": 106,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 107,
+        "annotations": [
+            {
+                "id": 214,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "nvQcL-4i39",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "T4yI9q8B-9",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:43:17.144002Z",
+                "updated_at": "2022-09-29T20:43:17.144030Z",
+                "lead_time": 81.575,
+                "prediction": {},
+                "result_count": 0,
+                "task": 107,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 106,
+            "caption_0": "someone is wearing a black hat and yellow shirt",
+            "caption_1": "someone is wearing a yellow hat and black shirt",
+            "image_0": "/data/local-files/?d=data/images/ex_106_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_106_img_1.png",
+            "tag": "Adjective-Color",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_106_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_106_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.077489Z",
+        "updated_at": "2022-09-29T20:43:17.225661Z",
+        "inner_id": 107,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 108,
+        "annotations": [
+            {
+                "id": 215,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "rZONFlVnnk",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "rKwsEvWQKS",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:43:46.214363Z",
+                "updated_at": "2022-09-29T20:43:46.214396Z",
+                "lead_time": 28.078,
+                "prediction": {},
+                "result_count": 0,
+                "task": 108,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 107,
+            "caption_0": "black socks and orange shoes",
+            "caption_1": "orange socks and black shoes",
+            "image_0": "/data/local-files/?d=data/images/ex_107_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_107_img_1.png",
+            "tag": "Adjective-Color",
+            "secondary_tag": "Symbolic",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_107_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_107_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.077549Z",
+        "updated_at": "2022-09-29T20:43:46.296580Z",
+        "inner_id": 108,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 109,
+        "annotations": [
+            {
+                "id": 216,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "gOmE5a0Tg6",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "2OJcQcCxXD",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:44:12.260803Z",
+                "updated_at": "2022-09-29T20:44:12.260839Z",
+                "lead_time": 25.016,
+                "prediction": {},
+                "result_count": 0,
+                "task": 109,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 108,
+            "caption_0": "red building with white shutters",
+            "caption_1": "white building with red shutters",
+            "image_0": "/data/local-files/?d=data/images/ex_108_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_108_img_1.png",
+            "tag": "Adjective-Color",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_108_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_108_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.077609Z",
+        "updated_at": "2022-09-29T20:44:12.342905Z",
+        "inner_id": 109,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 110,
+        "annotations": [
+            {
+                "id": 217,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "bfwNE-mzvA",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "9Pjo0dl_OO",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:44:46.366433Z",
+                "updated_at": "2022-09-29T20:44:46.366467Z",
+                "lead_time": 33.148,
+                "prediction": {},
+                "result_count": 0,
+                "task": 110,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 109,
+            "caption_0": "blue pants and green top",
+            "caption_1": "green pants and blue top",
+            "image_0": "/data/local-files/?d=data/images/ex_109_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_109_img_1.png",
+            "tag": "Adjective-Color",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_109_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_109_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.077669Z",
+        "updated_at": "2022-09-29T20:44:46.449180Z",
+        "inner_id": 110,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 111,
+        "annotations": [
+            {
+                "id": 218,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "SMV_R5w5w2",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "BvLI0uVhni",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:45:05.960921Z",
+                "updated_at": "2022-09-29T20:45:05.960953Z",
+                "lead_time": 18.694,
+                "prediction": {},
+                "result_count": 0,
+                "task": 111,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 110,
+            "caption_0": "there's one blue and many yellow balls",
+            "caption_1": "there's one yellow and many blue balls",
+            "image_0": "/data/local-files/?d=data/images/ex_110_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_110_img_1.png",
+            "tag": "Adjective-Color",
+            "secondary_tag": "Symbolic",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_110_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_110_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.077729Z",
+        "updated_at": "2022-09-29T20:45:06.046482Z",
+        "inner_id": 111,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 112,
+        "annotations": [
+            {
+                "id": 219,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "7K7wzB4Y6z",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "XGRDHxd3yp",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:45:28.665261Z",
+                "updated_at": "2022-09-29T20:45:28.665294Z",
+                "lead_time": 21.856,
+                "prediction": {},
+                "result_count": 0,
+                "task": 112,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 111,
+            "caption_0": "there are more silver coins than gold coins",
+            "caption_1": "there are more gold coins than silver coins",
+            "image_0": "/data/local-files/?d=data/images/ex_111_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_111_img_1.png",
+            "tag": "Adjective-Color",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_111_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_111_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.077794Z",
+        "updated_at": "2022-09-29T20:45:28.750224Z",
+        "inner_id": 112,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 113,
+        "annotations": [
+            {
+                "id": 220,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "9fxdnfoiBt",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "6OaA-HvBuB",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:47:02.792355Z",
+                "updated_at": "2022-09-29T20:47:02.792388Z",
+                "lead_time": 93.124,
+                "prediction": {},
+                "result_count": 0,
+                "task": 113,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 112,
+            "caption_0": "the red team kicking the ball directly next to the blue team",
+            "caption_1": "the blue team kicking the ball directly next to the red team",
+            "image_0": "/data/local-files/?d=data/images/ex_112_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_112_img_1.png",
+            "tag": "Adjective-Color",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_112_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_112_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.077856Z",
+        "updated_at": "2022-09-29T20:47:02.877566Z",
+        "inner_id": 113,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 114,
+        "annotations": [
+            {
+                "id": 221,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "S6H-5t4dzK",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "0NZHXdBQZ6",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:47:41.910054Z",
+                "updated_at": "2022-09-29T20:47:41.910088Z",
+                "lead_time": 38.045,
+                "prediction": {},
+                "result_count": 0,
+                "task": 114,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 113,
+            "caption_0": "black dog wearing a brown sweater",
+            "caption_1": "brown dog wearing a black sweater",
+            "image_0": "/data/local-files/?d=data/images/ex_113_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_113_img_1.png",
+            "tag": "Adjective-Color",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_113_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_113_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.077942Z",
+        "updated_at": "2022-09-29T20:47:41.992618Z",
+        "inner_id": 114,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 115,
+        "annotations": [
+            {
+                "id": 222,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "-q2P96cSiZ",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "pclrk3V3rG",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:48:20.959790Z",
+                "updated_at": "2022-09-29T20:48:20.959824Z",
+                "lead_time": 38.091,
+                "prediction": {},
+                "result_count": 0,
+                "task": 115,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 114,
+            "caption_0": "one green apple surrounded by a bunch of red apples",
+            "caption_1": "one red apple surrounded by a bunch of green apples",
+            "image_0": "/data/local-files/?d=data/images/ex_114_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_114_img_1.png",
+            "tag": "Adjective-Color",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_114_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_114_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.078051Z",
+        "updated_at": "2022-09-29T20:48:21.042930Z",
+        "inner_id": 115,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 116,
+        "annotations": [
+            {
+                "id": 223,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "ON_neAFOU_",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "V4kEel1Clm",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:49:02.793368Z",
+                "updated_at": "2022-09-29T20:49:02.793417Z",
+                "lead_time": 38.926,
+                "prediction": {},
+                "result_count": 0,
+                "task": 116,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 115,
+            "caption_0": "person in white is reading the orange book",
+            "caption_1": "person in orange is reading the white book",
+            "image_0": "/data/local-files/?d=data/images/ex_115_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_115_img_1.png",
+            "tag": "Adjective-Color",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_115_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_115_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.078149Z",
+        "updated_at": "2022-09-29T20:49:03.305548Z",
+        "inner_id": 116,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 117,
+        "annotations": [
+            {
+                "id": 224,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "oSAI39DY3l",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "OmIlKT4XW7",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:50:41.314816Z",
+                "updated_at": "2022-09-29T20:50:41.314851Z",
+                "lead_time": 97.075,
+                "prediction": {},
+                "result_count": 0,
+                "task": 117,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 116,
+            "caption_0": "the children are being quiet while the adult is loud",
+            "caption_1": "the children are being loud while the adult is quiet",
+            "image_0": "/data/local-files/?d=data/images/ex_116_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_116_img_1.png",
+            "tag": "Adjective-Manner",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_116_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_116_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.078260Z",
+        "updated_at": "2022-09-29T20:50:41.417611Z",
+        "inner_id": 117,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 118,
+        "annotations": [
+            {
+                "id": 225,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "Agcp0X5676",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "Vi7e7jse-m",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:51:48.310349Z",
+                "updated_at": "2022-09-29T20:51:48.310382Z",
+                "lead_time": 65.794,
+                "prediction": {},
+                "result_count": 0,
+                "task": 118,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 117,
+            "caption_0": "the circular mirror is on the left and the rectangular mirror is on the right",
+            "caption_1": "the rectangular mirror is on the left and the circular mirror is on the right",
+            "image_0": "/data/local-files/?d=data/images/ex_117_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_117_img_1.png",
+            "tag": "Adjective-Shape",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_117_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_117_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.078368Z",
+        "updated_at": "2022-09-29T20:51:48.401339Z",
+        "inner_id": 118,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 119,
+        "annotations": [
+            {
+                "id": 226,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "SD1n0LCAuX",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "6iySmPqbKH",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:52:48.827420Z",
+                "updated_at": "2022-09-29T20:52:48.827453Z",
+                "lead_time": 59.508,
+                "prediction": {},
+                "result_count": 0,
+                "task": 119,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 118,
+            "caption_0": "circular food on heart-shaped wood",
+            "caption_1": "heart-shaped food on circular wood",
+            "image_0": "/data/local-files/?d=data/images/ex_118_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_118_img_1.png",
+            "tag": "Adjective-Shape",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_118_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_118_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.078473Z",
+        "updated_at": "2022-09-29T20:52:48.941093Z",
+        "inner_id": 119,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 120,
+        "annotations": [
+            {
+                "id": 227,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "L0yQ2KkJVL",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "r8Yij8v7JY",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:53:03.500084Z",
+                "updated_at": "2022-09-29T20:53:03.500120Z",
+                "lead_time": 13.517,
+                "prediction": {},
+                "result_count": 0,
+                "task": 120,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 119,
+            "caption_0": "the dress on the left is long and the dress on the right is short",
+            "caption_1": "the dress on the left is short and the dress on the right is long",
+            "image_0": "/data/local-files/?d=data/images/ex_119_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_119_img_1.png",
+            "tag": "Adjective-Size",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_119_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_119_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.078574Z",
+        "updated_at": "2022-09-29T20:53:03.589049Z",
+        "inner_id": 120,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 121,
+        "annotations": [
+            {
+                "id": 228,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "2gf5BrdGS_",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "fmrn4OiTpg",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:53:37.361593Z",
+                "updated_at": "2022-09-29T20:53:37.361627Z",
+                "lead_time": 32.782,
+                "prediction": {},
+                "result_count": 0,
+                "task": 121,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 120,
+            "caption_0": "the balloon in the middle has less air and the other balloons have more air",
+            "caption_1": "the balloon in the middle has more air and the other balloons have less air",
+            "image_0": "/data/local-files/?d=data/images/ex_120_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_120_img_1.png",
+            "tag": "Adjective-Size",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_120_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_120_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.078684Z",
+        "updated_at": "2022-09-29T20:53:37.448925Z",
+        "inner_id": 121,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 122,
+        "annotations": [
+            {
+                "id": 229,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "uMWvWCBaFU",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "bFpR89g3-0",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:54:46.931434Z",
+                "updated_at": "2022-09-29T20:54:46.931467Z",
+                "lead_time": 68.462,
+                "prediction": {},
+                "result_count": 0,
+                "task": 122,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 121,
+            "caption_0": "the pool has no people and the area around it has a lot of people",
+            "caption_1": "the pool has a lot of people and the area around it has no people",
+            "image_0": "/data/local-files/?d=data/images/ex_121_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_121_img_1.png",
+            "tag": "Adjective-Size",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_121_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_121_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.078790Z",
+        "updated_at": "2022-09-29T20:54:47.021772Z",
+        "inner_id": 122,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 123,
+        "annotations": [
+            {
+                "id": 230,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "Mtm4l6qB9C",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "1mAEAxNNlu",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:55:35.115107Z",
+                "updated_at": "2022-09-29T20:55:35.115140Z",
+                "lead_time": 47.019,
+                "prediction": {},
+                "result_count": 0,
+                "task": 123,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 122,
+            "caption_0": "big fish beside a small person",
+            "caption_1": "small fish beside a big person",
+            "image_0": "/data/local-files/?d=data/images/ex_122_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_122_img_1.png",
+            "tag": "Adjective-Size",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_122_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_122_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.078888Z",
+        "updated_at": "2022-09-29T20:55:35.200379Z",
+        "inner_id": 123,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 124,
+        "annotations": [
+            {
+                "id": 231,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "7-LrotZo_Z",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "MX-Qb1xFpP",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:55:50.935676Z",
+                "updated_at": "2022-09-29T20:55:50.935706Z",
+                "lead_time": 14.797,
+                "prediction": {},
+                "result_count": 0,
+                "task": 124,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 123,
+            "caption_0": "the train is moving fast while the person is still",
+            "caption_1": "the train is still while the person is moving fast",
+            "image_0": "/data/local-files/?d=data/images/ex_123_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_123_img_1.png",
+            "tag": "Adjective-Speed",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_123_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_123_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.078989Z",
+        "updated_at": "2022-09-29T20:55:51.022986Z",
+        "inner_id": 124,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 125,
+        "annotations": [
+            {
+                "id": 232,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "eSyUmoCUop",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "8VcOfdKwRb",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:56:29.608961Z",
+                "updated_at": "2022-09-29T20:56:29.609011Z",
+                "lead_time": 37.59,
+                "prediction": {},
+                "result_count": 0,
+                "task": 125,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 124,
+            "caption_0": "they're enjoying hot water on a cold day",
+            "caption_1": "they're enjoying cold water on a hot day",
+            "image_0": "/data/local-files/?d=data/images/ex_124_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_124_img_1.png",
+            "tag": "Adjective-Temperature",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_124_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_124_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.079095Z",
+        "updated_at": "2022-09-29T20:56:29.695084Z",
+        "inner_id": 125,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 126,
+        "annotations": [
+            {
+                "id": 233,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "bGfd5a4DkQ",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "H3wQZzDBK0",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:56:58.621201Z",
+                "updated_at": "2022-09-29T20:56:58.621247Z",
+                "lead_time": 27.982,
+                "prediction": {},
+                "result_count": 0,
+                "task": 126,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 125,
+            "caption_0": "concrete floors with wood walls",
+            "caption_1": "wood floors with concrete walls",
+            "image_0": "/data/local-files/?d=data/images/ex_125_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_125_img_1.png",
+            "tag": "Adjective-Texture",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_125_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_125_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.079199Z",
+        "updated_at": "2022-09-29T20:56:58.714795Z",
+        "inner_id": 126,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 127,
+        "annotations": [
+            {
+                "id": 234,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "hOY_QqPhDt",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "uzeCnzKS55",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:57:46.557748Z",
+                "updated_at": "2022-09-29T20:57:46.557784Z",
+                "lead_time": 46.857,
+                "prediction": {},
+                "result_count": 0,
+                "task": 127,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 126,
+            "caption_0": "the person on the left has curly hair and the person on the right has straight hair",
+            "caption_1": "the person on the left has straight hair and the person on the right has curly hair",
+            "image_0": "/data/local-files/?d=data/images/ex_126_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_126_img_1.png",
+            "tag": "Adjective-Texture",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_126_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_126_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.079304Z",
+        "updated_at": "2022-09-29T20:57:46.643666Z",
+        "inner_id": 127,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 128,
+        "annotations": [
+            {
+                "id": 235,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "c_vtn4_xgR",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "YlcZR6xiVm",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:58:23.156468Z",
+                "updated_at": "2022-09-29T20:58:23.156505Z",
+                "lead_time": 35.487,
+                "prediction": {},
+                "result_count": 0,
+                "task": 128,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 127,
+            "caption_0": "there's a metal bottle with a plastic lid",
+            "caption_1": "there's a plastic bottle with a metal lid",
+            "image_0": "/data/local-files/?d=data/images/ex_127_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_127_img_1.png",
+            "tag": "Adjective-Texture",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_127_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_127_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.079407Z",
+        "updated_at": "2022-09-29T20:58:23.269106Z",
+        "inner_id": 128,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 129,
+        "annotations": [
+            {
+                "id": 236,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "D_0kxhSroN",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "2poqWMX0Qb",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:58:47.471048Z",
+                "updated_at": "2022-09-29T20:58:47.471082Z",
+                "lead_time": 23.184,
+                "prediction": {},
+                "result_count": 0,
+                "task": 129,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 128,
+            "caption_0": "the fruit is heavy while the junk food is light",
+            "caption_1": "the fruit is light while the junk food is heavy",
+            "image_0": "/data/local-files/?d=data/images/ex_128_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_128_img_1.png",
+            "tag": "Adjective-Weight",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_128_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_128_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.079491Z",
+        "updated_at": "2022-09-29T20:58:47.553878Z",
+        "inner_id": 129,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 130,
+        "annotations": [
+            {
+                "id": 237,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "JdCUES05i7",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "xoswYcHiaG",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T20:59:48.397765Z",
+                "updated_at": "2022-09-29T20:59:48.397802Z",
+                "lead_time": 59.91,
+                "prediction": {},
+                "result_count": 0,
+                "task": 130,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 129,
+            "caption_0": "the car is sitting upside down while the person is standing rightside up",
+            "caption_1": "the car is sitting rightside up while the person is standing upside down",
+            "image_0": "/data/local-files/?d=data/images/ex_129_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_129_img_1.png",
+            "tag": "Adverb-Spatial",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_129_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_129_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.079554Z",
+        "updated_at": "2022-09-29T20:59:48.495145Z",
+        "inner_id": 130,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 131,
+        "annotations": [
+            {
+                "id": 238,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "pPs2_BYpVI",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "sAp8n05jsv",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:00:05.977677Z",
+                "updated_at": "2022-09-29T21:00:05.977716Z",
+                "lead_time": 16.406,
+                "prediction": {},
+                "result_count": 0,
+                "task": 131,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 130,
+            "caption_0": "the cup on the left is filled first and the cup on the right is filled second",
+            "caption_1": "the cup on the left is filled second and the cup on the right is filled first",
+            "image_0": "/data/local-files/?d=data/images/ex_130_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_130_img_1.png",
+            "tag": "Adverb-Temporal",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_130_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_130_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.079616Z",
+        "updated_at": "2022-09-29T21:00:06.065825Z",
+        "inner_id": 131,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 132,
+        "annotations": [
+            {
+                "id": 239,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "gnd6DPN9li",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "J26igVxydK",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:00:29.763346Z",
+                "updated_at": "2022-09-29T21:00:29.763380Z",
+                "lead_time": 22.693,
+                "prediction": {},
+                "result_count": 0,
+                "task": 132,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 131,
+            "caption_0": "milk cow",
+            "caption_1": "cow milk",
+            "image_0": "/data/local-files/?d=data/images/ex_131_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_131_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_131_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_131_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.079678Z",
+        "updated_at": "2022-09-29T21:00:29.847505Z",
+        "inner_id": 132,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 133,
+        "annotations": [
+            {
+                "id": 240,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "iKPNww7jP1",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "kYHXUU7Ujn",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:00:57.966709Z",
+                "updated_at": "2022-09-29T21:00:57.966742Z",
+                "lead_time": 27.096,
+                "prediction": {},
+                "result_count": 0,
+                "task": 133,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 132,
+            "caption_0": "there is a clock wall",
+            "caption_1": "there is a wall clock",
+            "image_0": "/data/local-files/?d=data/images/ex_132_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_132_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_132_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_132_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.079739Z",
+        "updated_at": "2022-09-29T21:00:58.068451Z",
+        "inner_id": 133,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 134,
+        "annotations": [
+            {
+                "id": 241,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "0O1H387dI2",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "E27-3_YOqQ",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:01:16.359299Z",
+                "updated_at": "2022-09-29T21:01:16.359332Z",
+                "lead_time": 17.294,
+                "prediction": {},
+                "result_count": 0,
+                "task": 134,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 133,
+            "caption_0": "there is a split banana",
+            "caption_1": "there is a banana split",
+            "image_0": "/data/local-files/?d=data/images/ex_133_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_133_img_1.png",
+            "tag": "Altered POS",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Both",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_133_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_133_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.079805Z",
+        "updated_at": "2022-09-29T21:01:16.445596Z",
+        "inner_id": 134,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 135,
+        "annotations": [
+            {
+                "id": 242,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "3Xi0BG-N9Z",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "voNLw2Ps2A",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:01:39.614470Z",
+                "updated_at": "2022-09-29T21:01:39.614504Z",
+                "lead_time": 22.239,
+                "prediction": {},
+                "result_count": 0,
+                "task": 135,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 134,
+            "caption_0": "there are two people and a bunch of horses",
+            "caption_1": "there are a bunch of people and two horses",
+            "image_0": "/data/local-files/?d=data/images/ex_134_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_134_img_1.png",
+            "tag": "Determiner-Numeral",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_134_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_134_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.079866Z",
+        "updated_at": "2022-09-29T21:01:39.698356Z",
+        "inner_id": 135,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 136,
+        "annotations": [
+            {
+                "id": 243,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "_2xQgzsyWF",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "3ML3ujm0Bp",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:02:07.663121Z",
+                "updated_at": "2022-09-29T21:02:07.663152Z",
+                "lead_time": 27.116,
+                "prediction": {},
+                "result_count": 0,
+                "task": 136,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 135,
+            "caption_0": "three white and two brown eggs",
+            "caption_1": "two white and three brown eggs",
+            "image_0": "/data/local-files/?d=data/images/ex_135_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_135_img_1.png",
+            "tag": "Determiner-Numeral",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_135_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_135_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.079928Z",
+        "updated_at": "2022-09-29T21:02:07.746080Z",
+        "inner_id": 136,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 137,
+        "annotations": [
+            {
+                "id": 244,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "aIzc8Mes8J",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "GUJVw367VT",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:02:46.326416Z",
+                "updated_at": "2022-09-29T21:02:46.326448Z",
+                "lead_time": 37.589,
+                "prediction": {},
+                "result_count": 0,
+                "task": 137,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 136,
+            "caption_0": "the plastic is in the fish",
+            "caption_1": "the fish is in the plastic",
+            "image_0": "/data/local-files/?d=data/images/ex_136_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_136_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "Symbolic",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_136_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_136_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.080008Z",
+        "updated_at": "2022-09-29T21:02:46.410224Z",
+        "inner_id": 137,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 138,
+        "annotations": [
+            {
+                "id": 245,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "4wpb4a55VB",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "qw2iBg0eSr",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:03:01.982465Z",
+                "updated_at": "2022-09-29T21:03:01.982498Z",
+                "lead_time": 14.576,
+                "prediction": {},
+                "result_count": 0,
+                "task": 138,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 137,
+            "caption_0": "the dog's paw is on the cat's face",
+            "caption_1": "the cat's paw is on the dog's face",
+            "image_0": "/data/local-files/?d=data/images/ex_137_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_137_img_1.png",
+            "tag": "Determiner-Possessive",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_137_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_137_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.080069Z",
+        "updated_at": "2022-09-29T21:03:02.066912Z",
+        "inner_id": 138,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 139,
+        "annotations": [
+            {
+                "id": 246,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "ES31cxzflh",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "zbNqBk5oxp",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:03:21.841713Z",
+                "updated_at": "2022-09-29T21:03:21.841744Z",
+                "lead_time": 18.757,
+                "prediction": {},
+                "result_count": 0,
+                "task": 139,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 138,
+            "caption_0": "the computer's screen is on and the phone's screen is off",
+            "caption_1": "the phone's screen is on and the computer's screen is off",
+            "image_0": "/data/local-files/?d=data/images/ex_138_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_138_img_1.png",
+            "tag": "Determiner-Possessive",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_138_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_138_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.080131Z",
+        "updated_at": "2022-09-29T21:03:21.925360Z",
+        "inner_id": 139,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 140,
+        "annotations": [
+            {
+                "id": 247,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "WPQ2ae25gm",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "i-oPxNHt_Y",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:03:42.083762Z",
+                "updated_at": "2022-09-29T21:03:42.083791Z",
+                "lead_time": 19.155,
+                "prediction": {},
+                "result_count": 0,
+                "task": 140,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 139,
+            "caption_0": "the dog is in the driver's seat and the person is in the passenger's seat",
+            "caption_1": "the dog is in the passenger's seat and the person is in the driver's seat",
+            "image_0": "/data/local-files/?d=data/images/ex_139_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_139_img_1.png",
+            "tag": "Determiner-Possessive",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_139_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_139_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.080192Z",
+        "updated_at": "2022-09-29T21:03:42.164113Z",
+        "inner_id": 140,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 141,
+        "annotations": [
+            {
+                "id": 248,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "2k9aUpk0xC",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "AprKWgUMxN",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:03:56.420460Z",
+                "updated_at": "2022-09-29T21:03:56.420496Z",
+                "lead_time": 13.191,
+                "prediction": {},
+                "result_count": 0,
+                "task": 141,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 140,
+            "caption_0": "there are more trees than people",
+            "caption_1": "there are more people than trees",
+            "image_0": "/data/local-files/?d=data/images/ex_140_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_140_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_140_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_140_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.080252Z",
+        "updated_at": "2022-09-29T21:03:56.503554Z",
+        "inner_id": 141,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 142,
+        "annotations": [
+            {
+                "id": 249,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "-KJ7GC5InQ",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "fSveWoYYcY",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:04:13.097822Z",
+                "updated_at": "2022-09-29T21:04:13.097856Z",
+                "lead_time": 15.528,
+                "prediction": {},
+                "result_count": 0,
+                "task": 142,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 141,
+            "caption_0": "there are more computers than people",
+            "caption_1": "there are more people than computers",
+            "image_0": "/data/local-files/?d=data/images/ex_141_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_141_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_141_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_141_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.080311Z",
+        "updated_at": "2022-09-29T21:04:13.182670Z",
+        "inner_id": 142,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 143,
+        "annotations": [
+            {
+                "id": 250,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "vIzsVo1FJW",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "yzfebxQDOv",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:04:33.943625Z",
+                "updated_at": "2022-09-29T21:04:33.943657Z",
+                "lead_time": 19.78,
+                "prediction": {},
+                "result_count": 0,
+                "task": 143,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 142,
+            "caption_0": "there is more wood than metal",
+            "caption_1": "there is more metal than wood",
+            "image_0": "/data/local-files/?d=data/images/ex_142_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_142_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_142_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_142_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.083324Z",
+        "updated_at": "2022-09-29T21:04:34.027092Z",
+        "inner_id": 143,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 144,
+        "annotations": [
+            {
+                "id": 251,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "LShQ5SvFAV",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "zSBGRrO3lO",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:05:11.326985Z",
+                "updated_at": "2022-09-29T21:05:11.327018Z",
+                "lead_time": 36.472,
+                "prediction": {},
+                "result_count": 0,
+                "task": 144,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 143,
+            "caption_0": "there are more hats than people",
+            "caption_1": "there are more people than hats",
+            "image_0": "/data/local-files/?d=data/images/ex_143_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_143_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_143_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_143_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.083420Z",
+        "updated_at": "2022-09-29T21:05:11.409040Z",
+        "inner_id": 144,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 145,
+        "annotations": [
+            {
+                "id": 252,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "9hOMHDu8C8",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "N9lFJeUCOK",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:05:33.369811Z",
+                "updated_at": "2022-09-29T21:05:33.369845Z",
+                "lead_time": 21.04,
+                "prediction": {},
+                "result_count": 0,
+                "task": 145,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 144,
+            "caption_0": "there are more people than stools",
+            "caption_1": "there are more stools than people",
+            "image_0": "/data/local-files/?d=data/images/ex_144_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_144_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_144_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_144_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.083492Z",
+        "updated_at": "2022-09-29T21:05:33.456247Z",
+        "inner_id": 145,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 146,
+        "annotations": [
+            {
+                "id": 253,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "uLlii9c9S8",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "T_AWmhlknP",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:06:00.523817Z",
+                "updated_at": "2022-09-29T21:06:00.523848Z",
+                "lead_time": 26.182,
+                "prediction": {},
+                "result_count": 0,
+                "task": 146,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 145,
+            "caption_0": "there is more red wine than white wine",
+            "caption_1": "there is more white wine than red wine",
+            "image_0": "/data/local-files/?d=data/images/ex_145_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_145_img_1.png",
+            "tag": "Adjective-Color",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_145_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_145_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.083555Z",
+        "updated_at": "2022-09-29T21:06:00.605529Z",
+        "inner_id": 146,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 147,
+        "annotations": [
+            {
+                "id": 254,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "yC2F7RbnZa",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "3j4cDgl3EU",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:06:16.931737Z",
+                "updated_at": "2022-09-29T21:06:16.931777Z",
+                "lead_time": 15.473,
+                "prediction": {},
+                "result_count": 0,
+                "task": 147,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 146,
+            "caption_0": "there's more milk than coffee",
+            "caption_1": "there's more coffee than milk",
+            "image_0": "/data/local-files/?d=data/images/ex_146_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_146_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_146_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_146_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.083615Z",
+        "updated_at": "2022-09-29T21:06:17.016662Z",
+        "inner_id": 147,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 148,
+        "annotations": [
+            {
+                "id": 255,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "cuyM1w00u4",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "n7sZzTpkyX",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:06:36.036341Z",
+                "updated_at": "2022-09-29T21:06:36.036371Z",
+                "lead_time": 18.011,
+                "prediction": {},
+                "result_count": 0,
+                "task": 148,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 147,
+            "caption_0": "there's more cereal in the bowl than milk",
+            "caption_1": "there's more milk in the bowl than cereal",
+            "image_0": "/data/local-files/?d=data/images/ex_147_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_147_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_147_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_147_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.083675Z",
+        "updated_at": "2022-09-29T21:06:36.117251Z",
+        "inner_id": 148,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 149,
+        "annotations": [
+            {
+                "id": 256,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "xZIZqjK9gW",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "B7dr4BTvAy",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:06:54.721903Z",
+                "updated_at": "2022-09-29T21:06:54.721936Z",
+                "lead_time": 17.672,
+                "prediction": {},
+                "result_count": 0,
+                "task": 149,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 148,
+            "caption_0": "boat sail",
+            "caption_1": "sail boat",
+            "image_0": "/data/local-files/?d=data/images/ex_148_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_148_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_148_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_148_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.083735Z",
+        "updated_at": "2022-09-29T21:06:54.803913Z",
+        "inner_id": 149,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 150,
+        "annotations": [
+            {
+                "id": 257,
+                "completed_by": 3,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "mBkRCwIjka",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "QQwS9mt86q",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-29T21:07:10.099914Z",
+                "updated_at": "2022-09-29T21:07:10.099949Z",
+                "lead_time": 14.348,
+                "prediction": {},
+                "result_count": 0,
+                "task": 150,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 149,
+            "caption_0": "boat house",
+            "caption_1": "house boat",
+            "image_0": "/data/local-files/?d=data/images/ex_149_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_149_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_149_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_149_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.083806Z",
+        "updated_at": "2022-09-29T21:07:10.182615Z",
+        "inner_id": 150,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 3
+    },
+    {
+        "id": 151,
+        "annotations": [
+            {
+                "id": 260,
+                "completed_by": 1,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "tA6PFfDcrZ",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "P1OU4fuyTC",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-09-30T07:29:50.595044Z",
+                "updated_at": "2022-09-30T07:29:50.595077Z",
+                "lead_time": 2.194,
+                "prediction": {},
+                "result_count": 0,
+                "task": 151,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 150,
+            "caption_0": "check a rip",
+            "caption_1": "rip a check",
+            "image_0": "/data/local-files/?d=data/images/ex_150_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_150_img_1.png",
+            "tag": "Altered POS",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Both",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_150_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_150_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.083867Z",
+        "updated_at": "2022-09-30T07:29:50.682617Z",
+        "inner_id": 151,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 1
+    },
+    {
         "id": 201,
         "annotations": [
             {
@@ -10625,7 +14195,7 @@
                 "id": 15,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -10733,7 +14303,7 @@
                 "id": 16,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -10841,7 +14411,7 @@
                 "id": 17,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -10937,7 +14507,7 @@
                 "id": 18,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -11045,7 +14615,7 @@
                 "id": 25,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -11141,7 +14711,7 @@
                 "id": 24,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -11249,7 +14819,7 @@
                 "id": 26,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -11357,7 +14927,7 @@
                 "id": 27,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -11593,7 +15163,7 @@
                 "id": 28,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -11689,7 +15259,7 @@
                 "id": 29,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -11797,7 +15367,7 @@
                 "id": 30,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -11975,7 +15545,7 @@
                 "id": 31,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -12083,7 +15653,7 @@
                 "id": 32,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -12331,7 +15901,7 @@
                 "id": 33,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -12439,7 +16009,7 @@
                 "id": 34,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -12617,7 +16187,7 @@
                 "id": 35,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -12795,7 +16365,7 @@
                 "id": 36,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -13043,7 +16613,7 @@
                 "id": 37,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 21\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -14271,7 +17841,7 @@
                 "id": 20,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -14379,7 +17949,7 @@
                 "id": 19,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -14557,7 +18127,7 @@
                 "id": 21,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -14665,7 +18235,7 @@
                 "id": 22,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "3\u00a0days, 22\u00a0hours",
+                "created_ago": "4\u00a0days, 14\u00a0hours",
                 "result": [
                     {
                         "value": {
