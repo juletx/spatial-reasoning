@@ -1,0 +1,1 @@
+jq --slurp . < ../data/examples.jsonl > examples.json
