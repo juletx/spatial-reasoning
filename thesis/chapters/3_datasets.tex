@@ -6,7 +6,7 @@ This chapter introduces the datasets and metrics we used.
 
 See \cref{tab:stats-tag-subset}
 
-See \cref{fig:dataset-examples-linguistic} and \cref{fig:dataset-examples-visual}
+See \cref{fig:dataset-examples}, \cref{fig:dataset-examples-linguistic} and \cref{fig:dataset-examples-visual}
 
 \begin{table}
 \centering
@@ -28,6 +28,55 @@ See \cref{fig:dataset-examples-linguistic} and \cref{fig:dataset-examples-visual
 \caption{Linguistic and visual tag counts in the Winoground dataset. Every example has a linguistic tag; only examples that contain the visual phenomena have visual tags.}
 \label{tab:stats-tag-subset}
 \end{table}
+
+% add stable diffusion images for all examples
+
+\begin{figure}
+\centering
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_155_img_0.png}
+        \caption{[some plants] surrounding [a lightbulb]}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_155_img_1.png}
+        \caption{[a lightbulb] surrounding [some plants]}
+        \end{subfigure}%    
+        \caption*{\textit{Object}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_29_img_0.png}
+        \caption{a [brown] dog is on a [white] couch}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_29_img_1.png}
+        \caption{a [white] dog is on a [brown] couch}
+        \end{subfigure}%    
+        \caption*{\textit{Relation}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_118_img_1.png}
+        \caption{[circular] food on [heart-shaped] wood}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_118_img_0.png}
+        \caption{[heart-shaped] food on [circular] wood}
+        \end{subfigure}%
+        \caption*{\textit{Relation}}
+    \end{minipage}%
+    \caption[]{Examples from the dataset for the swap-dependent linguistic tags \textit{Object}, \textit{Relation} and \textit{Relation} from left to right. The linguistic examples are additionally tagged with 1 main predicate.}
+    \label{fig:dataset-examples}
+\end{figure}
 
 \begin{figure}
 \centering
@@ -199,3 +248,33 @@ The \textbf{group accuracy} in our framework is computed according to:
 \end{equation}
 
 \section{Visual Spatial Reasoning}
+
+\subsection{Dataset}
+
+See \cref{tab:spatial_relations}
+
+\begin{table*}[ht]
+    \centering
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{l|l}
+    \toprule
+        \rowcolor{DarkGray}
+    Category & Spatial Relations \\
+    \midrule
+    Adjacency   & \makecell[l]{Adjacent to, alongside, at the side of, at the right side of, at the left side of, attached to, at the back of,\\ ahead of, against, at the edge of} \\
+    \rowcolor{Gray}
+ Directional & \makecell[l]{Off, past, toward, down, deep down$^\ast$, up$^\ast$, away from, along, around, from$^\ast$, into, to$^\ast$, across, across from, \\through$^\ast$, down from }\\
+    Orientation & Facing, facing away from, parallel to, perpendicular to\\
+    \rowcolor{Gray}
+    Projective & On top of, beneath, beside, behind, left of, right of, under, in front of, below, above, over, in the middle of\\
+    Proximity & By, close to, near, far from, far away from \\
+        \rowcolor{Gray}
+    Topological & \makecell[l]{Connected to, detached from, has as a part, part of, contains, within, at, on, in, with, surrounding, among, \\ consists of, out of, between, inside, outside, touching}\\
+    Unallocated & Beyond, next to, opposite to, after$^\ast$, among, enclosed by \\
+\bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{The available 71 spatial relations. 65 of them appear in our final dataset. Relations with $\ast$ are not used.}
+    % unsued: 'up', 'through', 'deep down', 'from', 'to', 'after'
+    \label{tab:spatial_relations}
+\end{table*}
