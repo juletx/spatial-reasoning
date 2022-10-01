@@ -71,10 +71,12 @@ However, even the best model is still far from human performance in text, image 
  MTurk Human                         & \textbf{89.50} & \textbf{88.50} & \textbf{85.50} & \textbf{93.75} & \textbf{93.88} & \textbf{93.81} \\
  Random Chance                       & 25.00          & 25.00          & 16.67          & 50.00          & 50.00          & 50.00          \\
  \midrule
-  ViLT (ViT-B/32)                     & \textbf{27.50} & 8.75           & 6.00           & \textbf{56.88} & \textbf{53.12} & \textbf{55.00} \\
+ ViLT (ViT-B/32)                     & \textbf{27.50} & 8.75           & 6.00           & \textbf{56.88} & \textbf{53.12} & \textbf{55.00} \\
  ViLT$_{COCO}$ (ViT-B/32)            & \textbf{32.75} & 13.50          & 11.25          & \textbf{61.88} & \textbf{56.00} & \textbf{58.94} \\
  ViLT$_{Flickr30k}$ (ViT-B/32)       & \textbf{35.00} & 11.50          & 9.75           & \textbf{61.62} & \textbf{54.50} & \textbf{58.06} \\
  ViLT$_{NLVR2}$ (ViT-B/32)           & \textbf{38.00} & 15.25          & 12.00          & \textbf{58.75} & \textbf{55.62} & \textbf{57.19} \\
+ ViLT$_{VSR}$ Random (ViT-B/32)      & \textbf{30.50} & 14.50          & 8.00           & \textbf{59.00} & \textbf{55.75} & \textbf{57.38} \\
+ ViLT$_{VSR}$ Zero-shot (ViT-B/32)   & \textbf{29.50} & 14.00          & 9.25           & \textbf{58.38} & \textbf{54.75} & \textbf{56.56} \\
  FLAVA$_{ITM}$                       & \textbf{32.25} & 20.50          & 14.25          & \textbf{62.75} & \textbf{59.13} & \textbf{60.94} \\
  FLAVA$_{ITC}$                       & \textbf{25.25} & 13.50          & 9.00           & \textbf{59.25} & \textbf{55.12} & \textbf{57.19} \\
  CLIP (ViT-B/32)                     & \textbf{30.75} & 10.25          & 8.25           & \textbf{60.38} & \textbf{53.12} & \textbf{56.75} \\
@@ -102,6 +104,7 @@ However, even the best model is still far from human performance in text, image 
  BLIP$_{ITC COCO}$ (ViT-L/16)        & \textbf{37.75} & 13.75          & 10.50          & \textbf{64.88} & \textbf{55.75} & \textbf{60.31} \\
  BLIP$_{ITM Flickr30k}$ (ViT-L/16)   & \textbf{45.00} & 24.75          & \textbf{20.50} & \textbf{68.62} & \textbf{60.50} & \textbf{64.56} \\
  BLIP$_{ITC Flickr30k}$ (ViT-L/16)   & \textbf{36.00} & 16.25          & 13.50          & \textbf{63.38} & \textbf{56.75} & \textbf{60.06} \\
+ BLIP$_{NLVR2}$ (ViT-B/16)           & \textbf{40.25} & 25.00          & \textbf{18.50} & \textbf{64.62} & \textbf{61.62} & \textbf{63.12} \\
 \bottomrule
 \end{tabular}
 \caption{Results on the Winoground dataset across the text, image and group score and accuracy metrics. Results above random chance in \textbf{bold}.}
@@ -170,10 +173,12 @@ See \cref{tab:results-by-ling-tag-ours}
       \multicolumn{3}{c}{2 Main Preds}\\
     Model & Text & Image & Group & Text & Image & Group & Text & Image & Group & Text & Image & Group & Text & Image & Group \\\midrule
  MTurk Human                  & \textbf{92.20} & \textbf{90.78} & \textbf{88.65} & \textbf{89.27} & \textbf{90.56} & \textbf{86.70} & \textbf{76.92} & \textbf{57.69} & \textbf{57.69} & \textbf{87.33} & \textbf{85.62} & \textbf{82.53} & \textbf{95.37} & \textbf{96.30} & \textbf{93.52} \\
-  ViLT (ViT-B/32)                     & \textbf{29.08} & 10.64          & 4.96           & \textbf{26.18} & 7.73           & 6.44           & \textbf{30.77} & 7.69           & 7.69           & \textbf{30.14} & 10.62          & 7.53           & 20.37          & 3.70           & 1.85           \\
+ ViLT (ViT-B/32)                     & \textbf{29.08} & 10.64          & 4.96           & \textbf{26.18} & 7.73           & 6.44           & \textbf{30.77} & 7.69           & 7.69           & \textbf{30.14} & 10.62          & 7.53           & 20.37          & 3.70           & 1.85           \\
  ViLT$_{COCO}$ (ViT-B/32)            & \textbf{33.33} & 15.60          & 12.77          & \textbf{30.90} & 10.73          & 9.01           & \textbf{46.15} & \textbf{26.92} & \textbf{23.08} & \textbf{36.64} & 15.75          & 14.04          & 22.22          & 7.41           & 3.70           \\
  ViLT$_{Flickr30k}$ (ViT-B/32)       & \textbf{32.62} & 14.89          & 11.35          & \textbf{35.62} & 8.15           & 7.73           & \textbf{42.31} & 23.08          & \textbf{19.23} & \textbf{36.99} & 14.38          & 11.99          & \textbf{29.63} & 3.70           & 3.70           \\
  ViLT$_{NLVR2}$ (ViT-B/32)           & \textbf{39.01} & 16.31          & 14.18          & \textbf{36.48} & 14.59          & 10.30          & \textbf{46.15} & 15.38          & 15.38          & \textbf{39.73} & 18.15          & 15.07          & \textbf{33.33} & 7.41           & 3.70           \\
+ ViLT$_{VSR}$ Random (ViT-B/32)      & \textbf{34.75} & 17.73          & 9.93           & \textbf{27.47} & 11.16          & 6.01           & \textbf{34.62} & \textbf{26.92} & 15.38          & \textbf{32.53} & 16.44          & 9.59           & 25.00          & 9.26           & 3.70           \\
+ ViLT$_{VSR}$ Zero-shot (ViT-B/32)   & \textbf{34.75} & 19.86          & 14.18          & \textbf{26.18} & 10.73          & 6.44           & \textbf{30.77} & 11.54          & 7.69           & \textbf{32.19} & 15.75          & 11.30          & 22.22          & 9.26           & 3.70           \\
  FLAVA$_{ITM}$                       & \textbf{31.91} & 23.40          & 14.89          & \textbf{30.04} & 16.31          & 12.02          & \textbf{53.85} & \textbf{42.31} & \textbf{30.77} & \textbf{36.30} & 24.66          & \textbf{17.81} & 21.30          & 9.26           & 4.63           \\
  FLAVA$_{ITC}$                       & 23.40          & 19.15          & 11.35          & 23.61          & 8.58           & 5.58           & \textbf{50.00} & \textbf{26.92} & \textbf{26.92} & \textbf{26.37} & 16.44          & 10.62          & 22.22          & 5.56           & 4.63           \\
  CLIP (ViT-B/32)                     & \textbf{35.46} & 7.80           & 6.38           & 22.32          & 7.73           & 5.58           & \textbf{80.77} & \textbf{46.15} & \textbf{42.31} & \textbf{35.62} & 13.01          & 10.62          & 17.59          & 2.78           & 1.85           \\
@@ -201,6 +206,7 @@ See \cref{tab:results-by-ling-tag-ours}
  BLIP$_{ITC COCO}$ (ViT-L/16)        & \textbf{36.88} & 14.18          & 11.35          & \textbf{36.05} & 11.16          & 7.30           & \textbf{57.69} & \textbf{34.62} & \textbf{34.62} & \textbf{41.10} & 16.44          & 13.36          & \textbf{28.70} & 6.48           & 2.78           \\
  BLIP$_{ITM Flickr30k}$ (ViT-L/16)   & \textbf{46.10} & 22.70          & 16.31          & \textbf{42.06} & 24.89          & \textbf{21.46} & \textbf{65.38} & \textbf{34.62} & \textbf{34.62} & \textbf{50.34} & \textbf{29.11} & \textbf{24.66} & \textbf{30.56} & 12.96          & 9.26           \\
  BLIP$_{ITC Flickr30k}$ (ViT-L/16)   & \textbf{39.01} & 19.86          & 15.60          & \textbf{30.47} & 11.59          & 9.44           & \textbf{69.23} & \textbf{38.46} & \textbf{38.46} & \textbf{39.38} & 20.55          & \textbf{17.12} & \textbf{26.85} & 4.63           & 3.70           \\
+ BLIP$_{NLVR2}$ (ViT-B/16)           & \textbf{42.55} & 23.40          & \textbf{19.86} & \textbf{36.48} & \textbf{25.32} & \textbf{16.74} & \textbf{61.54} & \textbf{30.77} & \textbf{26.92} & \textbf{42.47} & \textbf{27.74} & \textbf{21.23} & \textbf{34.26} & 17.59          & 11.11    \\
           \bottomrule
   \end{tabular}
   \end{adjustbox}
@@ -266,10 +272,12 @@ See \cref{tab:results-by-visual-tag-ours}
       \multicolumn{3}{c}{Same Image Series} \\
     Model & Text & Image & Group & Text & Image & Group & Text & Image & Group \\\midrule
  MTurk Human                  & \textbf{96.43} & \textbf{92.86} & \textbf{92.86} & \textbf{58.82} & \textbf{41.18} & \textbf{41.18} & \textbf{95.65} & \textbf{91.30} & \textbf{91.30} \\
-ViLT (ViT-B/32)                     & 21.43          & 7.14           & 3.57           & 17.65          & 5.88           & 5.88           & 17.39          & 8.70           & 4.35           \\
+ ViLT (ViT-B/32)                     & 21.43          & 7.14           & 3.57           & 17.65          & 5.88           & 5.88           & 17.39          & 8.70           & 4.35           \\
  ViLT$_{COCO}$ (ViT-B/32)            & 21.43          & 10.71          & 10.71          & \textbf{29.41} & 17.65          & 5.88           & 21.74          & 8.70           & 4.35           \\
  ViLT$_{Flickr30k}$ (ViT-B/32)       & \textbf{28.57} & 7.14           & 7.14           & 23.53          & 0.00           & 0.00           & \textbf{26.09} & 4.35           & 4.35           \\
  ViLT$_{NLVR2}$ (ViT-B/32)           & \textbf{42.86} & 10.71          & 10.71          & \textbf{41.18} & 0.00           & 0.00           & 17.39          & 13.04          & 4.35           \\
+ ViLT$_{VSR}$ Random (ViT-B/32)      & \textbf{28.57} & 14.29          & 7.14           & \textbf{29.41} & 11.76          & 5.88           & \textbf{30.43} & 21.74          & 8.70           \\
+ ViLT$_{VSR}$ Zero-shot (ViT-B/32)   & 25.00          & 10.71          & 7.14           & \textbf{35.29} & 23.53          & 11.76          & \textbf{30.43} & 8.70           & 0.00           \\
  FLAVA$_{ITM}$                       & 25.00          & \textbf{28.57} & \textbf{17.86} & 17.65          & \textbf{29.41} & 11.76          & 17.39          & 8.70           & 0.00           \\
  FLAVA$_{ITC}$                       & 17.86          & 10.71          & 10.71          & 11.76          & 23.53          & 5.88           & 17.39          & 4.35           & 4.35           \\
  CLIP (ViT-B/32)                     & \textbf{35.71} & 3.57           & 3.57           & \textbf{35.29} & 5.88           & 5.88           & 13.04          & 0.00           & 0.00           \\
@@ -297,6 +305,7 @@ ViLT (ViT-B/32)                     & 21.43          & 7.14           & 3.57    
  BLIP$_{ITC COCO}$ (ViT-L/16)        & \textbf{46.43} & 14.29          & 14.29          & 17.65          & 5.88           & 5.88           & 13.04          & 0.00           & 0.00           \\
  BLIP$_{ITM Flickr30k}$ (ViT-L/16)   & \textbf{39.29} & \textbf{28.57} & \textbf{25.00} & \textbf{47.06} & 11.76          & 5.88           & \textbf{30.43} & 8.70           & 4.35           \\
  BLIP$_{ITC Flickr30k}$ (ViT-L/16)   & \textbf{39.29} & 14.29          & 14.29          & \textbf{47.06} & 5.88           & 5.88           & 21.74          & 13.04          & 13.04          \\
+ BLIP$_{NLVR2}$ (ViT-B/16)           & \textbf{57.14} & 21.43          & 10.71          & \textbf{41.18} & 5.88           & 5.88           & 21.74          & 17.39          & 4.35           \\
 \bottomrule
 \end{tabular}
   \end{adjustbox}
@@ -389,42 +398,41 @@ See \cref{tab:results-by-relation-random} and \cref{tab:results-by-relation-zero
 \toprule
 relation &  number &  VisualBERT &  LXMERT &  ViLT &  ViLT NLVR2 &  BLIP NLVR2 \\
 \midrule
-all                  &    2024 &        0.55 &    0.74 &  0.71 &        0.59
-&        0.60 \\
+all                  &    2024 &        55.1 &    73.9 &  71.2 &        59.1 &        60.1 \\
 \midrule
-touching             &     236 &        0.56 &    0.77 &  0.74 &        0.64 &        0.62 \\
-behind               &     136 &        0.45 &    0.75 &  0.71 &        0.53 &        0.58 \\
-on                   &     128 &        0.65 &    0.82 &  0.87 &        0.72 &        0.70 \\
-in front of          &     116 &        0.54 &    0.71 &  0.64 &        0.59 &        0.66 \\
-under                &     112 &        0.62 &    0.86 &  0.84 &        0.62 &        0.66 \\
-on top of            &      87 &        0.51 &    0.79 &  0.79 &        0.72 &        0.68 \\
-at the right side of &      85 &        0.52 &    0.76 &  0.58 &        0.64 &        0.51 \\
-at the left side of  &      80 &        0.49 &    0.74 &  0.61 &        0.50 &        0.56 \\
-beneath              &      80 &        0.64 &    0.80 &  0.78 &        0.59 &        0.56 \\
-above                &      72 &        0.60 &    0.76 &  0.72 &        0.56 &        0.62 \\
-contains             &      57 &        0.56 &    0.81 &  0.86 &        0.56 &        0.51 \\
-in                   &      51 &        0.69 &    0.82 &  0.84 &        0.61 &        0.59 \\
-facing               &      50 &        0.50 &    0.64 &  0.62 &        0.60 &        0.62 \\
-far away from        &      49 &        0.51 &    0.78 &  0.76 &        0.41 &        0.43 \\
-inside               &      49 &        0.59 &    0.78 &  0.80 &        0.57 &        0.55 \\
-below                &      42 &        0.60 &    0.67 &  0.67 &        0.48 &        0.52 \\
-next to              &      41 &        0.56 &    0.68 &  0.76 &        0.54 &        0.66 \\
-at the edge of       &      40 &        0.42 &    0.48 &  0.60 &        0.50 &        0.62 \\
-left of              &      39 &        0.56 &    0.77 &  0.59 &        0.59 &        0.56 \\
-beside               &      34 &        0.44 &    0.74 &  0.65 &        0.79 &        0.68 \\
-facing away from     &      32 &        0.56 &    0.53 &  0.47 &        0.56 &        0.50 \\
-away from            &      31 &        0.61 &    0.71 &  0.74 &        0.42 &        0.65 \\
-right of             &      24 &        0.50 &    0.88 &  0.58 &        0.58 &        0.54 \\
-far from             &      23 &        0.48 &    0.87 &  0.87 &        0.43 &        0.57 \\
-close to             &      21 &        0.57 &    0.71 &  0.71 &        0.71 &        0.57 \\
-part of              &      21 &        0.43 &    0.76 &  0.76 &        0.43 &        0.43 \\
-near                 &      21 &        0.52 &    0.57 &  0.71 &        0.76 &        0.67 \\
-parallel to          &      19 &        0.32 &    0.37 &  0.58 &        0.53 &        0.47 \\
-at the back of       &      19 &        0.58 &    0.74 &  0.63 &        0.53 &        0.63 \\
-across from          &      18 &        0.67 &    0.72 &  0.67 &        0.44 &        0.44 \\
-over                 &      16 &        0.50 &    0.75 &  0.94 &        0.81 &        0.56 \\
-in the middle of     &      15 &        0.47 &    0.60 &  0.33 &        0.33 &        0.53 \\
-off                  &      15 &        0.33 &    0.40 &  0.40 &        0.27 &        0.47 \\
+touching             &     236 &        55.9 &    76.7 &  73.7 &        64.0 &        62.3 \\
+behind               &     136 &        44.9 &    75.0 &  70.6 &        52.9 &        58.1 \\
+on                   &     128 &        64.8 &    82.0 &  86.7 &        71.9 &        70.3 \\
+in front of          &     116 &        54.3 &    70.7 &  63.8 &        58.6 &        65.5 \\
+under                &     112 &        62.5 &    85.7 &  83.9 &        62.5 &        66.1 \\
+on top of            &      87 &        50.6 &    79.3 &  79.3 &        72.4 &        67.8 \\
+at the right side of &      85 &        51.8 &    76.5 &  57.6 &        63.5 &        50.6 \\
+at the left side of  &      80 &        48.8 &    73.8 &  61.3 &        50.0 &        56.2 \\
+beneath              &      80 &        63.7 &    80.0 &  77.5 &        58.8 &        56.2 \\
+above                &      72 &        59.7 &    76.4 &  72.2 &        55.6 &        62.5 \\
+contains             &      57 &        56.1 &    80.7 &  86.0 &        56.1 &        50.9 \\
+in                   &      51 &        68.6 &    82.4 &  84.3 &        60.8 &        58.8 \\
+facing               &      50 &        50.0 &    64.0 &  62.0 &        60.0 &        62.0 \\
+far away from        &      49 &        51.0 &    77.6 &  75.5 &        40.8 &        42.9 \\
+inside               &      49 &        59.2 &    77.6 &  79.6 &        57.1 &        55.1 \\
+below                &      42 &        59.5 &    66.7 &  66.7 &        47.6 &        52.4 \\
+next to              &      41 &        56.1 &    68.3 &  75.6 &        53.7 &        65.9 \\
+at the edge of       &      40 &        42.5 &    47.5 &  60.0 &        50.0 &        62.5 \\
+left of              &      39 &        56.4 &    76.9 &  59.0 &        59.0 &        56.4 \\
+beside               &      34 &        44.1 &    73.5 &  64.7 &        79.4 &        67.6 \\
+facing away from     &      32 &        56.2 &    53.1 &  46.9 &        56.2 &        50.0 \\
+away from            &      31 &        61.3 &    71.0 &  74.2 &        41.9 &        64.5 \\
+right of             &      24 &        50.0 &    87.5 &  58.3 &        58.3 &        54.2 \\
+far from             &      23 &        47.8 &    87.0 &  87.0 &        43.5 &        56.5 \\
+close to             &      21 &        57.1 &    71.4 &  71.4 &        71.4 &        57.1 \\
+part of              &      21 &        42.9 &    76.2 &  76.2 &        42.9 &        42.9 \\
+near                 &      21 &        52.4 &    57.1 &  71.4 &        76.2 &        66.7 \\
+parallel to          &      19 &        31.6 &    36.8 &  57.9 &        52.6 &        47.4 \\
+at the back of       &      19 &        57.9 &    73.7 &  63.2 &        52.6 &        63.2 \\
+across from          &      18 &        66.7 &    72.2 &  66.7 &        44.4 &        44.4 \\
+over                 &      16 &        50.0 &    75.0 &  93.8 &        81.2 &        56.2 \\
+in the middle of     &      15 &        46.7 &    60.0 &  33.3 &        33.3 &        53.3 \\
+off                  &      15 &        33.3 &    40.0 &  40.0 &        26.7 &        46.7 \\
 \bottomrule
 \end{tabular}
 \caption{Number and performance by relation on the random split test. Only relations with more than 15 occurrences are shown.}
@@ -437,41 +445,41 @@ off                  &      15 &        0.33 &    0.40 &  0.40 &        0.27 &  
 \toprule
 relation &  number &  VisualBERT &  LXMERT &  ViLT &  ViLT NLVR2 &  BLIP NLVR2 \\
 \midrule
-all                  &     731 &        0.51 &    0.66 &  0.62 &        0.53 &        0.54 \\
+all                  &     731 &        50.8 &    65.5 &  61.6 &        52.8 &        53.9 \\
 \midrule
-in front of          &      76 &        0.46 &    0.64 &  0.54 &        0.50 &        0.53 \\
-behind               &      71 &        0.49 &    0.79 &  0.69 &        0.51 &        0.49 \\
-far away from        &      57 &        0.58 &    0.60 &  0.60 &        0.40 &        0.37 \\
-at the left side of  &      32 &        0.59 &    0.72 &  0.50 &        0.59 &        0.72 \\
-next to              &      32 &        0.41 &    0.62 &  0.62 &        0.81 &        0.66 \\
-contains             &      29 &        0.48 &    0.86 &  0.76 &        0.48 &        0.55 \\
-touching             &      27 &        0.56 &    0.48 &  0.78 &        0.56 &        0.74 \\
-at the right side of &      25 &        0.44 &    0.48 &  0.68 &        0.52 &        0.72 \\
-on                   &      23 &        0.52 &    0.87 &  0.78 &        0.74 &        0.83 \\
-above                &      22 &        0.55 &    0.59 &  0.59 &        0.55 &        0.45 \\
-left of              &      22 &        0.59 &    0.86 &  0.55 &        0.55 &        0.55 \\
-on top of            &      20 &        0.40 &    0.80 &  0.90 &        0.85 &        0.85 \\
-under                &      20 &        0.45 &    0.60 &  0.45 &        0.45 &        0.40 \\
-below                &      18 &        0.67 &    0.61 &  0.61 &        0.61 &        0.67 \\
-in                   &      16 &        0.38 &    0.88 &  0.88 &        0.62 &        0.75 \\
-parallel to          &      14 &        0.36 &    0.43 &  0.50 &        0.64 &        0.43 \\
-far from             &      14 &        0.57 &    0.71 &  0.71 &        0.29 &        0.43 \\
-facing               &      14 &        0.50 &    0.43 &  0.79 &        0.71 &        0.57 \\
-at the back of       &      14 &        0.71 &    0.64 &  0.50 &        0.36 &        0.36 \\
-across from          &      14 &        0.43 &    0.57 &  0.57 &        0.29 &        0.29 \\
-ahead of             &      13 &        0.31 &    0.54 &  0.38 &        0.54 &        0.62 \\
-away from            &      12 &        0.50 &    0.42 &  0.50 &        0.33 &        0.42 \\
-beside               &      12 &        0.42 &    0.42 &  0.67 &        0.42 &        0.25 \\
-adjacent to          &      12 &        0.83 &    0.67 &  0.33 &        0.58 &        0.58 \\
-right of             &      12 &        0.58 &    0.75 &  0.58 &        0.50 &        0.33 \\
-beneath              &      11 &        0.55 &    0.64 &  0.55 &        0.55 &        0.45 \\
-facing away from     &      10 &        0.60 &    0.70 &  0.60 &        0.60 &        0.50 \\
-inside               &       8 &        0.50 &    0.62 &  0.75 &        0.38 &        0.75 \\
-close to             &       8 &        0.62 &    0.50 &  0.38 &        0.50 &        0.38 \\
-beyond               &       6 &        0.33 &    0.67 &  0.67 &        0.33 &        0.67 \\
-alongside            &       6 &        0.33 &    0.67 &  0.67 &        0.50 &        0.50 \\
-off                  &       6 &        0.67 &    0.50 &  0.50 &        0.17 &        0.33 \\
-surrounding          &       5 &        0.40 &    1.00 &  0.60 &        0.40 &        0.80 \\
+in front of          &      76 &        46.1 &    64.5 &  53.9 &        50.0 &        52.6 \\
+behind               &      71 &        49.3 &    78.9 &  69.0 &        50.7 &        49.3 \\
+far away from        &      57 &        57.9 &    59.6 &  59.6 &        40.4 &        36.8 \\
+at the left side of  &      32 &        59.4 &    71.9 &  50.0 &        59.4 &        71.9 \\
+next to              &      32 &        40.6 &    62.5 &  62.5 &        81.2 &        65.6 \\
+contains             &      29 &        48.3 &    86.2 &  75.9 &        48.3 &        55.2 \\
+touching             &      27 &        55.6 &    48.1 &  77.8 &        55.6 &        74.1 \\
+at the right side of &      25 &        44.0 &    48.0 &  68.0 &        52.0 &        72.0 \\
+on                   &      23 &        52.2 &    87.0 &  78.3 &        73.9 &        82.6 \\
+above                &      22 &        54.5 &    59.1 &  59.1 &        54.5 &        45.5 \\
+left of              &      22 &        59.1 &    86.4 &  54.5 &        54.5 &        54.5 \\
+on top of            &      20 &        40.0 &    80.0 &  90.0 &        85.0 &        85.0 \\
+under                &      20 &        45.0 &    60.0 &  45.0 &        45.0 &        40.0 \\
+below                &      18 &        66.7 &    61.1 &  61.1 &        61.1 &        66.7 \\
+in                   &      16 &        37.5 &    87.5 &  87.5 &        62.5 &        75.0 \\
+parallel to          &      14 &        35.7 &    42.9 &  50.0 &        64.3 &        42.9 \\
+far from             &      14 &        57.1 &    71.4 &  71.4 &        28.6 &        42.9 \\
+facing               &      14 &        50.0 &    42.9 &  78.6 &        71.4 &        57.1 \\
+at the back of       &      14 &        71.4 &    64.3 &  50.0 &        35.7 &        35.7 \\
+across from          &      14 &        42.9 &    57.1 &  57.1 &        28.6 &        28.6 \\
+ahead of             &      13 &        30.8 &    53.8 &  38.5 &        53.8 &        61.5 \\
+away from            &      12 &        50.0 &    41.7 &  50.0 &        33.3 &        41.7 \\
+beside               &      12 &        41.7 &    41.7 &  66.7 &        41.7 &        25.0 \\
+adjacent to          &      12 &        83.3 &    66.7 &  33.3 &        58.3 &        58.3 \\
+right of             &      12 &        58.3 &    75.0 &  58.3 &        50.0 &        33.3 \\
+beneath              &      11 &        54.5 &    63.6 &  54.5 &        54.5 &        45.5 \\
+facing away from     &      10 &        60.0 &    70.0 &  60.0 &        60.0 &        50.0 \\
+inside               &       8 &        50.0 &    62.5 &  75.0 &        37.5 &        75.0 \\
+close to             &       8 &        62.5 &    50.0 &  37.5 &        50.0 &        37.5 \\
+beyond               &       6 &        33.3 &    66.7 &  66.7 &        33.3 &        66.7 \\
+alongside            &       6 &        33.3 &    66.7 &  66.7 &        50.0 &        50.0 \\
+off                  &       6 &        66.7 &    50.0 &  50.0 &        16.7 &        33.3 \\
+surrounding          &       5 &        40.0 &   100.0 &  60.0 &        40.0 &        80.0 \\
 \bottomrule
 \end{tabular}
 \caption{Number and performance by relation on the zero-shot split test. Only relations with more than 5 occurrences are shown.}
@@ -528,15 +536,15 @@ See \cref{tab:results-by-relation-meta-category-random} and \cref{tab:results-by
 \toprule
 category &  number &  VisualBERT &  LXMERT &  ViLT &  ViLT NLVR2 &  BLIP NLVR2 \\
 \midrule
-All         &    2024 &        0.55 &    0.74 &  0.71 &        0.59 &        0.60 \\
+All         &    2024 &        55.1 &    73.9 &  71.2 &        59.1 &        60.1 \\
 \midrule
-Adjacency   &     284 &        0.51 &    0.71 &  0.63 &        0.57 &        0.60 \\
-Directional &      90 &        0.57 &    0.69 &  0.56 &        0.48 &        0.54 \\
-Orientation &     112 &        0.51 &    0.55 &  0.54 &        0.55 &        0.56 \\
-Projective  &     773 &        0.54 &    0.77 &  0.72 &        0.60 &        0.61 \\
-Proximity   &     123 &        0.52 &    0.73 &  0.75 &        0.54 &        0.53 \\
-Topological &     591 &        0.59 &    0.77 &  0.79 &        0.63 &        0.61 \\
-Unallocated &      51 &        0.53 &    0.65 &  0.75 &        0.55 &        0.61 \\
+Adjacency   &     284 &        51.4 &    71.1 &  63.0 &        56.7 &        60.2 \\
+Directional &      90 &        56.7 &    68.9 &  55.6 &        47.8 &        54.4 \\
+Orientation &     112 &        50.9 &    55.4 &  54.5 &        55.4 &        56.2 \\
+Proximity   &     123 &        52.0 &    73.2 &  74.8 &        53.7 &        52.8 \\
+Projective  &     773 &        54.5 &    76.7 &  71.7 &        59.8 &        61.4 \\
+Topological &     591 &        59.2 &    76.8 &  79.2 &        63.5 &        61.4 \\
+Unallocated &      51 &        52.9 &    64.7 &  74.5 &        54.9 &        60.8 \\
 \bottomrule
 \end{tabular}
 \caption{Number and performance by relation meta category on the random split test.}
@@ -549,15 +557,15 @@ Unallocated &      51 &        0.53 &    0.65 &  0.75 &        0.55 &        0.6
 \toprule
 category &  number &  VisualBERT &  LXMERT &  ViLT &  ViLT NLVR2 &  BLIP NLVR2 \\
 \midrule
-All         &     731 &        0.51 &    0.66 &  0.62 &        0.53 &        0.54 \\
+All         &     731 &        50.8 &    65.5 &  61.6 &        52.8 &        53.9 \\
 \midrule
-Adjacency   &     114 &        0.55 &    0.62 &  0.53 &        0.55 &        0.61 \\
-Directional &      40 &        0.50 &    0.52 &  0.52 &        0.25 &        0.40 \\
-Orientation &      42 &        0.48 &    0.48 &  0.60 &        0.64 &        0.48 \\
-Projective  &     286 &        0.50 &    0.70 &  0.61 &        0.54 &        0.51 \\
-Proximity   &      83 &        0.59 &    0.59 &  0.58 &        0.41 &        0.37 \\
-Topological &     124 &        0.48 &    0.74 &  0.77 &        0.56 &        0.68 \\
-Unallocated &      42 &        0.38 &    0.64 &  0.62 &        0.71 &        0.64 \\
+Adjacency   &     114 &        55.3 &    62.3 &  52.6 &        55.3 &        61.4 \\
+Directional &      40 &        50.0 &    52.5 &  52.5 &        25.0 &        40.0 \\
+Orientation &      42 &        47.6 &    47.6 &  59.5 &        64.3 &        47.6 \\
+Proximity   &      83 &        59.0 &    59.0 &  57.8 &        41.0 &        37.3 \\
+Projective  &     286 &        50.0 &    69.6 &  61.2 &        53.5 &        51.0 \\
+Topological &     124 &        48.4 &    74.2 &  76.6 &        55.6 &        67.7 \\
+Unallocated &      42 &        38.1 &    64.3 &  61.9 &        71.4 &        64.3 \\
 \bottomrule
 \end{tabular}
 \caption{Number and performance by relation meta category on the zero-shot split test.}
