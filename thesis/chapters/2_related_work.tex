@@ -16,17 +16,111 @@ There are several \textbf{works that try to ground language models to spatial re
 
 \section{Synthetic Visual Reasoning Datasets} \label{sec:synthetic_visual_reasoning_datasets}
 
-% add example images?   
+Multimodal training datasets with images and descriptions that include spatial relations tend to be small. Synthetic visual reasoning datasets have been proposed to overcome this problem. These datasets enable full control of dataset generation, easing spatial reasoning capability probing  on VLMs. Some examples of synthetic datasets include SHAPES \cite{andreas2016neural}, CLEVR \cite{johnson2017clevr}, NLVR \cite{suhr-etal-2017-corpus} and SPARTQA \cite{mirzaee-etal-2021-spartqa}.
 
-Multimodal training datasets with images and descriptions that include spatial relations tend to be small. Synthetic visual reasoning datasets have been proposed to overcome this problem. These datasets enable full control of dataset generation, easing spatial reasoning capability probing  on VLMs. Some examples of synthetic datasets include SHAPES \cite{andreas2016neural}, CLEVR \cite{liu2019clevr}, NLVR \cite{suhr-etal-2017-corpus} and SPARTQA \cite{mirzaee-etal-2021-spartqa}.
+\textbf{SHAPES} is a dataset of synthetic images designed to benchmark understanding of spatial and logical relations among multiple objects \cite{andreas2016neural}. The dataset consists of complex yes or no questions about arrangements of colored shapes. Each image is a 3×3 grid of objects. Each object is characterized by shape (circle, square, triangle), colour (red, green, blue) and size (small, big). \cref{fig:shapes_examples} shows some example images and questions.
 
-\textbf{SHAPES} is a dataset of synthetic images designed to benchmark understanding of spatial and logical relations among multiple objects \cite{andreas2016neural}. The dataset consists of complex yes or no questions about arrangements of colored shapes. Each image is a 3×3 grid of objects. Each object is characterized by shape (circle, square, triangle), colour (red, green, blue) and size (small, big).
+\begin{figure}[ht]
+  \centering
+    \begin{subfigure}[b]{0.24\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/datasets/shapes0_big.png}
+    \caption{\textbf{Q:} is a red shape blue? \\ \textbf{A:} no}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.24\linewidth}
+     \centering
+    \includegraphics[width=\linewidth]{images/datasets/shapes1_big.png}
+    \caption{\textbf{Q:} is there a blue shape below a square? \textbf{A:} no}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.24\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/datasets/shapes2_big.png}
+    \caption{\textbf{Q:} is there a red shape above a circle? \textbf{A:} yes}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.24\linewidth}
+     \centering
+    \includegraphics[width=\linewidth]{images/datasets/shapes3_big.png}
+    \caption{\textbf{Q:} is there a red shape below a triangle? \textbf{A:} yes}
+     \end{subfigure}
+    \caption{Example images, questions and answers from SHAPES.}
+    \label{fig:shapes_examples}
+\end{figure}
 
-\textbf{CLEVR} was one of the pioneering works on testing \textbf{compositional language and elementary visual reasoning} \cite{johnson2017clevr}. However, it presents two major drawbacks: i) questions not only cover spatial grounding but some other concepts such as compositional language and attribute identification, and ii) spatial relations are limited to four, i.e. left, right, behind and in front. 
+\textbf{CLEVR} was one of the pioneering works on testing \textbf{compositional language and elementary visual reasoning} \cite{johnson2017clevr}. However, it presents two major drawbacks: i) questions not only cover spatial grounding but some other concepts such as compositional language and attribute identification, and ii) spatial relations are limited to four, i.e. left, right, behind and in front. A sample image and questions are shown in \cref{fig:clevr_example}.
 
-\textbf{NLVR} containins natural language sentences grounded in images \cite{suhr-etal-2017-corpus}. The task is to determine whether a sentence is true about a visual input. The data was collected through crowdsourcing, and solving the task requires reasoning about sets of objects, comparisons, and spatial relations.
+\begin{figure}[ht]
+  \centering
+  \begin{minipage}{0.49\textwidth}
+  \includegraphics[width=\textwidth]{images/datasets/clevr_example.jpg}
+  \end{minipage}
+  \vspace{1mm}
+  \begin{minipage}{0.49\textwidth}
+    \footnotesize
+    \textbf{Q:} Are there an \textcolor{blue}{equal} \textcolor{red}{number} of
+    \textcolor{brown}{large} things and \textcolor{brown}{metal spheres}? \textbf{A:} no \\\\
+    \textbf{Q:} \textcolor{brown}{What size} is the \textcolor{brown}{cylinder}
+    \textcolor{green}{that is left of} the \textcolor{brown}{brown metal} thing
+    \textcolor{green}{that is left of} the \textcolor{brown}{big sphere}? \textbf{A:} small \\\\
+    \textbf{Q:} There is a \textcolor{brown}{sphere} with the \textcolor{blue}{same size as}
+    the \textcolor{brown}{metal cube}; is it
+    \textcolor{blue}{made of the same material as} the \textcolor{brown}{small red sphere}? \textbf{A:} no \\\\
+    \textbf{Q:} \textcolor{red}{How many} objects \textcolor{purple}{are either}
+    \textcolor{brown}{small cylinders}
+    \textcolor{purple}{or} \textcolor{brown}{metal} things? \textbf{A:} 6
+  \end{minipage}
+  \vspace{1mm}
+  \caption{A sample image, questions and answers from CLEVR. Questions test aspects of visual reasoning
+    such as \textcolor{brown}{attribute identification}, \textcolor{red}{counting},
+    \textcolor{blue}{comparison}, \textcolor{green}{spatial relations},
+    and \textcolor{purple}{logical operations}.
+  }
+  \vspace{-4mm}
+  \label{fig:clevr_example}
+\end{figure}
 
-\textbf{SPARTQA} provides a synthetic \textbf{question-answering} dataset that is specially focused on spatial reasoning capabilities \cite{mirzaee-etal-2021-spartqa}. SPARTQA is built on NLVR’s images containing more objects with richer spatial structures. However, it contains only text and no images, and therefore it does not provide any means to ground spatial concepts.
+\textbf{NLVR} containins natural language sentences grounded in images \cite{suhr-etal-2017-corpus}. The task is to determine whether a sentence is true about a visual input. The data was collected through crowdsourcing, and solving the task requires reasoning about sets of objects, comparisons, and spatial relations. \cref{fig:nlvr_examples} shows two examples from NLVR.
+
+\begin{figure}[ht]
+  \centering
+    \centering
+    \begin{subfigure}[b]{0.49\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/datasets/nlvr_ex_0.png}
+    \caption{There is at least one tower with four blocks with a yellow block at the base and a blue block below the top block.}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.49\linewidth}
+     \centering
+    \includegraphics[width=\linewidth]{images/datasets/nlvr_ex_1.png}
+    \caption{There is exactly one tower with a blue block at the base and yellow block at the top.}
+     \end{subfigure}
+    \caption{Example sentences and images from NLVR. Each image includes three boxes with different object types. The left sentence is true, while the right is false.}
+    \label{fig:nlvr_examples}
+\end{figure}
+
+\textbf{SPARTQA} provides a synthetic \textbf{question-answering} dataset that is specially focused on spatial reasoning capabilities \cite{mirzaee-etal-2021-spartqa}. SPARTQA is built on NLVR’s images containing more objects with richer spatial structures (\cref{fig:spartqa_examples}). Questions require deeper reasoning and have four types: {\em find relation} (FR), {\em find blocks} (FB), {\em choose object} (CO), and {\em yes/no} (YN), which allows for more fine-grained analysis of models' capabilities. However, it contains only text and no images, and therefore it does not provide any means to ground spatial concepts.
+
+\begin{figure}[ht]
+	\centering
+	\begin{subfigure}[b]{\linewidth}
+		\includegraphics[width=\linewidth]{images/datasets/spartqa_story_sample.pdf}
+		\caption{An example story and corresponding questions and answers.
+		}
+		\label{fig:spartqa_story_sample}
+	\end{subfigure}
+%	\hfill
+	\begin{subfigure}[b]{\linewidth}
+			\includegraphics[width=\linewidth]{images/datasets/spartqa_nlvr.pdf}
+			\caption{An example NLVR image and the scene created in \cref{fig:spartqa_story_sample}, where the blocks in the NLVR image are rearranged.
+			}
+			\label{fig:spartqa_nlvr}
+    \end{subfigure}
+ 	\caption{Example from \textsc{SpartQA}. We can see an automatically generated story and corresponding questions and answers.}
+	\label{fig:spartqa_examples}
+\end{figure}
 
 A very recent work proposes a method called \textbf{Pseudo-Q} to \textbf{automatically create synthetic datasets} that can be used to train visually grounded models \cite{jiang2022pseudo}. Their method consists of leveraging an off-the-shelf object detector to identify visual objects from unlabeled images, and then creating language queries for these objects that are obtained in an unsupervised fashion with a pseudo-query generation module.
 
@@ -44,15 +138,15 @@ The examples in \cref{fig:nlvr2_examples} require addressing challenging semanti
     \centering
     \begin{subfigure}[b]{0.49\linewidth}
     \centering
-    \includegraphics[width=0.49\linewidth]{images/nlvr_ex_0_img_0.jpg}
-    \includegraphics[width=0.49\linewidth]{images/nlvr_ex_0_img_1.jpg}
+    \includegraphics[width=0.49\linewidth]{images/datasets/nlvr2_ex_0_img_0.jpg}
+    \includegraphics[width=0.49\linewidth]{images/datasets/nlvr2_ex_0_img_1.jpg}
     \caption{The left image contains twice the number of dogs as the right image, and at least two dogs in total are standing.}
      \end{subfigure}
      \hfill
      \begin{subfigure}[b]{0.49\linewidth}
      \centering
-    \includegraphics[width=0.49\linewidth]{images/nlvr_ex_1_img_0.jpg}
-    \includegraphics[width=0.49\linewidth]{images/nlvr_ex_1_img_1.jpg}
+    \includegraphics[width=0.49\linewidth]{images/datasets/nlvr2_ex_1_img_0.jpg}
+    \includegraphics[width=0.49\linewidth]{images/datasets/nlvr2_ex_1_img_1.jpg}
     \caption{One image shows exactly two brown acorns in back-to-back caps on green foliage.}
      \end{subfigure}
     \caption{Two examples from NLVR2, where each caption is paired with two images. The first caption is True and the second one is False.}
@@ -63,7 +157,7 @@ The examples in \cref{fig:nlvr2_examples} require addressing challenging semanti
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\linewidth]{images/vqa_examples.jpg}
+    \includegraphics[width=\linewidth]{images/datasets/vqa_examples.pdf}
     \caption{Example images, questions and answers from VQA.}
     \label{fig:vqa_examples}
 \end{figure}
@@ -96,7 +190,7 @@ Diffusion models are machine learning systems trained to denoise random gaussian
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\linewidth]{images/diffusion-process.png}
+    \includegraphics[width=\linewidth]{images/diffusion/diffusion-process.png}
     \caption{In the diffusion process random images are denoised in multiple steps to get a sample image. Source: \url{https://github.com/huggingface/notebooks/blob/main/diffusers/diffusers_intro.ipynb}}
     \label{fig:diffusion_process}
 \end{figure}
@@ -113,7 +207,7 @@ Stable Diffusion is based on a type of diffusion model called Latent Diffusion \
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\linewidth]{images/vae.png}
+    \includegraphics[width=\linewidth]{images/diffusion/vae.png}
     \caption{Variational Autoencoder (VAE) training and generation processes. Source: \url{https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73}}
     \label{fig:vae}
 \end{figure}
@@ -122,7 +216,7 @@ Stable Diffusion is based on a type of diffusion model called Latent Diffusion \
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\linewidth]{images/unet-model.png}
+    \includegraphics[width=\linewidth]{images/diffusion/unet-model.png}
     \caption{The architecture of the U-Net model. Source: \url{https://github.com/huggingface/notebooks/blob/main/diffusers/diffusers_intro.ipynb}}
     \label{fig:unet_model}
 \end{figure}
@@ -131,7 +225,7 @@ Stable Diffusion is based on a type of diffusion model called Latent Diffusion \
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\linewidth]{images/clip.png}
+    \includegraphics[width=\linewidth]{images/diffusion/clip.png}
     \caption{CLIP model architecture. Source: \url{https://github.com/openai/CLIP}}
     \label{fig:clip}
 \end{figure}
@@ -140,7 +234,7 @@ With the previous components we nearly have the full Stable Diffusion inference 
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.6\linewidth]{images/stable_diffusion.png}
+    \includegraphics[width=0.6\linewidth]{images/diffusion/stable_diffusion.png}
     \caption{Stable Diffusion inference architecture. Source: \url{https://github.com/huggingface/notebooks/blob/main/diffusers/stable_diffusion.ipynb}}
     \label{fig:stable_diffusion}
 \end{figure}
