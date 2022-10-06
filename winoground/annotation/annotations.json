@@ -1589,7 +1589,7 @@
                 "id": 121,
                 "user": "juletxara@gmail.com",
                 "created_username": "Julen Etxaniz juletxara@gmail.com, 1",
-                "created_ago": "17\u00a0hours, 50\u00a0minutes",
+                "created_ago": "6\u00a0days, 21\u00a0hours",
                 "result": [
                     {
                         "value": {
@@ -3517,7 +3517,7 @@
                 "id": 7,
                 "user": "andersalaberria@gmail.com",
                 "created_username": "andersalaberria@gmail.com, 2",
-                "created_ago": "6\u00a0days, 18\u00a0hours",
+                "created_ago": "1\u00a0week, 5\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -10646,6 +10646,3474 @@
         "updated_by": 1
     },
     {
+        "id": 152,
+        "annotations": [
+            {
+                "id": 261,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "azPIzlFU99",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "8loUiZKXtl",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:13:58.244348Z",
+                "updated_at": "2022-10-06T09:13:58.244379Z",
+                "lead_time": 252.618,
+                "prediction": {},
+                "result_count": 0,
+                "task": 152,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 151,
+            "caption_0": "dress the display",
+            "caption_1": "display the dress",
+            "image_0": "/data/local-files/?d=data/images/ex_151_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_151_img_1.png",
+            "tag": "Altered POS",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Both",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_151_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_151_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.083927Z",
+        "updated_at": "2022-10-06T09:13:58.384125Z",
+        "inner_id": 152,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 153,
+        "annotations": [
+            {
+                "id": 262,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "r81o43CuG1",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "RG4jAufFgj",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:15:01.516039Z",
+                "updated_at": "2022-10-06T09:15:01.516068Z",
+                "lead_time": 58.321,
+                "prediction": {},
+                "result_count": 0,
+                "task": 153,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 152,
+            "caption_0": "spoon holding honey",
+            "caption_1": "honey holding spoon",
+            "image_0": "/data/local-files/?d=data/images/ex_152_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_152_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_152_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_152_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.083987Z",
+        "updated_at": "2022-10-06T09:15:01.605137Z",
+        "inner_id": 153,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 154,
+        "annotations": [
+            {
+                "id": 263,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "w-ajnhKNTR",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "MwYcbYn7ye",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:15:41.302895Z",
+                "updated_at": "2022-10-06T09:15:41.302924Z",
+                "lead_time": 34.897,
+                "prediction": {},
+                "result_count": 0,
+                "task": 154,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 153,
+            "caption_0": "books holding up a person",
+            "caption_1": "a person holding up books",
+            "image_0": "/data/local-files/?d=data/images/ex_153_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_153_img_1.png",
+            "tag": "Noun Phrase",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_153_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_153_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.084047Z",
+        "updated_at": "2022-10-06T09:15:41.390503Z",
+        "inner_id": 154,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 155,
+        "annotations": [
+            {
+                "id": 264,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "HhulwV6aBs",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Both"
+                            ]
+                        },
+                        "id": "6hIQcqmiuc",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:16:20.074556Z",
+                "updated_at": "2022-10-06T09:16:20.074586Z",
+                "lead_time": 33.92,
+                "prediction": {},
+                "result_count": 0,
+                "task": 155,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 154,
+            "caption_0": "a dog is using a wheelchair next to a person",
+            "caption_1": "a person is using a wheelchair next to a dog",
+            "image_0": "/data/local-files/?d=data/images/ex_154_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_154_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_154_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_154_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.084141Z",
+        "updated_at": "2022-10-06T09:16:20.164815Z",
+        "inner_id": 155,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 156,
+        "annotations": [
+            {
+                "id": 265,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "7_zbhpXuIy",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "MQ8w1wLzN_",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:18:22.457254Z",
+                "updated_at": "2022-10-06T09:18:22.457284Z",
+                "lead_time": 118.819,
+                "prediction": {},
+                "result_count": 0,
+                "task": 156,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [
+            {
+                "id": 179,
+                "user": "juletxara@gmail.com",
+                "created_username": "Julen Etxaniz juletxara@gmail.com, 1",
+                "created_ago": "1\u00a0hour, 36\u00a0minutes",
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Both"
+                            ]
+                        },
+                        "id": "9SHJ76ktCU",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "nwPD8eXnjX",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "lead_time": 68.705,
+                "created_at": "2022-10-06T09:07:13.932667Z",
+                "updated_at": "2022-10-06T09:07:55.729125Z",
+                "task": 156,
+                "annotation": null
+            }
+        ],
+        "predictions": [],
+        "data": {
+            "id": 155,
+            "caption_0": "some plants surrounding a lightbulb",
+            "caption_1": "a lightbulb surrounding some plants",
+            "image_0": "/data/local-files/?d=data/images/ex_155_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_155_img_1.png",
+            "tag": "Determiner-Numeral, Noun Phrase",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_155_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_155_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.084241Z",
+        "updated_at": "2022-10-06T09:18:22.547949Z",
+        "inner_id": 156,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 157,
+        "annotations": [
+            {
+                "id": 266,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "fx9X_rwlnQ",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "ldTj6kOmT2",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:21:32.957309Z",
+                "updated_at": "2022-10-06T09:21:32.957339Z",
+                "lead_time": 187.938,
+                "prediction": {},
+                "result_count": 0,
+                "task": 157,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 156,
+            "caption_0": "a more lightly-colored dog is holding a toy next to a black dog",
+            "caption_1": "a black dog is holding a toy next to a more lightly-colored dog",
+            "image_0": "/data/local-files/?d=data/images/ex_156_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_156_img_1.png",
+            "tag": "Adjective-Color",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_156_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_156_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.084341Z",
+        "updated_at": "2022-10-06T09:21:33.039698Z",
+        "inner_id": 157,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 158,
+        "annotations": [
+            {
+                "id": 267,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "bnDT6BRazu",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "OiJtfkqF14",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:22:34.291109Z",
+                "updated_at": "2022-10-06T09:22:34.291140Z",
+                "lead_time": 55.025,
+                "prediction": {},
+                "result_count": 0,
+                "task": 158,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 157,
+            "caption_0": "the flowers are taller than the people",
+            "caption_1": "the people are taller than the flowers",
+            "image_0": "/data/local-files/?d=data/images/ex_157_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_157_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_157_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_157_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.084443Z",
+        "updated_at": "2022-10-06T09:22:34.375675Z",
+        "inner_id": 158,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 159,
+        "annotations": [
+            {
+                "id": 268,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "fIJwdeQ7c5",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "kcwFfg7O7_",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:24:10.554367Z",
+                "updated_at": "2022-10-06T09:24:10.554398Z",
+                "lead_time": 93.42,
+                "prediction": {},
+                "result_count": 0,
+                "task": 159,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 158,
+            "caption_0": "there's a human in a stroller next to a dog",
+            "caption_1": "there's a dog in a stroller next to a human",
+            "image_0": "/data/local-files/?d=data/images/ex_158_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_158_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_158_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_158_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.084543Z",
+        "updated_at": "2022-10-06T09:24:10.638935Z",
+        "inner_id": 159,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 160,
+        "annotations": [
+            {
+                "id": 269,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "BMZlyLZJvl",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "E7G-Bc4cAD",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:25:51.169440Z",
+                "updated_at": "2022-10-06T09:25:51.169469Z",
+                "lead_time": 56.744,
+                "prediction": {},
+                "result_count": 0,
+                "task": 160,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 159,
+            "caption_0": "a person is casting a shadow beside a ball",
+            "caption_1": "a ball is casting a shadow beside a person",
+            "image_0": "/data/local-files/?d=data/images/ex_159_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_159_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_159_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_159_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.084647Z",
+        "updated_at": "2022-10-06T09:25:51.250399Z",
+        "inner_id": 160,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 161,
+        "annotations": [
+            {
+                "id": 270,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "vqIwnl2Qf9",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "4vpOlJInwD",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:29:55.227668Z",
+                "updated_at": "2022-10-06T09:29:55.227703Z",
+                "lead_time": 242.025,
+                "prediction": {},
+                "result_count": 0,
+                "task": 161,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 160,
+            "caption_0": "its tail is shorter than its body",
+            "caption_1": "its body is shorter than its tail",
+            "image_0": "/data/local-files/?d=data/images/ex_160_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_160_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_160_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_160_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.084750Z",
+        "updated_at": "2022-10-06T09:29:55.676833Z",
+        "inner_id": 161,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 162,
+        "annotations": [
+            {
+                "id": 271,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Both"
+                            ]
+                        },
+                        "id": "HSrTQt_gnY",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Both"
+                            ]
+                        },
+                        "id": "WTxbSa6RVT",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:30:26.418919Z",
+                "updated_at": "2022-10-06T09:30:26.418951Z",
+                "lead_time": 28.543,
+                "prediction": {},
+                "result_count": 0,
+                "task": 162,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 161,
+            "caption_0": "the child is throwing the adult the ball",
+            "caption_1": "the adult is throwing the child the ball",
+            "image_0": "/data/local-files/?d=data/images/ex_161_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_161_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_161_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_161_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.084860Z",
+        "updated_at": "2022-10-06T09:30:26.504361Z",
+        "inner_id": 162,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 163,
+        "annotations": [
+            {
+                "id": 272,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "HU6hetGgZr",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "OxZotqaxu9",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:30:57.893582Z",
+                "updated_at": "2022-10-06T09:30:57.893611Z",
+                "lead_time": 28.76,
+                "prediction": {},
+                "result_count": 0,
+                "task": 163,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 162,
+            "caption_0": "a person underneath lights",
+            "caption_1": "lights underneath a person",
+            "image_0": "/data/local-files/?d=data/images/ex_162_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_162_img_1.png",
+            "tag": "Noun Phrase",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_162_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_162_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.084962Z",
+        "updated_at": "2022-10-06T09:30:57.980617Z",
+        "inner_id": 163,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 164,
+        "annotations": [
+            {
+                "id": 273,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "54q06sG1OY",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Both"
+                            ]
+                        },
+                        "id": "1GLTsQFhdA",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:31:22.654638Z",
+                "updated_at": "2022-10-06T09:31:22.654667Z",
+                "lead_time": 22.01,
+                "prediction": {},
+                "result_count": 0,
+                "task": 164,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 163,
+            "caption_0": "some green on the ball",
+            "caption_1": "the ball on some green",
+            "image_0": "/data/local-files/?d=data/images/ex_163_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_163_img_1.png",
+            "tag": "Determiner-Numeral, Noun Phrase",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_163_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_163_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.085058Z",
+        "updated_at": "2022-10-06T09:31:22.737854Z",
+        "inner_id": 164,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 165,
+        "annotations": [
+            {
+                "id": 274,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "XtA6SrLD95",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "OxkAFfm1ZH",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:31:53.108923Z",
+                "updated_at": "2022-10-06T09:31:53.108952Z",
+                "lead_time": 28.643,
+                "prediction": {},
+                "result_count": 0,
+                "task": 165,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 164,
+            "caption_0": "mind in the clouds",
+            "caption_1": "clouds in the mind",
+            "image_0": "/data/local-files/?d=data/images/ex_164_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_164_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "Symbolic",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_164_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_164_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.085157Z",
+        "updated_at": "2022-10-06T09:31:53.196371Z",
+        "inner_id": 165,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 166,
+        "annotations": [
+            {
+                "id": 275,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "i24_JIm8nw",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "I2V2yUPjvO",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:32:18.570308Z",
+                "updated_at": "2022-10-06T09:32:18.570338Z",
+                "lead_time": 18.771,
+                "prediction": {},
+                "result_count": 0,
+                "task": 166,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 165,
+            "caption_0": "there's a phone on a map",
+            "caption_1": "there's a map on a phone",
+            "image_0": "/data/local-files/?d=data/images/ex_165_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_165_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_165_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_165_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.085261Z",
+        "updated_at": "2022-10-06T09:32:18.657320Z",
+        "inner_id": 166,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 167,
+        "annotations": [
+            {
+                "id": 276,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Both"
+                            ]
+                        },
+                        "id": "1_D6NkfzFS",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "yIt42a7IXE",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:32:43.243410Z",
+                "updated_at": "2022-10-06T09:32:43.243441Z",
+                "lead_time": 22.581,
+                "prediction": {},
+                "result_count": 0,
+                "task": 167,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 166,
+            "caption_0": "a person on a rock next to a dog",
+            "caption_1": "a dog on a rock next to a person",
+            "image_0": "/data/local-files/?d=data/images/ex_166_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_166_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_166_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_166_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.085366Z",
+        "updated_at": "2022-10-06T09:32:43.330741Z",
+        "inner_id": 167,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 168,
+        "annotations": [
+            {
+                "id": 277,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "Wl7vKkYB2P",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "mIfB1YotmW",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:33:08.938977Z",
+                "updated_at": "2022-10-06T09:33:08.939018Z",
+                "lead_time": 22.226,
+                "prediction": {},
+                "result_count": 0,
+                "task": 168,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 167,
+            "caption_0": "an adult is flexing beside a child",
+            "caption_1": "a child is flexing beside an adult",
+            "image_0": "/data/local-files/?d=data/images/ex_167_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_167_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_167_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_167_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.085468Z",
+        "updated_at": "2022-10-06T09:33:09.026785Z",
+        "inner_id": 168,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 169,
+        "annotations": [
+            {
+                "id": 278,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Both"
+                            ]
+                        },
+                        "id": "Q4WtOSs8wY",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "gZW7vzz3Uj",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:33:30.174934Z",
+                "updated_at": "2022-10-06T09:33:30.174965Z",
+                "lead_time": 19.083,
+                "prediction": {},
+                "result_count": 0,
+                "task": 169,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 168,
+            "caption_0": "the person is looking at the dog",
+            "caption_1": "the dog is looking at the person",
+            "image_0": "/data/local-files/?d=data/images/ex_168_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_168_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_168_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_168_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.085572Z",
+        "updated_at": "2022-10-06T09:33:30.264963Z",
+        "inner_id": 169,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 170,
+        "annotations": [
+            {
+                "id": 279,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "8ehChTYcIj",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "u1AhQDghIh",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:33:58.712409Z",
+                "updated_at": "2022-10-06T09:33:58.712440Z",
+                "lead_time": 24.652,
+                "prediction": {},
+                "result_count": 0,
+                "task": 170,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 169,
+            "caption_0": "a cat is underneath a red blanket",
+            "caption_1": "a red blanket is underneath a cat",
+            "image_0": "/data/local-files/?d=data/images/ex_169_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_169_img_1.png",
+            "tag": "Noun Phrase",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_169_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_169_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.085674Z",
+        "updated_at": "2022-10-06T09:33:58.802676Z",
+        "inner_id": 170,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 171,
+        "annotations": [
+            {
+                "id": 280,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "d3skwMxhlB",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "C9YUKcFafJ",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:34:13.508497Z",
+                "updated_at": "2022-10-06T09:34:13.508527Z",
+                "lead_time": 13.109,
+                "prediction": {},
+                "result_count": 0,
+                "task": 171,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 170,
+            "caption_0": "the person is bigger than the house",
+            "caption_1": "the house is bigger than the person",
+            "image_0": "/data/local-files/?d=data/images/ex_170_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_170_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_170_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_170_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.085741Z",
+        "updated_at": "2022-10-06T09:34:13.595758Z",
+        "inner_id": 171,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 172,
+        "annotations": [
+            {
+                "id": 281,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "cvRAaftsel",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "UU4rJD5NAl",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:34:28.840070Z",
+                "updated_at": "2022-10-06T09:34:28.840101Z",
+                "lead_time": 13.537,
+                "prediction": {},
+                "result_count": 0,
+                "task": 172,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 171,
+            "caption_0": "the person is underneath the car",
+            "caption_1": "the car is underneath the person",
+            "image_0": "/data/local-files/?d=data/images/ex_171_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_171_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_171_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_171_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.085811Z",
+        "updated_at": "2022-10-06T09:34:28.928791Z",
+        "inner_id": 172,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 173,
+        "annotations": [
+            {
+                "id": 282,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "QCE5lUp8AT",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "YEirYaC0mk",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:35:22.643219Z",
+                "updated_at": "2022-10-06T09:35:22.643250Z",
+                "lead_time": 52.172,
+                "prediction": {},
+                "result_count": 0,
+                "task": 173,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 172,
+            "caption_0": "the water is filled with plastic",
+            "caption_1": "the plastic is filled with water",
+            "image_0": "/data/local-files/?d=data/images/ex_172_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_172_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_172_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_172_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.085872Z",
+        "updated_at": "2022-10-06T09:35:22.729731Z",
+        "inner_id": 173,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 174,
+        "annotations": [
+            {
+                "id": 283,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "ZyZlp_xLg1",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "CEuFnzwrjJ",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:35:34.269431Z",
+                "updated_at": "2022-10-06T09:35:34.269462Z",
+                "lead_time": 8.981,
+                "prediction": {},
+                "result_count": 0,
+                "task": 174,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 173,
+            "caption_0": "an apple is on a target",
+            "caption_1": "a target is on an apple",
+            "image_0": "/data/local-files/?d=data/images/ex_173_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_173_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_173_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_173_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.085932Z",
+        "updated_at": "2022-10-06T09:35:34.360507Z",
+        "inner_id": 174,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 175,
+        "annotations": [
+            {
+                "id": 284,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "35LcDsfKAu",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "9GP0RzJBt8",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:36:10.603319Z",
+                "updated_at": "2022-10-06T09:36:10.603352Z",
+                "lead_time": 34.748,
+                "prediction": {},
+                "result_count": 0,
+                "task": 175,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 174,
+            "caption_0": "plant made out of a light bulb",
+            "caption_1": "light bulb made out of a plant",
+            "image_0": "/data/local-files/?d=data/images/ex_174_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_174_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "Symbolic",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_174_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_174_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.085992Z",
+        "updated_at": "2022-10-06T09:36:10.690531Z",
+        "inner_id": 175,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 176,
+        "annotations": [
+            {
+                "id": 285,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "5g_0wy2nGx",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "EC0o1chuZe",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:36:26.384260Z",
+                "updated_at": "2022-10-06T09:36:26.384292Z",
+                "lead_time": 13.284,
+                "prediction": {},
+                "result_count": 0,
+                "task": 176,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 175,
+            "caption_0": "parent pointing at child",
+            "caption_1": "child pointing at parent",
+            "image_0": "/data/local-files/?d=data/images/ex_175_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_175_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_175_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_175_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.086051Z",
+        "updated_at": "2022-10-06T09:36:26.480258Z",
+        "inner_id": 176,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 177,
+        "annotations": [
+            {
+                "id": 286,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "D4UhFsBLuF",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "ocN7unqhLq",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:37:33.681463Z",
+                "updated_at": "2022-10-06T09:37:33.681493Z",
+                "lead_time": 65.683,
+                "prediction": {},
+                "result_count": 0,
+                "task": 177,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 176,
+            "caption_0": "the person reached the base before the ball",
+            "caption_1": "the ball reached the base before the person",
+            "image_0": "/data/local-files/?d=data/images/ex_176_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_176_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_176_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_176_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.086111Z",
+        "updated_at": "2022-10-06T09:37:33.769576Z",
+        "inner_id": 177,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 178,
+        "annotations": [
+            {
+                "id": 287,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "UZvNsZOQPA",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "5VYa-tR9zz",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:38:03.102338Z",
+                "updated_at": "2022-10-06T09:38:03.102367Z",
+                "lead_time": 27.801,
+                "prediction": {},
+                "result_count": 0,
+                "task": 178,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 177,
+            "caption_0": "ice being dumped on top of fish",
+            "caption_1": "fish being dumped on top of ice",
+            "image_0": "/data/local-files/?d=data/images/ex_177_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_177_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_177_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_177_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.086171Z",
+        "updated_at": "2022-10-06T09:38:03.191528Z",
+        "inner_id": 178,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 179,
+        "annotations": [
+            {
+                "id": 288,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Both"
+                            ]
+                        },
+                        "id": "6SRLuTXQGf",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Both"
+                            ]
+                        },
+                        "id": "GD5pyZOM4c",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:38:15.863320Z",
+                "updated_at": "2022-10-06T09:38:15.863349Z",
+                "lead_time": 10.676,
+                "prediction": {},
+                "result_count": 0,
+                "task": 179,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 178,
+            "caption_0": "an adult kisses a child",
+            "caption_1": "a child kisses an adult",
+            "image_0": "/data/local-files/?d=data/images/ex_178_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_178_img_1.png",
+            "tag": "Noun",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Object",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_178_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_178_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.086230Z",
+        "updated_at": "2022-10-06T09:38:15.953839Z",
+        "inner_id": 179,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 180,
+        "annotations": [
+            {
+                "id": 289,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Both"
+                            ]
+                        },
+                        "id": "rjp1ER2Ml-",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "X4nWonVhTz",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:39:14.428625Z",
+                "updated_at": "2022-10-06T09:39:14.428656Z",
+                "lead_time": 56.882,
+                "prediction": {},
+                "result_count": 0,
+                "task": 180,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 179,
+            "caption_0": "there's a dog in a mask and a person beside it",
+            "caption_1": "there's a dog and a person in a mask beside it",
+            "image_0": "/data/local-files/?d=data/images/ex_179_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_179_img_1.png",
+            "tag": "Preposition Phrase, Scope",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_179_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_179_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.086290Z",
+        "updated_at": "2022-10-06T09:39:14.517628Z",
+        "inner_id": 180,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 181,
+        "annotations": [
+            {
+                "id": 290,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "2_6_aRSLZG",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "8-ZcjhvhPh",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:40:03.281231Z",
+                "updated_at": "2022-10-06T09:40:03.281260Z",
+                "lead_time": 44.324,
+                "prediction": {},
+                "result_count": 0,
+                "task": 181,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 180,
+            "caption_0": "the baby on the phone is next to an adult",
+            "caption_1": "the baby is next to an adult on the phone",
+            "image_0": "/data/local-files/?d=data/images/ex_180_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_180_img_1.png",
+            "tag": "Preposition Phrase, Scope",
+            "secondary_tag": "Pragmatics",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_180_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_180_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.086349Z",
+        "updated_at": "2022-10-06T09:40:03.370997Z",
+        "inner_id": 181,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 182,
+        "annotations": [
+            {
+                "id": 291,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "p2dxMCbeLd",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "DzCPE7nU5_",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:40:27.910363Z",
+                "updated_at": "2022-10-06T09:40:27.910394Z",
+                "lead_time": 22.753,
+                "prediction": {},
+                "result_count": 0,
+                "task": 182,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 181,
+            "caption_0": "the person on the left has their arms up and the person on the right has their arms down",
+            "caption_1": "the person on the right has their arms up and the person on the left has their arms down",
+            "image_0": "/data/local-files/?d=data/images/ex_181_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_181_img_1.png",
+            "tag": "Preposition",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_181_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_181_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.086408Z",
+        "updated_at": "2022-10-06T09:40:27.998789Z",
+        "inner_id": 182,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 183,
+        "annotations": [
+            {
+                "id": 292,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "NMdfpMMqDj",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "tktEgqmsws",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:41:08.986923Z",
+                "updated_at": "2022-10-06T09:41:08.986953Z",
+                "lead_time": 38.76,
+                "prediction": {},
+                "result_count": 0,
+                "task": 183,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 182,
+            "caption_0": "the person on the left is holding the phone and the person on the right is staring at it",
+            "caption_1": "the person on the right is holding the phone and the person on the left is staring at it",
+            "image_0": "/data/local-files/?d=data/images/ex_182_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_182_img_1.png",
+            "tag": "Preposition",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_182_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_182_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.086467Z",
+        "updated_at": "2022-10-06T09:41:09.067465Z",
+        "inner_id": 183,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 184,
+        "annotations": [
+            {
+                "id": 293,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "X0P-gNS5OE",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "zPJybQame_",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:41:41.372063Z",
+                "updated_at": "2022-10-06T09:41:41.372094Z",
+                "lead_time": 30.615,
+                "prediction": {},
+                "result_count": 0,
+                "task": 184,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 183,
+            "caption_0": "the orange on the left is moldy while the orange on the right is fresh",
+            "caption_1": "the orange on the right is moldy while the orange on the left is fresh",
+            "image_0": "/data/local-files/?d=data/images/ex_183_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_183_img_1.png",
+            "tag": "Preposition",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_183_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_183_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.086528Z",
+        "updated_at": "2022-10-06T09:41:41.452090Z",
+        "inner_id": 184,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 185,
+        "annotations": [
+            {
+                "id": 294,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "hPKCUr_ntX",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "9UJeWY4frZ",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:42:43.775800Z",
+                "updated_at": "2022-10-06T09:42:43.775830Z",
+                "lead_time": 60.216,
+                "prediction": {},
+                "result_count": 0,
+                "task": 185,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 184,
+            "caption_0": "a pink scoop of ice cream on top and a blue scoop on bottom",
+            "caption_1": "a pink scoop of ice cream on bottom and a blue scoop on top",
+            "image_0": "/data/local-files/?d=data/images/ex_184_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_184_img_1.png",
+            "tag": "Preposition",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_184_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_184_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.086617Z",
+        "updated_at": "2022-10-06T09:42:43.864422Z",
+        "inner_id": 185,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 186,
+        "annotations": [
+            {
+                "id": 295,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "iZfmmJ1ddm",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "y7MK09OJIT",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:43:19.911850Z",
+                "updated_at": "2022-10-06T09:43:19.911880Z",
+                "lead_time": 34.731,
+                "prediction": {},
+                "result_count": 0,
+                "task": 186,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 185,
+            "caption_0": "the glasses on the right are fuller than the glasses on the left",
+            "caption_1": "the glasses on the left are fuller than the glasses on the right",
+            "image_0": "/data/local-files/?d=data/images/ex_185_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_185_img_1.png",
+            "tag": "Preposition",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_185_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_185_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.086693Z",
+        "updated_at": "2022-10-06T09:43:20.003968Z",
+        "inner_id": 186,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 187,
+        "annotations": [
+            {
+                "id": 296,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "XND8RQH7AN",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "f_mMGTB3vp",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:43:58.684273Z",
+                "updated_at": "2022-10-06T09:43:58.684303Z",
+                "lead_time": 37.088,
+                "prediction": {},
+                "result_count": 0,
+                "task": 187,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 186,
+            "caption_0": "the person on the left is blowing bubbles and the person on the right is watching",
+            "caption_1": "the person on the right is blowing bubbles and the person on the left is watching",
+            "image_0": "/data/local-files/?d=data/images/ex_186_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_186_img_1.png",
+            "tag": "Preposition",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_186_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_186_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.086763Z",
+        "updated_at": "2022-10-06T09:43:58.775349Z",
+        "inner_id": 187,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 188,
+        "annotations": [
+            {
+                "id": 297,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "tV901qcg8k",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "o1EDM3SBy4",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:44:16.448461Z",
+                "updated_at": "2022-10-06T09:44:16.448490Z",
+                "lead_time": 15.319,
+                "prediction": {},
+                "result_count": 0,
+                "task": 188,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 187,
+            "caption_0": "there's more foam on the left than on the right",
+            "caption_1": "there's more foam on the right than on the left",
+            "image_0": "/data/local-files/?d=data/images/ex_187_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_187_img_1.png",
+            "tag": "Preposition",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_187_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_187_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.086824Z",
+        "updated_at": "2022-10-06T09:44:16.537080Z",
+        "inner_id": 188,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 189,
+        "annotations": [
+            {
+                "id": 298,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "K5qKAnpD43",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "3SO6K-nW_8",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:44:33.100992Z",
+                "updated_at": "2022-10-06T09:44:33.101032Z",
+                "lead_time": 13.992,
+                "prediction": {},
+                "result_count": 0,
+                "task": 189,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 188,
+            "caption_0": "a fish is jumping from left to right",
+            "caption_1": "a fish is jumping from right to left",
+            "image_0": "/data/local-files/?d=data/images/ex_188_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_188_img_1.png",
+            "tag": "Preposition",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_188_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_188_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.086883Z",
+        "updated_at": "2022-10-06T09:44:33.193406Z",
+        "inner_id": 189,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 190,
+        "annotations": [
+            {
+                "id": 299,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Both"
+                            ]
+                        },
+                        "id": "Klo-TwL9GR",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Both"
+                            ]
+                        },
+                        "id": "rxDrMpYExS",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:45:54.554612Z",
+                "updated_at": "2022-10-06T09:45:54.554641Z",
+                "lead_time": 79.644,
+                "prediction": {},
+                "result_count": 0,
+                "task": 190,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 189,
+            "caption_0": "they worked out then they drank water",
+            "caption_1": "they drank water then they worked out",
+            "image_0": "/data/local-files/?d=data/images/ex_189_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_189_img_1.png",
+            "tag": "Verb-Transitive Phrase",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_189_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_189_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.086943Z",
+        "updated_at": "2022-10-06T09:45:54.644578Z",
+        "inner_id": 190,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 191,
+        "annotations": [
+            {
+                "id": 300,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "7iqfxqwcTP",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "Xpz9dHPI02",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:46:21.307072Z",
+                "updated_at": "2022-10-06T09:46:21.307103Z",
+                "lead_time": 24.914,
+                "prediction": {},
+                "result_count": 0,
+                "task": 191,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 190,
+            "caption_0": "the shrimp are peeled then the shrimp are cooked",
+            "caption_1": "the shrimp are cooked then the shrimp are peeled",
+            "image_0": "/data/local-files/?d=data/images/ex_190_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_190_img_1.png",
+            "tag": "Verb-Intransitive",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_190_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_190_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.087002Z",
+        "updated_at": "2022-10-06T09:46:21.397191Z",
+        "inner_id": 191,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 192,
+        "annotations": [
+            {
+                "id": 301,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "1r0LrBNCC3",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "bDa6Rt9IDE",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:46:32.243933Z",
+                "updated_at": "2022-10-06T09:46:32.243965Z",
+                "lead_time": 8.922,
+                "prediction": {},
+                "result_count": 0,
+                "task": 192,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 191,
+            "caption_0": "the coffee is poured before it is ground",
+            "caption_1": "it is ground before the coffee is poured",
+            "image_0": "/data/local-files/?d=data/images/ex_191_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_191_img_1.png",
+            "tag": "Sentence",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_191_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_191_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.087061Z",
+        "updated_at": "2022-10-06T09:46:32.336010Z",
+        "inner_id": 192,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 193,
+        "annotations": [
+            {
+                "id": 302,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "uS5uqXLNK9",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "Yx31UVEjvC",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:47:10.669594Z",
+                "updated_at": "2022-10-06T09:47:10.669624Z",
+                "lead_time": 36.189,
+                "prediction": {},
+                "result_count": 0,
+                "task": 193,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 192,
+            "caption_0": "the potato is washed and then it is cut",
+            "caption_1": "the potato is cut and then it is washed",
+            "image_0": "/data/local-files/?d=data/images/ex_192_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_192_img_1.png",
+            "tag": "Verb-Intransitive",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_192_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_192_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.087121Z",
+        "updated_at": "2022-10-06T09:47:10.762432Z",
+        "inner_id": 193,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 194,
+        "annotations": [
+            {
+                "id": 303,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "ZAWJhVQJeO",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "ULiP8h3INn",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:47:20.810233Z",
+                "updated_at": "2022-10-06T09:47:20.810262Z",
+                "lead_time": 7.904,
+                "prediction": {},
+                "result_count": 0,
+                "task": 194,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 193,
+            "caption_0": "the banana is peeled then it is sliced",
+            "caption_1": "the banana is sliced then it is peeled",
+            "image_0": "/data/local-files/?d=data/images/ex_193_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_193_img_1.png",
+            "tag": "Verb-Intransitive",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_193_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_193_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.087181Z",
+        "updated_at": "2022-10-06T09:47:20.899158Z",
+        "inner_id": 194,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 195,
+        "annotations": [
+            {
+                "id": 304,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "NH_POCgPUm",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "xeqtgN-GIy",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:47:46.630448Z",
+                "updated_at": "2022-10-06T09:47:46.630476Z",
+                "lead_time": 23.889,
+                "prediction": {},
+                "result_count": 0,
+                "task": 195,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 194,
+            "caption_0": "the dog is swimming and the person is standing",
+            "caption_1": "the dog is standing and the person is swimming",
+            "image_0": "/data/local-files/?d=data/images/ex_194_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_194_img_1.png",
+            "tag": "Verb-Intransitive, Noun",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_194_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_194_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.087241Z",
+        "updated_at": "2022-10-06T09:47:46.721279Z",
+        "inner_id": 195,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 196,
+        "annotations": [
+            {
+                "id": 305,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "iWoLcPPfhq",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "9cj5sPe9ID",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:48:18.155918Z",
+                "updated_at": "2022-10-06T09:48:18.155948Z",
+                "lead_time": 16.869,
+                "prediction": {},
+                "result_count": 0,
+                "task": 196,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 195,
+            "caption_0": "the person is jumping while the cat is sitting",
+            "caption_1": "the person is sitting while the cat is jumping",
+            "image_0": "/data/local-files/?d=data/images/ex_195_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_195_img_1.png",
+            "tag": "Verb-Intransitive, Noun",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_195_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_195_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.087303Z",
+        "updated_at": "2022-10-06T09:48:18.245559Z",
+        "inner_id": 196,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 197,
+        "annotations": [
+            {
+                "id": 306,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "cGPFxMJCxU",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "pl1BaRv0WI",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:48:37.505133Z",
+                "updated_at": "2022-10-06T09:48:37.505166Z",
+                "lead_time": 16.69,
+                "prediction": {},
+                "result_count": 0,
+                "task": 197,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 196,
+            "caption_0": "a cat is lying down and a person is stretching",
+            "caption_1": "a cat is stretching and a person is lying down",
+            "image_0": "/data/local-files/?d=data/images/ex_196_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_196_img_1.png",
+            "tag": "Verb-Intransitive Phrase",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_196_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_196_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.087407Z",
+        "updated_at": "2022-10-06T09:48:37.595717Z",
+        "inner_id": 197,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 198,
+        "annotations": [
+            {
+                "id": 307,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "7Y7yYeq_9G",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "FfOlSJYPYM",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:49:05.665800Z",
+                "updated_at": "2022-10-06T09:49:05.665830Z",
+                "lead_time": 25.886,
+                "prediction": {},
+                "result_count": 0,
+                "task": 198,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 197,
+            "caption_0": "some people are standing but more are sitting",
+            "caption_1": "some people are sitting but more are standing",
+            "image_0": "/data/local-files/?d=data/images/ex_197_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_197_img_1.png",
+            "tag": "Verb-Intransitive, Determiner-Numeral",
+            "secondary_tag": "",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_197_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_197_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.087507Z",
+        "updated_at": "2022-10-06T09:49:05.751332Z",
+        "inner_id": 198,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 199,
+        "annotations": [
+            {
+                "id": 308,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "None"
+                            ]
+                        },
+                        "id": "CIAW09_QIQ",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 0"
+                            ]
+                        },
+                        "id": "1PH5JeRwhQ",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:49:31.708338Z",
+                "updated_at": "2022-10-06T09:49:31.708370Z",
+                "lead_time": 22.954,
+                "prediction": {},
+                "result_count": 0,
+                "task": 199,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 198,
+            "caption_0": "The kid throws the pancake and the adult sees it",
+            "caption_1": "The kids see the pancake and the adult throws it",
+            "image_0": "/data/local-files/?d=data/images/ex_198_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_198_img_1.png",
+            "tag": "Verb-Transitive",
+            "secondary_tag": "Morpheme-Level",
+            "num_main_preds": 2,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_198_cap_1_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_198_cap_0_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.087604Z",
+        "updated_at": "2022-10-06T09:49:31.798972Z",
+        "inner_id": 199,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
+        "id": 200,
+        "annotations": [
+            {
+                "id": 309,
+                "completed_by": 6,
+                "result": [
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "thsbhZHq7m",
+                        "from_name": "choice_image_0",
+                        "to_name": "generated_image_0",
+                        "type": "choices",
+                        "origin": "manual"
+                    },
+                    {
+                        "value": {
+                            "choices": [
+                                "Caption 1"
+                            ]
+                        },
+                        "id": "d3ZQvfQt3C",
+                        "from_name": "choice_image_1",
+                        "to_name": "generated_image_1",
+                        "type": "choices",
+                        "origin": "manual"
+                    }
+                ],
+                "was_cancelled": false,
+                "ground_truth": false,
+                "created_at": "2022-10-06T09:49:53.174642Z",
+                "updated_at": "2022-10-06T09:49:53.174671Z",
+                "lead_time": 19.334,
+                "prediction": {},
+                "result_count": 0,
+                "task": 200,
+                "parent_prediction": null,
+                "parent_annotation": null
+            }
+        ],
+        "file_upload": "8f0e8939-examples.json",
+        "drafts": [],
+        "predictions": [],
+        "data": {
+            "id": 199,
+            "caption_0": "painting gray walls white",
+            "caption_1": "painting white walls gray",
+            "image_0": "/data/local-files/?d=data/images/ex_199_img_0.png",
+            "image_1": "/data/local-files/?d=data/images/ex_199_img_1.png",
+            "tag": "Adjective-Color",
+            "secondary_tag": "",
+            "num_main_preds": 1,
+            "collapsed_tag": "Relation",
+            "generated_image_0": "/data/local-files/?d=images/stable_diffusion/ex_199_cap_0_img_0.png",
+            "generated_image_1": "/data/local-files/?d=images/stable_diffusion/ex_199_cap_1_img_0.png"
+        },
+        "meta": {},
+        "created_at": "2022-09-23T12:24:40.087710Z",
+        "updated_at": "2022-10-06T09:49:53.270897Z",
+        "inner_id": 200,
+        "total_annotations": 1,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "project": 1,
+        "updated_by": 6
+    },
+    {
         "id": 201,
         "annotations": [
             {
@@ -14195,7 +17663,7 @@
                 "id": 15,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -14303,7 +17771,7 @@
                 "id": 16,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -14411,7 +17879,7 @@
                 "id": 17,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -14507,7 +17975,7 @@
                 "id": 18,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -14615,7 +18083,7 @@
                 "id": 25,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -14711,7 +18179,7 @@
                 "id": 24,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -14819,7 +18287,7 @@
                 "id": 26,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -14927,7 +18395,7 @@
                 "id": 27,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -15163,7 +18631,7 @@
                 "id": 28,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -15259,7 +18727,7 @@
                 "id": 29,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -15367,7 +18835,7 @@
                 "id": 30,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -15545,7 +19013,7 @@
                 "id": 31,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -15653,7 +19121,7 @@
                 "id": 32,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -15901,7 +19369,7 @@
                 "id": 33,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -16009,7 +19477,7 @@
                 "id": 34,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -16187,7 +19655,7 @@
                 "id": 35,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -16365,7 +19833,7 @@
                 "id": 36,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -16613,7 +20081,7 @@
                 "id": 37,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -17841,7 +21309,7 @@
                 "id": 20,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -17949,7 +21417,7 @@
                 "id": 19,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -18127,7 +21595,7 @@
                 "id": 21,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
@@ -18235,7 +21703,7 @@
                 "id": 22,
                 "user": "e.agirre@ehu.eus",
                 "created_username": "e.agirre@ehu.eus, 3",
-                "created_ago": "4\u00a0days, 14\u00a0hours",
+                "created_ago": "1\u00a0week, 3\u00a0days",
                 "result": [
                     {
                         "value": {
