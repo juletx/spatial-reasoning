@@ -2,9 +2,14 @@ This chapter introduces the two datasets that we used for our experiments. On th
 
 \section{Winoground} \label{sec:winoground}
 
+This section describes the Winoground \cite{thrush2022winoground} dataset and explains the metrics that are used for evaluation.
+
 \subsection{Dataset}
 
-See \cref{tab:stats-tag-subset} for linguistic and visual tag counts.
+Each Winoground example contains two images and two captions, the goal
+is to match them correctly. Both captions contain a completely identical set of words in a different order. The dataset was created by expert annotators and is labeled with tags. As it is a probing dataset, it only has 400 examples, with 800 unique captions and images.
+
+There are three types of tags: linguistic swap-dependent and. See \cref{tab:stats-tag-subset} for linguistic and visual tag counts.
 
 \begin{table}[ht]
 \centering
@@ -175,8 +180,7 @@ There are three non-mutually exclusive visual reasoning tags: Symbolic, Series a
 
 \subsection{Metrics}
 
-\subsubsection{Score}
-
+\paragraph{Score.}
 Performance on Winoground \cite{thrush2022winoground} is computed according to three different metrics that evaluate different aspects of the models' visio-linguistic reasoning abilities.
 
 The first metric is the \textbf{text score}, which measures whether a model can select the correct caption, given an image. 
@@ -213,8 +217,7 @@ The group score for an example is computed according to:
     \end{cases}
 \end{equation}
 
-\subsubsection{Accuracy}
-
+\paragraph{Accuracy.}
 We also add three additional accuracy metrics. These are similar to the previous ones, but accuracy is 0.5 when one of the pairs is correct.
 
 Given images $I_0$ and $I_{1}$ and captions $C_{0}$ and $C_{1}$, the \textbf{text accuracy} for an example $(C_{0},I_{0},C_{1},I_{1})$ is computed according to:
@@ -250,6 +253,8 @@ The \textbf{group accuracy} in our framework is computed according to:
 
 \section{Visual Spatial Reasoning} \label{sec:vsr}
 
+This section describes the Visual Spatial Reasoning (VSR) \cite{liu2022visual} dataset and the splits that are used for evaluation.
+
 \subsection{Dataset}
 
 See \cref{tab:spatial_relations}
@@ -279,3 +284,31 @@ See \cref{tab:spatial_relations}
     % unsued: 'up', 'through', 'deep down', 'from', 'to', 'after'
     \label{tab:spatial_relations}
 \end{table}
+
+\subsection{Dataset Splits}\label{sec:vsr_splits}
+
+The VSR dataset has two types of splits \cite{liu2022visual}, random and zero-shot. The statistics of the two splits are shown in \cref{tab:data_splits}.
+
+\begin{table}[ht]
+\small
+\centering
+\begin{tabular}{lllll}
+\toprule
+ split & train & dev & test & total   \\
+\midrule
+\textit{random} & 7,083 & 1,012 & 2,024 & 10,119 \\
+\textit{zero-shot} & 5,440 & 259 & 731  & 6,430\\
+\bottomrule
+\end{tabular}
+\caption{Data statistics of the \textit{random} and \textit{zero-shot} splits. }
+\label{tab:data_splits}
+\end{table}
+
+\paragraph{Random split.}
+The dataset is split randomly into train/dev/test with the ratio of 70\%/10\%/20\%. All the validated data points are used in this split.
+
+\paragraph{Zero-shot split.}
+It is a concept zero-shot split where train/dev/test have no overlapping concepts. That is, each concept can only appear in one of the sets.
+This is done by randomly grouping concepts into three sets with the ratio of 50\%/20\%/30\%.
+This is a more challenging setup because the model has to learn concepts and relations in a compositional way instead of remembering the co-occurrence of the two.
+Moreover, having less training data is a disadvantage for the models, since not all the data can be used in this setting.
