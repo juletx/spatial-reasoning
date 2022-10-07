@@ -35,7 +35,7 @@
 	Computational Science and Artificial Intelligence
 }
 \newcommand{\izenburua}{Grounding Language Models for Compositional and Spatial Reasoning}
-\newcommand{\data}{2023}
+\newcommand{\data}{October 2022}
 
 
 %% BAKARRIK BAT DESKOMENTATU, GRADU AMAIERAKO LANA BADA. BESTELA, DENAK KOMENTATU%%
@@ -104,7 +104,7 @@
 % LABURPENA / RESUMEN %
 %%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter*{Abstract} \label{cha:abstract}
+\chapter{Abstract} \label{cha:abstract}
 \input chapters/abstract
 \cleardoublepage
 
@@ -114,20 +114,19 @@
 
 %% KOMENTATU HIRU LERRO HAUEK ATALA NAHI EZ BADUZU
 %% COMENTA ESTAS TRES LÍNEAS SI NO QUIERES ESTE APARTADO
-% \chapter*{Acknowledgements} \label{cha:acknowledgements}
-% \input chapters/acknowledgements
-% \cleardoublepage
+\chapter{Acknowledgements} \label{cha:acknowledgements}
+\input chapters/acknowledgements
+\cleardoublepage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % EDUKIEN ZERRENDA / ÍNIDCES %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{KeepFromToc}
+
 {
   \hypersetup{linkcolor=black}
   \tableofcontents
 }
-\end{KeepFromToc}
 \clearpage
 {
   \hypersetup{linkcolor=black}
@@ -139,11 +138,14 @@
   \listoftables
 }
 \clearpage
+
+\if0
 {
   \hypersetup{linkcolor=black}
   \listofalgorithms
 }
 \addcontentsline{toc}{chapter}{List of Algorithms}
+\fi
 
 
 %%%%%%%%%%%%%%%%%%%%%%
@@ -166,20 +168,16 @@
 \input chapters/3_datasets
 \cleardoublepage
 
-\chapter{Methods} \label{cha:4_methods}
-\input chapters/4_methods
+\chapter{Winoground} \label{cha:4_methods}
+\input chapters/4_winoground
 \cleardoublepage
 
 \chapter{Experiments} \label{cha:5_experiments}
 \input chapters/5_experiments
 \cleardoublepage
 
-\chapter{Results} \label{cha:5_results}
-\input chapters/5_results
-\cleardoublepage
-
-\chapter{Discussion} \label{cha:6_discussion}
-\input chapters/6_discussion
+\chapter{Visual Spatial Reasoning} \label{cha:6_visual_spatial_reasoning}
+\input chapters/6_visual_spatial_reasoning
 \cleardoublepage
 
 \chapter{Conclusions} \label{cha:7_conclusions}
