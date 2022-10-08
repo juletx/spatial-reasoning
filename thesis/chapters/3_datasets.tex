@@ -7,9 +7,7 @@ This section describes the Winoground \cite{thrush2022winoground} dataset and ex
 \subsection{Dataset}
 
 Each Winoground example contains two images and two captions, the goal
-is to match them correctly. Both captions contain a completely identical set of words in a different order. The dataset was created by expert annotators and is labeled with tags. As it is a probing dataset, it only has 400 examples, with 800 unique captions and images.
-
-There are three types of tags: linguistic swap-dependent and. See \cref{tab:stats-tag-subset} for linguistic and visual tag counts.
+is to match them correctly. Both captions contain a completely identical set of words in a different order. The dataset was created by expert annotators by creating captions and finding images. As it is a probing dataset, it only has 400 examples, with 800 unique captions and images. All examples are labeled with \textbf{linguistic tags} and some include \textbf{visual tags}. See \cref{tab:stats-tag-subset} for linguistic and visual tag counts.
 
 \begin{table}[ht]
 \centering
@@ -32,7 +30,7 @@ There are three types of tags: linguistic swap-dependent and. See \cref{tab:stat
 \label{tab:stats-tag-subset}
 \end{table}
 
-Linguistic tags can be split in three groups: Object, Relation and Both. See \cref{fig:dataset-examples} and \cref{fig:dataset-examples-linguistic} for examples of linguistic tags. 
+On the one hand, there are 70 \textbf{linguistic tags} in total, which can be split into three groups: Object, Relation and Both. \textbf{Object} swaps consist in swapping noun phrases that refer to objects. \textbf{Relation} swaps reorder words that refer to objects such as verbs, adjectives, prepositions and adverbs. \textbf{Both} swaps involve changing both relations and objects. The annotators also tagged examples for \textbf{how many main predicates} were in the captions, which is independent of the swap type. See \cref{fig:winoground-examples} and \cref{fig:winoground-examples-linguistic} for examples of linguistic tags.
 
 \begin{figure}[ht]
 \centering
@@ -56,12 +54,13 @@ Linguistic tags can be split in three groups: Object, Relation and Both. See \cr
         \includegraphics[height=3cm]{ex_29_img_0.png}
         \caption{a [brown] dog is on a [white] couch}
         \end{subfigure}\\
-        \vspace{9pt}
+        \vspace{10pt}
         \begin{subfigure}[t]{\textwidth}
         \centering
         \includegraphics[height=3cm]{ex_29_img_1.png}
         \caption{a [white] dog is on a [brown] couch}
-        \end{subfigure}%    
+        \end{subfigure}% 
+        \vspace{10pt}
         \caption*{\textit{Relation}}
     \end{minipage}
     \hfill
@@ -78,8 +77,8 @@ Linguistic tags can be split in three groups: Object, Relation and Both. See \cr
         \end{subfigure}%
         \caption*{\textit{Relation}}
     \end{minipage}%
-    \caption{Examples from the dataset for the swap-dependent linguistic tags \textit{Object}, \textit{Relation} and \textit{Relation} from left to right. The linguistic examples are additionally tagged with 1 main predicate.}
-    \label{fig:dataset-examples}
+    \caption{Examples from the Winoground dataset for the swap-dependent linguistic tags \textit{Object}, \textit{Relation} and \textit{Relation} from left to right. They are additionally tagged with 1 main predicate.}
+    \label{fig:winoground-examples}
 \end{figure}
 
 \begin{figure}[ht]
@@ -125,11 +124,11 @@ Linguistic tags can be split in three groups: Object, Relation and Both. See \cr
         \end{subfigure}%
         \caption*{\textit{Both}}
     \end{minipage}%
-    \caption{Examples from the dataset for the swap-dependent linguistic tags \textit{Object}, \textit{Relation} and \textit{Both} from left to right. The linguistic examples are additionally tagged with 1, 2 and 1 main predicates from left to right.}
-    \label{fig:dataset-examples-linguistic}
+    \caption{Examples from the Winoground dataset for the swap-dependent linguistic tags \textit{Object}, \textit{Relation} and \textit{Both} from left to right. They are additionally tagged with 1, 2 and 1 main predicates from left to right.}
+    \label{fig:winoground-examples-linguistic}
 \end{figure}
 
-There are three non-mutually exclusive visual reasoning tags: Symbolic, Series and Pragmatics. \cref{fig:dataset-examples-visual} shows examples of visual tags.
+On the other hand, there are three non-mutually exclusive \textbf{visual reasoning tags}: Pragmatics, Series and Symbolic. \textbf{Pragmatics} tag includes images that need to be interpreted non-literally. \textbf{Series} tag contains examples where both images come from the same photo series. \textbf{Symbolic} tag represents that the images include a symbolic representation. \cref{fig:winoground-examples-visual} shows examples of visual tags.
 
 \begin{figure}[ht]
 \centering
@@ -174,8 +173,8 @@ There are three non-mutually exclusive visual reasoning tags: Symbolic, Series a
         \end{subfigure}%    
         \caption*{\textit{Symbolic}}
     \end{minipage}
-    \caption{Examples from the dataset for the swap-dependent visual tags \textit{Pragmatics}, \textit{Series} and \textit{Symbolic} from left to right. The visual examples are additionally tagged with the \textit{Relation} tag, and 1, 2, and 1 main predicates from left to right.}
-    \label{fig:dataset-examples-visual}
+    \caption{Examples from the Winoground dataset for the visual tags \textit{Pragmatics}, \textit{Series} and \textit{Symbolic} from left to right. They are additionally tagged with the \textit{Relation} tag, and 1, 2, and 1 main predicates from left to right.}
+    \label{fig:winoground-examples-visual}
 \end{figure}
 
 \subsection{Metrics}
@@ -257,7 +256,11 @@ This section describes the Visual Spatial Reasoning (VSR) \cite{liu2022visual} d
 
 \subsection{Dataset}
 
-See \cref{tab:spatial_relations}
+The objective of VSR is to \textbf{test spatial grounding} capabilities by covering \textbf{65 spatial relations} over natural images from COCO. Given an image and a caption which describes a spatial relation between two of the objects, the model has to infer if the relation is true or false.
+
+A \textbf{contrastive caption generation} approach was used in VSR to avoid choosing too many trivial relations. First, a pair of images that contain the same two concepts are selected from COCO. Second, an annotator had to choose a spatial relation that made the caption template correct for one image but incorrect for the other. Finally, every item is reviewed by at least two additional human annotators. If the agreement between annotators is not high enough, the data point is excluded.
+
+To get a more high-level understanding of the relations, they are grouped in \textbf{meta categories} \cite{marchi2021cross}: Adjacency, Directional, Orientation, Projective, Proximity, Topological and Unallocated (see \cref{tab:spatial_relations}). We show some examples to understand the differences between relation categories in Figures \ref{fig:vsr-examples} and \ref{fig:vsr-examples-2}.
 
 \begin{table}[ht]
     \centering
@@ -281,9 +284,111 @@ See \cref{tab:spatial_relations}
     \end{tabular}
     \end{adjustbox}
     \caption{The available 71 spatial relations. 65 of them appear in the final dataset. Relations with $\ast$ are not used.}
-    % unsued: 'up', 'through', 'deep down', 'from', 'to', 'after'
+    % unused: 'up', 'through', 'deep down', 'from', 'to', 'after'
     \label{tab:spatial_relations}
 \end{table}
+
+In \cref{fig:vsr-examples} we show examples of Adjacency, Projective and Topological meta categories. \textbf{Adjacency} examples involve identifying what is ahead of the cow and which is the edge of the table. The \textbf{Projective} images are paired with the same caption, but have different labels. \textbf{Topological} examples require understanding what being inside and touching are.
+
+\begin{figure}[ht]
+\centering
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000080336.jpg}
+        \caption{Caption: \textit{The person is ahead of the cow.} Label: \texttt{True}.}
+        \label{fig:person_cow}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000261511.jpg}
+        \caption{Caption: \textit{The pizza is at the edge of the dining table.} Label: \texttt{True}.}
+        \label{fig:pizza_table}
+        \end{subfigure}%
+        \caption*{\textit{Adjacency}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000119360.jpg}
+        \caption{Caption: \textit{The cat is behind the laptop.} Label: \texttt{True}.}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000310958.jpg}
+        \caption{Caption: \textit{The cat is behind the laptop.} Label: \texttt{False}.}
+        \end{subfigure}% 
+        \caption*{\textit{Projective}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000292365.jpg}
+        \caption{Caption: \textit{The cat is inside the toilet.} Label: \texttt{False}.}
+        \label{fig:cat_toilet_true}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000092020.jpg}
+        \caption{Caption: \textit{The person is touching the hair drier.} Label: \texttt{True}.}
+        \label{fig:cat_toilet}
+        \end{subfigure}%
+        \caption*{\textit{Topological}}
+    \end{minipage}%
+    \caption{Examples from the VSR dataset for the relation meta categories \textit{Adjacency}, \textit{Projective} and \textit{Topological} from left to right.}
+    \label{fig:vsr-examples}
+\end{figure}
+
+In \cref{fig:vsr-examples-2} Adjacency, Projective and Orientation meta categories. The first \textbf{Adjacency} example is tricky, it requires knowing which is the right side of the bench. The second one is even more difficult because the cow both the cow appears in the car’s side mirror. \textbf{Projective} examples involve knowing where is the front of the person and below the cat. \textbf{Orientation} examples require understanding the orientations of the hair drier and the fire hydrant.
+
+\begin{figure}[ht]
+\centering
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000259555.jpg}
+        \caption{Caption: \textit{The potted plant is at the right side of the bench.} Label: \texttt{True}.}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000512796.jpg}
+        \caption{Caption: \textit{The cow is at the back of the car.} Label: \texttt{True}.}
+        \end{subfigure}%
+        \caption*{\textit{Adjacency}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000434410.jpg}
+        \caption{Caption: \textit{The bench is in front of the person.} Label: \texttt{True}.}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000420344.jpg}
+        \caption{Caption: \textit{The keyboard is below the cat.} Label: \texttt{True}.}
+        \end{subfigure}%
+        \caption*{\textit{Projective}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000134738.jpg}
+        \caption{Caption: \textit{The hair drier is facing away from the person.} Label: \texttt{False}.}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000147270.jpg}
+        \caption{Caption: \textit{The fire hydrant is facing away from the person.} Label: \texttt{True}.}
+        \end{subfigure}% 
+        \caption*{\textit{Orientation}}
+    \end{minipage}%
+    \caption{Examples from the VSR dataset for the relation meta categories \textit{Adjacency}, \textit{Projective} and \textit{Orientation} from left to right.}
+    \label{fig:vsr-examples-2}
+\end{figure}
 
 \subsection{Dataset Splits}\label{sec:vsr_splits}
 
