@@ -1,4 +1,247 @@
-This chapter explains the experiments we performed and the results we obtained in Winoground.
+This chapter describes the Winoground \cite{thrush2022winoground} dataset and explains the metrics that are used for evaluation. Then, we explain the experiments we performed and the results we obtained.
+
+\section{Dataset}
+
+Each Winoground example contains two images and two captions, the goal
+is to match them correctly. Both captions contain a completely identical set of words in a different order. The dataset was created by expert annotators by creating captions and finding images on Getty Images. As it is a probing dataset, it only has 400 examples, with 800 unique captions and images. All examples are labeled with \textbf{linguistic tags} and some include \textbf{visual tags}. See \cref{tab:stats-tag-subset} for linguistic and visual tag counts.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrr}
+\toprule
+ Category & Tag    &   Count \\
+\midrule
+ %All Examples & 400\\
+ & Object   &     141 \\
+ Linguistic$_\text{swap-dep.}$ & Relation &     233 \\
+ & Both &      26 \\\midrule
+ Linguistic$_\text{swap-indep.}$ & 1 Main Pred & 292 \\
+ & 2 Main Preds & 108 \\\midrule
+ & Symbolic &  41 \\
+ Visual & Series &  31 \\
+ & Pragmatics &  24\\
+\bottomrule
+\end{tabular}
+\caption{Linguistic and visual tag counts in the Winoground dataset. Every example has a linguistic tag; only examples that contain the visual phenomena have visual tags.}
+\label{tab:stats-tag-subset}
+\end{table}
+
+On the one hand, there are 70 \textbf{linguistic tags} in total, which can be split into three groups: Object, Relation and Both. \textbf{Object} swaps consist in swapping noun phrases that refer to objects. \textbf{Relation} swaps reorder words that refer to objects such as verbs, adjectives, prepositions and adverbs. \textbf{Both} swaps involve changing both relations and objects. The annotators also tagged examples for \textbf{how many main predicates} were in the captions, which is independent of the swap type. See \cref{fig:winoground-examples} and \cref{fig:winoground-examples-linguistic} for examples of linguistic tags.
+
+\begin{figure}[ht]
+\centering
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_155_img_0.png}
+        \caption{[some plants] surrounding [a lightbulb]}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_155_img_1.png}
+        \caption{[a lightbulb] surrounding [some plants]}
+        \end{subfigure}%
+        \caption*{\textit{Object}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_29_img_0.png}
+        \caption{a [brown] dog is on a [white] couch}
+        \end{subfigure}\\
+        \vspace{10pt}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_29_img_1.png}
+        \caption{a [white] dog is on a [brown] couch}
+        \end{subfigure}% 
+        \vspace{10pt}
+        \caption*{\textit{Relation}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_118_img_0.png}
+        \caption{[circular] food on [heart-shaped] wood}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_118_img_1.png}
+        \caption{[heart-shaped] food on [circular] wood}
+        \end{subfigure}%
+        \caption*{\textit{Relation}}
+    \end{minipage}%
+    \caption{Examples from the Winoground dataset for the swap-dependent linguistic tags \textit{Object}, \textit{Relation} and \textit{Relation} from left to right. They are additionally tagged with 1 main predicate.}
+    \label{fig:winoground-examples}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_14_img_0.png}
+        \caption{there is [a mug] in [some grass]}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_14_img_1.png}
+        \caption{there is [some grass] in [a mug]}
+        \end{subfigure}%    
+        \caption*{\textit{Object}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_21_img_0.png}
+        \caption{a person [sits] and a dog [stands]}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_21_img_1.png}
+        \caption{a person [stands] and a dog [sits]}
+        \end{subfigure}%    
+        \caption*{\textit{Relation}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_72_img_0.png}
+        \caption{it's a [fire] [truck]}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_72_img_1.png}
+        \caption{it's a [truck] [fire]}
+        \end{subfigure}%
+        \caption*{\textit{Both}}
+    \end{minipage}%
+    \caption{Examples from the Winoground dataset for the swap-dependent linguistic tags \textit{Object}, \textit{Relation} and \textit{Both} from left to right. They are additionally tagged with 1, 2 and 1 main predicates from left to right.}
+    \label{fig:winoground-examples-linguistic}
+\end{figure}
+
+On the other hand, there are three non-mutually exclusive \textbf{visual reasoning tags}: Pragmatics, Series and Symbolic. \textbf{Pragmatics} tag includes images that need to be interpreted non-literally. \textbf{Series} tag contains examples where both images come from the same photo series. \textbf{Symbolic} tag represents that the images include a symbolic representation. \cref{fig:winoground-examples-visual} shows examples of visual tags.
+
+\begin{figure}[ht]
+\centering
+    \begin{minipage}{.30\textwidth}
+        \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_75_img_0.png}
+        \caption{the kid [with the magnifying glass] looks at them []}
+        \end{subfigure}\\
+        \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_75_img_1.png}
+        \caption{the kid [] looks at them [with the magnifying glass]}
+        \end{subfigure}%    
+        \caption*{\textit{Pragmatics}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{.30\textwidth}
+        \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_27_img_0.png}
+        \caption{the person with the ponytail [packs] stuff and other [buys] it}
+        \end{subfigure}\\
+        \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_27_img_1.png}
+        \caption{the person with the ponytail [buys] stuff and other [packs] it}
+        \end{subfigure}%    
+        \caption*{\textit{Series}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{.30\textwidth}
+        \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_61_img_0.png}
+        \caption{there are [three] people and [two] windows}
+        \end{subfigure}\\
+        \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{ex_61_img_1.png}
+        \caption{there are [two] people and [three] windows}
+        \end{subfigure}%    
+        \caption*{\textit{Symbolic}}
+    \end{minipage}
+    \caption{Examples from the Winoground dataset for the visual tags \textit{Pragmatics}, \textit{Series} and \textit{Symbolic} from left to right. They are additionally tagged with the \textit{Relation} tag, and 1, 2, and 1 main predicates from left to right.}
+    \label{fig:winoground-examples-visual}
+\end{figure}
+
+\section{Metrics}
+
+An example in Winoground is composed of two caption-image pairs: $(C_{0},I_{0})$ and $(C_{1},I_{1})$. Metrics must measure models' abilities to match pairs correctly. We compute two types of metrics, \textbf{score} and \textbf{accuracy}.
+
+\paragraph{Score.}
+Performance on Winoground \cite{thrush2022winoground} is computed according to three different score metrics that evaluate different aspects of the models' visio-linguistic reasoning abilities.
+
+The first metric is the \textbf{text score}, which measures whether a model can select the correct caption, given an image:
+\begin{equation}\label{eq:text-score}
+        ts(C_{0},I_{0},C_{1},I_{1})= 
+    \begin{cases}
+        1 & \text{if}\  s(C_{0}, I_{0}) > s(C_{1}, I_{0}) \\
+        & \ \ \text{and}\ s(C_{1}, I_{1}) > s(C_{0}, I_{1}) \\
+        0              & \text{otherwise}
+    \end{cases}
+\end{equation}
+
+The second metric is the \textbf{image score}, which measures whether a model can select the correct image, given a caption:
+\begin{equation}\label{eq:image-score}
+        is(C_{0},I_{0},C_{1},I_{1})= 
+    \begin{cases}
+        1 & \text{if}\  s(C_{0}, I_{0}) > s(C_{0}, I_{1})\\
+        & \ \ \text{and}\ s(C_{1}, I_{1}) > s(C_{1}, I_{0}) \\
+        0              & \text{otherwise}
+    \end{cases}
+\end{equation}
+
+Our final metric \textbf{group score} combines the previous two, which measures if every combination for a given example is correct:
+\begin{equation}\label{eq:group-score}
+        gs(C_{0},I_{0},C_{1},I_{1})= 
+    \begin{cases}
+        1 & \text{if}\  ts(C_{0},I_{0},C_{1},I_{1})  \\
+         & \ \ \text{and}\ is(C_{0},I_{0},C_{1},I_{1})\\
+        0              & \text{otherwise}
+    \end{cases}
+\end{equation}
+
+\paragraph{Accuracy.}
+We also add three additional accuracy metrics for additional information. These are similar to the previous ones, but the accuracy is 0.5 when one of the pairs is correct.
+
+The \textbf{text accuracy} for an example is computed according to:
+\begin{equation}\label{eq:text-accuracy}
+        ta(C_{0},I_{0},C_{1},I_{1})= 
+    \begin{cases}
+        1 & \text{if}\  s(C_{0}, I_{0}) > s(C_{1}, I_{0}) \\
+        & \ \ \text{and}\ s(C_{1}, I_{1}) > s(C_{0}, I_{1}) \\
+        0.5 & \text{if}\  s(C_{0}, I_{0}) > s(C_{1}, I_{0}) \\
+        & \ \ \text{xor}\ s(C_{1}, I_{1}) > s(C_{0}, I_{1}) \\
+        0              & \text{otherwise}
+    \end{cases}
+\end{equation}
+
+The \textbf{image accuracy} for an example is calculated according to:
+\begin{equation}\label{eq:image-accuracy}
+        ia(C_{0},I_{0},C_{1},I_{1})= 
+    \begin{cases}
+        1 & \text{if}\  s(C_{0}, I_{0}) > s(C_{0}, I_{1})\\
+        & \ \ \text{and}\ s(C_{1}, I_{1}) > s(C_{1}, I_{0}) \\
+        0.5 & \text{if}\  s(C_{0}, I_{0}) > s(C_{0}, I_{1})\\
+        & \ \ \text{xor}\ s(C_{1}, I_{1}) > s(C_{1}, I_{0}) \\
+        0              & \text{otherwise}
+    \end{cases}
+\end{equation}
+
+The \textbf{group accuracy} in our framework is the mean of both accuracies:
+\begin{equation}\label{eq:group-accuracy}
+        ga(C_{0},I_{0},C_{1},I_{1})= 
+        (ta(C_{0},I_{0},C_{1},I_{1}) + ia(C_{0},I_{0},C_{1},I_{1})) / 2\\
+\end{equation}
 
 \section{Models} \label{sec:winoground_models}
 
@@ -69,55 +312,6 @@ We provide a high-level overview of the differences between our models in \cref{
     \label{tab:model-types-ours}
 \end{table}
 
-\paragraph{CLIP.} CLIP \cite{radford2021clip} models adopt two
-unimodal encoders to get image and text representations (see \cref{fig:clip}). CLIP maximizes the similarity between positive image-text pairs, rendering strong unimodal representations. CLIP was trained by OpenAI on a closed dataset of 400M image-text pairs. CLIP variants use different visual backbones, including ViT-B/16, ViT-B/32, ViT-L/14, and ViT-L/14-336.
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=\linewidth]{images/models/clip.png}
-    \caption{CLIP model architecture. Source: \url{https://github.com/openai/CLIP}}
-    \label{fig:clip}
-\end{figure}
-
-\paragraph{OpenCLIP.} OpenCLIP \cite{ilharco_gabriel_2021_5143773} models follow the same architecture (see \cref{fig:clip}), but are trained on LAION-2B, a subset of LAION-5B \cite{schuhmann2022laionb} with 2.32 billion English captions. There are different OpenCLIP variants depending on visual backbones: ViT-B/32, ViT-L/14, ViT-H/14, and ViT-g/14. The H/14 model achieves 78.0\% zero-shot top-1 accuracy on ImageNet and 73.4\% on zero-shot image retrieval at Recall@5 on MS COCO. This makes it the best open-source CLIP model.
-
-\paragraph{BLIP.} BLIP \cite{li2022blip} achieves state-of-the-art performance on five vision-language tasks: image-text retrieval, image captioning, visual question answering, visual reasoning, and visual dialogue. It employs a Vision Transformer (ViT) \cite{dosovitskiy2020imageworth} as the image encoder and a BERT as the text encoder. BLIP proposes a mixture of encoder-decoder (MED), which can operate either as a unimodal image or text encoder, an image-grounded text encoder, or an image-grounded text decoder (see \cref{fig:blip}). This enables both multimodal understanding and generation. Moreover, BLIP proposes dataset bootstrapping to improve the quality of the pretraining captions by removing noisy ones and generating new ones. BLIP is jointly pretrained with three objectives: language modeling (LM), image-text contrastive learning (ITC) and image-text matching (ITM). There are BLIP variants that use different vision transformers: ViT-B/16 and ViT-L/16. Fine-tuned checkpoints are also available for many downstream tasks.
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=\linewidth]{images/models/blip.png}
-    \caption{BLIP pre-training model architecture: a multimodal mixture
-of encoder-decoder (MED).}
-    \label{fig:blip}
-\end{figure}
-
-\paragraph{OFA.} OFA \cite{wang2022unifying} is a sequence-to-sequence pretrained model that unifies modalities and tasks. It performs a lot of cross-modal and uni-modal tasks, including image generation, visual grounding, image captioning, image classification and language modelling (see \cref{fig:ofa}). In contrast with the recent VLMs that require large cross-modal datasets, OFA is pretrained on only 20M publicly available image-text pairs. Despite this, OFA achieves SOTA in various cross-modal tasks and competitive performance on uni-modal tasks.
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=\linewidth]{images/models/ofa.png}
-    \caption{OFA pretraining tasks: visual grounding, grounded captioning, image-text matching, image captioning, VQA, object detection, image infilling and text infilling.}
-    \label{fig:ofa}
-\end{figure}
-
-\paragraph{ViLT.} ViLT \cite{kim2021vilt} ViLT is a minimal vision-and-language pre-training transformer model where processing of visual inputs is simplified to the same way that text inputs are processed (see \cref{fig:vilt}). ViLT requires much less computation than previous VLMs, and still gets good performance on downstream tasks. ViLT is pre-trained on the following objectives: image text matching (ITM), masked language modeling (MLM), and word patch alignment (WPA). It is fine-tuned on four downstream tasks: visual question answering (VQA2), visual reasoning (NLVR2) and image-text retrieval (COCO and Flickr30K).
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=\linewidth]{images/models/vilt.png}
-    \caption{ViLT model overview.}
-    \label{fig:vilt}
-\end{figure}
-
-\paragraph{FLAVA.} FLAVA \cite{singh2022flava} is a language vision alignment model that learns representations from multimodal and unimodal data. The model consists of three transformers, an image encoder, a text encoder and a multimodal encoder (see \cref{fig:flava}). During pretraining, masked image modelling (MIM) and mask language modelling (MLM), image-text contrastive (ITC), masked multimodal modelling (MMM), and image-text matching (ITM) objectives are used. Classification heads are applied to the outputs from the encoders for visual recognition, language understanding, and multimodal reasoning tasks.
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=\linewidth]{images/models/flava.png}
-    \caption{FLAVA model overview.}
-    \label{fig:flava}
-\end{figure}
-
 \section{Results} \label{sec:winoground_results}
 
 \subsection{Compared To Humans}
@@ -149,7 +343,7 @@ We show baseline results in \cref{tab:results_aggr_baseline}, which includes the
  ViLBERT$_{base}$             & 23.75          & 7.25           & 4.75           & \textbf{57.25} & \textbf{52.50} & \textbf{54.87} \\
  UniT$_{ITM Finetuned}$       & 19.50          & 6.25           & 4.00           & \textbf{50.25} & \textbf{50.75} & \textbf{50.50} \\
  FLAVA$_{ITM}$                & \textbf{32.25} & 20.50          & 14.25          & \textbf{62.75} & \textbf{59.13} & \textbf{60.94} \\
- FLAVA$_{Contrastive}$        & \textbf{25.25} & 13.50          & 9.00           & \textbf{59.25} & \textbf{55.12} & \textbf{57.19} \\
+ FLAVA$_{ITC}$        & \textbf{25.25} & 13.50          & 9.00           & \textbf{59.25} & \textbf{55.12} & \textbf{57.19} \\
  CLIP (ViT-B/32)              & \textbf{30.75} & 10.50          & 8.00           & \textbf{60.38} & \textbf{53.25} & \textbf{56.81} \\
  VSE++$_{COCO}$ (ResNet)      & 22.75          & 8.00           & 4.00           & \textbf{51.38} & \textbf{50.88} & \textbf{51.12} \\
  VSE++$_{COCO}$ (VGG)         & 18.75          & 5.50           & 3.50           & \textbf{50.38} & 49.75          & \textbf{50.06} \\
@@ -163,23 +357,17 @@ We show baseline results in \cref{tab:results_aggr_baseline}, which includes the
 \label{tab:results_aggr_baseline}
 \end{table}
 
+On the one hand, \textbf{human performance} is high in all metrics, between 85\% and 90\% in \textbf{scores} and around 93\% in \textbf{accuracy}. On the other hand, most models perform below random chance in all scores and slightly above random chance in accuracy. 
+
+First, only some models are above random chance in \textbf{text score}: UNITER, VILLA, VinVL, ViLT, FLAVA, and CLIP. The larger versions of UNITER and VILLA, and VinVL are the models that perform best, and there is still more than 50\% difference with human performance.
+
+Second, the performance on \textbf{image score} is even worse, where no model performs better than random chance. In contrast, text and image scores in humans are nearly the same. Even the best performing models (FLAVA$_{ITM}$ and VinVL) have nearly 70\% difference with the human score.
+
+Last, \textbf{group score} is also below random chance for all models, while it is only a bit lower than other scores for humans. Similar to the image score, there is a 70\% difference between the human score and the best models, which are again FLAVA$_{ITM}$ and VinVL.
+
 \paragraph{Ours}
 
 We show our results in \cref{tab:results_aggr_ours}, which includes various configurations of the following multimodal transformers: OFA \cite{wang2022unifying}, BLIP \cite{li2022blip}, CLIP \cite{radford2021clip}, FLAVA \cite{singh2022flava} and ViLT \cite{kim2021vilt}.
-
-In the baseline models, only pre-trained models are tested. We extend this by testing some models that are fine-tuned for specific tasks. Those tasks include image-text retrieval and visual reasoning. We compare pre-trained only versions with fine-tuned versions of the same models. Our aim is to measure if scores improve by fine-tuning on related tasks.
-
-Depending on the model and setting, the score for an image-text pair is calculated in a different way. For contrastive models, we use cosine similarity between image and text embeddings (CLIP). Other models use the softmaxed probability from the image-text-match classifier (ViLT). BLIP and FLAVA include both options, image-text contrastive (ITC) and image-text matching (ITM) scores. OFA is a generative model, so we have to use the probability of generating that the image and text match. For models fine-tuned on visual reasoning tasks, we take the probability of the True label as a score. Due to its generative nature, we decided to test OFA, hoping that it would have better spatial reasoning skills.
-
-We test 6 different versions of ViLT. The first one is the pre-trained only version, without finetuning. Two others are finetuned for retrieval on COCO and Flickr30k. The next one is finetuned for visual reasoning on NLVR2. The last two are finetuned on different splits of VSR. The best one is the one trained on NLVR2, which shows that finetuning on that task helps perform better on Winoground. VSR fine-tuning also increases scores, but not as much as NLVR2. Finetuning for retrieval is also helpful and improves the results of the pre-trained model. The score of the pre-trained model is lower than the baseline one.
-
-For FLAVA and CLIP we manage to replicate baseline results. We also test 3 other OpenAI CLIP \cite{radford2021clip} models with different configurations and find that they all perform similar to the baseline configuration. Finally, we test some new OpenCLIP \cite{ilharco_gabriel_2021_5143773} models, that were trained on LAION-2B, a subset of LAION-5B \cite{schuhmann2022laionb} with English captions.
-
-We test the 5 model sizes of OFA. Taking into account that this model gets state-of-the-art performance on many tasks, the performance is not very good. Even the biggest model is not better than the best baseline model. OFA is trained to generate "yes" or "no" when given an image and the text "Does the image describe <caption>?". This might explain why it does not perform that well on retrieval and Winoground.
-
-We test many configurations of BLIP, which include different training sizes, scoring, vision transformer sizes and finetuning datasets. ITM score is better than ITC score in all the cases. Even the 14M pretrained only model is better than all the previously tested models. Finetuning for retrieval on COCO and Flickr30k improves the results even more, reaching nearly above random performance in text, image and group scores.
-
-However, even the best model is still far from human performance in text, image and group scores. If we look at accuracy metrics, the gap is reduced, but the difference is still very big. Image score remains much lower than text score for all the models.
 
 \begin{table}[ht]
 \centering
@@ -233,6 +421,20 @@ However, even the best model is still far from human performance in text, image 
 \label{tab:results_aggr_ours}
 \end{table}
 
+In the baseline models, only pre-trained models are tested. We extend this by testing some models that are fine-tuned for specific tasks. Those tasks include image-text retrieval and visual reasoning. We compare pre-trained versions with fine-tuned versions of the same models. Our aim is to measure if scores improve by fine-tuning on related tasks.
+
+Depending on the model and setting, the score for an image-text pair is calculated in a different way. For contrastive models, we use cosine similarity between image and text embeddings (CLIP). Other models use the softmaxed probability from the image-text-match classifier (ViLT). BLIP and FLAVA include both options, image-text contrastive (ITC) and image-text matching (ITM) scores. OFA is a generative model, so we have to use the probability of generating that the image and text match. For models fine-tuned on visual reasoning tasks, we take the probability of the True label as a score. Due to its generative nature, we decided to test OFA, hoping that it would have better spatial reasoning skills.
+
+We test 6 different versions of \textbf{ViLT}. The first one is the pre-trained version, without finetuning. Two others are finetuned for retrieval on COCO and Flickr30k. The next one is finetuned for visual reasoning on NLVR2. The last two are finetuned on different splits of VSR. The best one is the one trained on NLVR2, which shows that finetuning on that task helps perform better on Winoground. VSR fine-tuning also increases scores, but not as much as NLVR2. Finetuning for retrieval is also helpful and improves the results of the pre-trained model. The score of the pre-trained model is lower than the baseline one.
+
+For \textbf{FLAVA} and \textbf{CLIP} we manage to replicate baseline results. We also test 3 other OpenAI CLIP \cite{radford2021clip} models with different configurations and find that they all perform similar to the baseline configuration. Finally, we test some new \textbf{OpenCLIP} \cite{ilharco_gabriel_2021_5143773} models, that were trained on LAION-2B, a subset of LAION-5B \cite{schuhmann2022laionb} with English captions. These models perform slightly better than OpenAI CLIP models.
+
+We test the 5 model sizes of \textbf{OFA}. Considering that this model gets state-of-the-art performance on many tasks, the performance is not very good. Even the biggest model is not better than the best baseline model. OFA is trained to generate "yes" or "no" when given an image and the text "Does the image describe <caption>?". This might explain why it does not perform that well on retrieval and Winoground.
+
+We test many configurations of \textbf{BLIP}, which include different training sizes, scoring, vision transformer sizes and finetuning datasets. ITM score is better than ITC score in all the cases. Even the 14M pretrained-only model is better than all the previously tested models. Finetuning for retrieval on COCO and Flickr30k improves the results even more, reaching nearly above random performance in text, image and group scores. The best scores are much better than baseline models, ~10\% in text score, ~4\% in image score and ~7\% in group score.
+
+However, even the best model is still far from human performance in text, image and group scores. There is still a ~40\% gap in text scores, and ~64\% in image and group scores. If we look at accuracy metrics, the gap is reduced, but the difference is still very big. Image score remains much lower than text score for all the models.
+
 \subsection{Results By Linguistic Tag}
 
 \paragraph{Baseline}
@@ -263,7 +465,7 @@ See \cref{tab:results-by-ling-tag-baseline}
  ViLBERT$_{base}$             & \textbf{29.08} & 10.64          & 7.09           & 19.31          & 3.00           & 1.72           & \textbf{34.62} & \textbf{26.92} & \textbf{19.23} & 23.97          & 8.90           & 5.82           & 23.15          & 2.78           & 1.85           \\
  UniT$_{ITM finetuned}$       & 17.73          & 5.67           & 2.13           & 18.03          & 4.72           & 3.43           & \textbf{42.31} & 23.08          & \textbf{19.23} & 21.58          & 6.85           & 4.11           & 13.89          & 4.63           & 3.70           \\
   FLAVA$_{ITM}$                & \textbf{31.91} & 23.40 & 14.89 & \textbf{30.04} & 16.31 & 12.02 & \textbf{53.85} & \textbf{42.31} & \textbf{30.77} & \textbf{36.30} & 24.66 & \textbf{17.81} & 21.30          & 9.26 & 4.63 \\
- FLAVA$_{Contrastive}$        & 23.40          & 19.15 & 11.35 & 23.61          &  8.58 &  5.58 & \textbf{50.00} & \textbf{26.92} & \textbf{26.92} & \textbf{26.37} & 16.44 & 10.62          & 22.22          &  5.56 & 4.63 \\
+ FLAVA$_{ITC}$        & 23.40          & 19.15 & 11.35 & 23.61          &  8.58 &  5.58 & \textbf{50.00} & \textbf{26.92} & \textbf{26.92} & \textbf{26.37} & 16.44 & 10.62          & 22.22          &  5.56 & 4.63 \\
  CLIP (ViT-B/32)              & \textbf{34.75} & 7.80           & 6.38           & 22.75          & 8.58           & 5.58           & \textbf{80.77} & \textbf{42.31} & \textbf{38.46} & \textbf{35.27} & 13.01          & 10.27          & 18.52          & 3.70           & 1.85           \\
  VSE++$_{COCO}$ (ResNet)      & 21.99          & 6.38           & 1.42           & 23.61          & 9.01           & 5.58           & 19.23          & 7.69           & 3.85           & 25.00          & 9.59           & 4.79           & 16.67          & 3.70           & 1.85           \\
  VSE++$_{COCO}$ (VGG)         & 17.73          & 2.13           & 2.13           & 18.45          & 7.30           & 3.86           & \textbf{26.92} & 7.69           & 7.69           & 18.49          & 4.79           & 2.74           & 19.44          & 7.41           & 5.56           \\
@@ -364,7 +566,7 @@ See \cref{tab:results-by-visual-tag-baseline}
  ViLBERT$_{base}$             & \textbf{28.57} & 10.71          & 7.14           & \textbf{29.41} & 5.88           & 5.88           & 13.04          & 0.00           & 0.00           \\
  UniT$_{ITM finetuned}$       & 14.29          & 10.71          & 7.14           & 17.65          & 5.88           & 5.88           & 21.74          & 4.35           & 4.35           \\
  FLAVA$_{ITM}$                & 25.00          & \textbf{28.57} & \textbf{17.86} & 17.65          & \textbf{29.41} & 11.76 & 17.39          &  8.70 &  0.00 \\
- FLAVA$_{Contrastive}$        & 17.86          & 10.71          & 10.71          & 11.76          & 23.53          & 5.88           & 17.39          & 4.35           &  4.35 \\
+ FLAVA$_{ITC}$        & 17.86          & 10.71          & 10.71          & 11.76          & 23.53          & 5.88           & 17.39          & 4.35           &  4.35 \\
  CLIP (ViT-B/32)              & \textbf{39.29} & 3.57           & 3.57           & \textbf{35.29} & 5.88           & 5.88           & 8.70           & 0.00           & 0.00           \\
  VSE++$_{COCO}$ (ResNet)      & \textbf{32.14} & 10.71          & 10.71          & 23.53          & 11.76          & 0.00           & 13.04          & 4.35           & 4.35           \\
  VSE++$_{COCO}$ (VGG)         & 17.86          & 14.29          & 7.14           & 17.65          & 0.00           & 0.00           & 13.04          & 4.35           & 4.35           \\
@@ -464,7 +666,7 @@ See \cref{tab:perplexity-and-length-correlations-baseline}
  ViLBERT$_{base}$             & -0.04          & 0.11          & -0.09          & 0.09          & \textbf{-0.15} & \textbf{0.00} & \textbf{-0.14} & \textbf{0.00} \\
  UniT$_{ITM Finetuned}$       & -0.01          & 0.73          & -0.03          & 0.53          & -0.05          & 0.32          & -0.02          & 0.73          \\
  FLAVA$_{ITM}$                & -0.03          & 0.22          & \textbf{-0.21} & \textbf{0.00} & \textbf{-0.22} & \textbf{0.00} & \textbf{-0.23} & \textbf{0.00} \\
- FLAVA$_{Contrastive}$        & \textbf{-0.06} & \textbf{0.01} & \textbf{-0.15} & \textbf{0.00} & \textbf{-0.25} & \textbf{0.00} & \textbf{-0.19} & \textbf{0.00} \\
+ FLAVA$_{ITC}$        & \textbf{-0.06} & \textbf{0.01} & \textbf{-0.15} & \textbf{0.00} & \textbf{-0.25} & \textbf{0.00} & \textbf{-0.19} & \textbf{0.00} \\
  CLIP (ViT-B/32)              & -0.04          & 0.09          & \textbf{-0.27} & \textbf{0.00} & \textbf{-0.19} & \textbf{0.00} & \textbf{-0.22} & \textbf{0.00} \\
  VSE++$_{COCO}$ (ResNet)      & \textbf{-0.05} & \textbf{0.04} & -0.03          & 0.60          & -0.02          & 0.74          & 0.01           & 0.90          \\
  VSE++$_{COCO}$ (VGG)         & -0.04          & 0.08          & -0.02          & 0.65          & 0.03           & 0.50          & 0.03           & 0.56          \\

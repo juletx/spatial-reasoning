@@ -1,38 +1,105 @@
-This chapter introduces background knowledge that was used in the development of this project. This chapter includes two main sections: Grounding Language Models and Visual Reasoning Datasets. \cref{sec:grounding_language_models} explains the importance of grounding language models, and the types of models. \cref{sec:visual_reasoning_datasets} includes synthetic and natural visual reasoning datasets, and the datasets that we chose for this work.
+This chapter introduces background knowledge that was used in the development of this project. This chapter includes two main sections: Multimodal Models and Visual Reasoning Datasets. \cref{sec:multimodal_models} explains the types of models that are related to this work. \cref{sec:visual_reasoning_datasets} includes synthetic and natural visual reasoning datasets, and the datasets that we chose for this work.
 
-\section{Grounding Language Models} \label{sec:grounding_language_models}
+\section{Multimodal Models} \label{sec:multimodal_models}
 
-This section includes information about grounding Language Models (\ref{sec:language_models}) and Vision Language Models (\ref{sec:vision_language_models}). Sections \ref{sec:multimodal_transformers} and \ref{sec:diffusion_models} explain the types of models that were used in this work, Multimodal Transformers and Diffusion Models.
-
-\subsection{Language Models} \label{sec:language_models}
-
-Neural Language Models (LM) have shown \textbf{impressive capabilities} on many Natural Language Processing (NLP) tasks \cite{wang2019superglue, brown2020language, chowdhery2022palm}. LMs are pretrained on large corpora in order for them to learn universal language representations, which are beneficial for downstream NLP tasks and can avoid training a new model from scratch. The \textbf{pretrained models are fine-tuned in specific downstream tasks}, using annotated data that is orders of magnitude smaller than the text used in the pretraining phase. Following this transfer learning methodology, researchers have extended the state of the art on a wide array of tasks as measured by leaderboards on specific benchmarks for English \cite{bommasani2021opportunities, wang2019superglue}.
-
-Despite the impressive results of LMs for different language-related tasks, many authors criticize them for their \textbf{lack of meaning} \cite{bender2020climbing, bender2021dangers}. In their opinion, language models trained exclusively on language are unable to learn meaning. Those authors suggest that \textbf{grounding is one of the key elements to bring human-like language understanding}. However, language grounding is a very broad area that covers a great diversity of techniques, modalities and concepts. 
-
-In this project, we will focus on \textbf{compositional and spatial reasoning}. Spatial reasoning consists on \textbf{grounding LMs with spatial concepts}. We choose spatial reasoning because it is one of the most fundamental capabilities for both humans and LMs. Such relations are crucial to how humans organize the mental space and make sense of the physical world, and therefore fundamental for a grounded theory of semantics \cite{levinson2003space}. However, spatial reasoning has been found to be \textbf{particularly challenging for current models} \cite{akula2020words}. That is, spatial reasoning is much more challenging than capturing properties of individual entities.
-
-\subsection{Vision Language Models} \label{sec:vision_language_models}
-
-Vision Language Models (VLM), which are trained jointly on text and image, have been proposed as a general solution to the lack of grounding in language models \cite{lu2019vilbert, tan2020lxmert, ramesh2022hierarchical, saharia2022photorealistic}. Vision-language pre-training aims to improve performance of downstream vision and language tasks by \textbf{pretraining the model on many image-text pairs}. These pre-trained models can then be fine-tuned on each downstream task. VLMs have been fine-tuned in tasks that require grounding spatial concepts, such as VQA \cite{antol2015vqa} or NLVR2 \cite{suhr2018corpus}.
-
-With the objective of \textbf{evaluating spatial relations}, a recent work provides new unified datasets \cite{liu2022things}. As the objective of such work is to evaluate whether VLMs learn more spatial commonsense than LMs, the datasets are purely textual, so they do not provide any means to ground spatial concepts. Interestingly, authors find that VLMs, and more concretely text-to-image systems, perform much better than text-only LMs. Still, they show that VLMs \textbf{struggle to ground spatial concepts properly}.
-
-Large generative \textbf{text-to-image diffusion models}, like DALLE-2 \cite{ramesh2022hierarchical} and IMAGEN \cite{saharia2022photorealistic}, are able to generate stunning images. They are are known to possess some visual-reasoning skills \cite{cho2022dall}. However, a recent work \cite{liu2022compositional} has shown that they \textbf{struggle to understand the composition of some concepts}, such as confusing the attributes and relations of different objects. They propose a new method, where an image is generated by composing a set of diffusion models, with each of them modeling a certain component of the image. Another work \cite{anonymous2023trainingfree} proposes manipulating cross-attention representations to address three challenging phenomena in Stable Diffusion \cite{rombach2021highresolution}: attribute leakage, interchanged attributes and missing objects.
-
-There are several \textbf{works that try to ground language models to spatial relations}. For example, \cite{bagherinezhad2016elephants, elazar2019large} focus on the acquired commonsense knowledge of models about object scales, e.g. do they know that a person is bigger than an ant? However, they ask about generic object scale relations, without providing any context. Some other authors \cite{collell2018acquiring, elu2021inferring} work on implicit and explicit spatial relations of objects, given some descriptive texts. The proposed benchmark datasets are designed for object bounding box generation.
+Sections \ref{sec:multimodal_transformers}, \ref{sec:multimodal_rnns} and \ref{sec:diffusion_models} explain the types of models that are related to this work, Multimodal Transformers, Multimodal RNNs and Diffusion Models.
 
 \subsection{Multimodal Transformers} \label{sec:multimodal_transformers}
 
-Multimodal transformers are state-of-the-art in many vision-language tasks, and that includes spatial reasoning. Most of the models tested in Winoground \cite{thrush2022winoground} and VSR \cite{liu2022visual} are multimodal transformers. Those transformers differ in embedding, architecture and pretraining objectives and cross-modal attention.
+Multimodal transformers are state-of-the-art in many vision-language tasks, and that includes spatial reasoning. Most of the models tested in Winoground \cite{thrush2022winoground} and VSR \cite{liu2022visual} are multimodal transformers. Those transformers differ in embedding, architecture, pretraining objectives and cross-modal attention.
 
-\paragraph{Embedding.} Most models use a pretrained BERT tokenizer for text encoding. For image embedding, there are more different options. Some models use Convolutional Neural Networks (CNN) to extract features from images. Another common approach is to use Vision Transformer (ViT).
+\textbf{Embedding.} Most models use a pretrained BERT tokenizer for text encoding. For image embedding, there are more different options. Some models use Convolutional Neural Networks (CNN) to extract features from images. Another common approach is to use Vision Transformer (ViT).
 
-\paragraph{Architecture.} Depending on their architecture, they can mainly be classified into two types: single-stream and dual-stream transformers. On the one hand, in \textbf{single-stream} transformers the image and text embeddings are concatenated and then jointly encoded. On the other hand, \textbf{dual-stream} transformers have two separate modality-specific encoders with optional cross-modality fusion.
+\textbf{Architecture.} Depending on their architecture, they can mainly be classified into two types: single-stream and dual-stream transformers. On the one hand, in \textbf{single-stream} transformers the image and text embeddings are concatenated and then jointly encoded. On the other hand, \textbf{dual-stream} transformers have two separate modality-specific encoders with optional cross-modality fusion.
 
-\paragraph{Pretraining Objectives.} Vision-language transformers use a different pretraining objectives including \textbf{masked language modeling} (MLM), image-conditioned \textbf{language modeling} (LM), \textbf{image-text contrastive} learning (ITC), \textbf{image-text matching} (ITM). For example, BLIP \cite{li2022blip} is jointly pre-trained with three vision-language objectives: ITC, ITM and LM.
+\textbf{Pretraining Objectives.} Vision-language transformers use a different pretraining objectives including \textbf{masked language modeling} (MLM), image-conditioned \textbf{language modeling} (LM), \textbf{image-text contrastive} learning (ITC), \textbf{image-text matching} (ITM). For example, BLIP \cite{li2022blip} is jointly pre-trained with three vision-language objectives: ITC, ITM and LM.
 
-\paragraph{Cross-Modal Attention.} There are different types of multimodal attention as presented in \cite{hendricks2021decoupling}. In \textbf{modality-specific attention}, the language and visual input attend to their modality. In \textbf{merged attention}, the language and visual input attend to both themselves and the other modality. In \textbf{co-attention}, the language and visual input only attends to the other modality input.
+\textbf{Cross-Modal Attention.} There are different types of multimodal attention as presented in \cite{hendricks2021decoupling}. In \textbf{modality-specific attention}, the language and visual input attend to their modality. In \textbf{merged attention}, the language and visual input attend to both themselves and the other modality. In \textbf{co-attention}, the language and visual input only attend to the other modality input.
+
+\paragraph{LXMERT.} LXMERT \cite{tan2020lxmert} consists of  three transformer encoders: object relationship encoder, a language encoder, and a cross-modality encoder (see \cref{fig:lxmert}). The images are represented as a sequence of objects, whereas each sentence is a sequence of words. It combines self-attention and cross-attention layers to generate language representations, image representations, and cross-modality representations. The model is pre-trained with five pre-training tasks: masked language modelling, masked object prediction, cross-modality matching, and image question answering.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{images/models/lxmert.pdf}
+    \caption{The LXMERT model for learning vision-and-language cross-modality representations.}
+    \label{fig:lxmert}
+\end{figure}
+
+\paragraph{VisualBERT.} VisualBERT \cite{li2019visualbert} aims to reuse transformer self-attention to align elements of the input text and regions in the input image (see \cref{fig:visualbert}). Visual embeddings are constructed by summing visual feature representation, segment embedding and position embeddings. Visual feature representations are obtained from a bounding region object detector. VisualBERT is trained using COCO using two objectives: masked language modelling (MLM) and sentence-image prediction task.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{images/models/visualbert.pdf}
+    \caption{The architecture of VisualBERT combines image regions and language with a transformer.}
+    \label{fig:visualbert}
+\end{figure}
+
+\paragraph{UniT.} UniT \cite{hu2021unit}
+
+\paragraph{UNITER.} UNITER \cite{chen2020uniter}
+
+\paragraph{VILLA.} VILLA \cite{gan2020villa} 
+
+\paragraph{VinVL.} VinVL \cite{zhang2021vinvl}
+
+\paragraph{ViLBERT.} ViLBERT \cite{lu2019vilbert}
+
+\paragraph{ViLT.} ViLT \cite{kim2021vilt} is a minimal vision-and-language pre-training transformer model where processing of visual inputs is simplified to the same way that text inputs are processed (see \cref{fig:vilt}). ViLT requires much less computation than previous VLMs, and still gets good performance on downstream tasks. ViLT is pre-trained on the following objectives: image text matching (ITM), masked language modeling (MLM), and word patch alignment (WPA). It is fine-tuned on four downstream tasks: visual question answering (VQA2), visual reasoning (NLVR2) and image-text retrieval (COCO and Flickr30K).
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{images/models/vilt.png}
+    \caption{ViLT model overview.}
+    \label{fig:vilt}
+\end{figure}
+
+\paragraph{FLAVA.} FLAVA \cite{singh2022flava} is a language vision alignment model that learns representations from multimodal and unimodal data. The model consists of three transformers, an image encoder, a text encoder and a multimodal encoder (see \cref{fig:flava}). During pretraining, masked image modelling (MIM) and mask language modelling (MLM), image-text contrastive (ITC), masked multimodal modelling (MMM), and image-text matching (ITM) objectives are used. Classification heads are applied to the outputs from the encoders for visual recognition, language understanding, and multimodal reasoning tasks.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{images/models/flava.png}
+    \caption{FLAVA model overview.}
+    \label{fig:flava}
+\end{figure}
+
+\paragraph{CLIP.} CLIP \cite{radford2021clip} models adopt two
+unimodal encoders to get image and text representations (see \cref{fig:clip}). CLIP maximizes the similarity between positive image-text pairs, rendering strong unimodal representations. CLIP was trained by OpenAI on a closed dataset of 400M image-text pairs. CLIP variants use different visual backbones, including ViT-B/16, ViT-B/32, ViT-L/14, and ViT-L/14-336.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{images/models/clip.png}
+    \caption{CLIP model architecture.}
+    \label{fig:clip}
+\end{figure}
+
+\paragraph{OpenCLIP.} OpenCLIP \cite{ilharco_gabriel_2021_5143773} models follow the same architecture (see \cref{fig:clip}), but are trained on LAION-2B, a subset of LAION-5B \cite{schuhmann2022laionb} with 2.32 billion English captions. There are different OpenCLIP variants depending on visual backbones: ViT-B/32, ViT-L/14, ViT-H/14, and ViT-g/14. The H/14 model achieves 78.0\% zero-shot top-1 accuracy on ImageNet and 73.4\% on zero-shot image retrieval at Recall@5 on MS COCO. This makes it the best open-source CLIP model.
+
+\paragraph{BLIP.} BLIP \cite{li2022blip} achieves state-of-the-art performance on five vision-language tasks: image-text retrieval, image captioning, visual question answering, visual reasoning, and visual dialogue. It employs a Vision Transformer (ViT) \cite{dosovitskiy2020imageworth} as the image encoder and a BERT as the text encoder. BLIP proposes a mixture of encoder-decoder (MED), which can operate either as a unimodal image or text encoder, an image-grounded text encoder, or an image-grounded text decoder (see \cref{fig:blip}). This enables both multimodal understanding and generation. Moreover, BLIP proposes dataset bootstrapping to improve the quality of the pretraining captions by removing noisy ones and generating new ones. BLIP is jointly pretrained with three objectives: language modeling (LM), image-text contrastive learning (ITC) and image-text matching (ITM). There are BLIP variants that use different vision transformers: ViT-B/16 and ViT-L/16. Fine-tuned checkpoints are also available for many downstream tasks.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{images/models/blip.png}
+    \caption{BLIP pre-training model architecture: a multimodal mixture
+of encoder-decoder (MED).}
+    \label{fig:blip}
+\end{figure}
+
+\paragraph{OFA.} OFA \cite{wang2022unifying} is a sequence-to-sequence pretrained model that unifies modalities and tasks. It performs a lot of cross-modal and uni-modal tasks, including image generation, visual grounding, image captioning, image classification and language modelling (see \cref{fig:ofa}). In contrast with the recent VLMs that require large cross-modal datasets, OFA is pretrained on only 20M publicly available image-text pairs. Despite this, OFA achieves SOTA in various cross-modal tasks and competitive performance on uni-modal tasks.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{images/models/ofa.png}
+    \caption{OFA pretraining tasks: visual grounding, grounded captioning, image-text matching, image captioning, VQA, object detection, image infilling and text infilling.}
+    \label{fig:ofa}
+\end{figure}
+
+\subsection{Multimodal RNNs} \label{sec:multimodal_rnns}
+
+Multimodal RNNs where the SOTA apprach for vision-language tasks before transformers. Two sequence-based models are included in Winoground \cite{thrush2022winoground} evaluation, VSE++ \cite{faghri2018vse} and VSRN \cite{li2019vsrn}. 
+
+\paragraph{VSE++.} VSE++ \cite{faghri2018vse} 
+
+\paragraph{VSRN.} VSRN \cite{li2019vsrn}
 
 \subsection{Diffusion Models} \label{sec:diffusion_models}
 
@@ -41,7 +108,7 @@ Diffusion models are trained to denoise random gaussian noise step by step, to g
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\linewidth]{images/diffusion/diffusion-process.png}
-    \caption{In the diffusion process random images are denoised in multiple steps to get a sample image. Source: \url{https://github.com/huggingface/notebooks/blob/main/diffusers/diffusers_intro.ipynb}}
+    \caption{In the diffusion process random images are denoised in multiple steps to get a sample image.}
     \label{fig:diffusion_process}
 \end{figure}
 
@@ -49,36 +116,36 @@ Diffusion models have obtained SOTA results on image generation. However, one do
 
 Consequently, most of the recent diffusion models, e.g. DALLE-2 \cite{ramesh2022hierarchical} and IMAGEN \cite{saharia2022photorealistic}, are unfortunately not accessible to the community. The most popular exception is Stable Diffusion \cite{rombach2021highresolution}, which has been open sourced and can be used on a single GPU.
 
-\subsubsection{Stable Diffusion}
+\paragraph{Stable Diffusion.}
 
 Stable Diffusion is based on a type of diffusion model called Latent Diffusion \cite{rombach2021highresolution}. Latent diffusion reduces the memory and compute complexity by applying the diffusion process over a lower dimensional latent space. There are three main components in latent diffusion: an autoencoder (VAE), a U-Net and a text-encoder (CLIP).
 
-\paragraph{The autoencoder (VAE).} The VAE \cite{kingma2013auto} has two parts, an encoder and a decoder, as we can see in \cref{fig:vae}. During latent diffusion training, the encoder maps the images to a latent space for the forward diffusion process, which applies more noise at each step. During inference, the decoder maps the latents generated by the reverse diffusion process back to the images. The encoder and decoder are trained jointly to minimize the reconstruction error.
+\textbf{The autoencoder (VAE).} The VAE \cite{kingma2013auto} has two parts, an encoder and a decoder, as we can see in \cref{fig:vae}. During latent diffusion training, the encoder maps the images to a latent space for the forward diffusion process, which applies more noise at each step. During inference, the decoder maps the latents generated by the reverse diffusion process back to the images. The encoder and decoder are trained jointly to minimize the reconstruction error.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\linewidth]{images/diffusion/vae.png}
-    \caption{Variational Autoencoder (VAE) training and generation processes. Source: \url{https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73}}
+    \caption{Variational Autoencoder (VAE) training and generation processes.}
     \label{fig:vae}
 \end{figure}
 
-\paragraph{The U-Net.} The U-Net \cite{ronneberger2015u} also has an encoder part and a decoder part, as shown in \cref{fig:unet_model}. The encoder has several ResNet blocks which half the image size by 2. The decoder does the opposite process to upsample the image to the initial size. The U-Net outputs the noise residual which can be used to compute the denoised image representation. To prevent the U-Net from losing important information while downsampling, shortcut connections are usually added from the downsample path to the corresponding layers in the upsample path. Moreover, the output of the stable diffusion U-Net is conditioned on text-embeddings via cross-attention layers.
+\textbf{The U-Net.} The U-Net \cite{ronneberger2015u} also has an encoder part and a decoder part, as shown in \cref{fig:unet_model}. The encoder has several ResNet blocks which half the image size by 2. The decoder does the opposite process to upsample the image to the initial size. The U-Net outputs the noise residual which can be used to compute the denoised image representation. To prevent the U-Net from losing important information while downsampling, shortcut connections are usually added from the downsample path to the corresponding layers in the upsample path. Moreover, the output of the stable diffusion U-Net is conditioned on text-embeddings via cross-attention layers.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\linewidth]{images/diffusion/unet-model.png}
-    \caption{The architecture of the U-Net model. Source: \url{https://github.com/huggingface/notebooks/blob/main/diffusers/diffusers_intro.ipynb}}
+    \caption{The architecture of the U-Net model.}
     \label{fig:unet_model}
 \end{figure}
 
-\paragraph{The text-encoder (CLIP).} The CLIP \cite{radford2021clip} text-encoder transforms the input prompt into an embedding for the U-Net. Stable Diffusion does not train the text-encoder during training and uses an already trained CLIP text encoder.
+\textbf{The text-encoder (CLIP).} The CLIP \cite{radford2021clip} text-encoder transforms the input prompt into an embedding for the U-Net. Stable Diffusion does not train the text-encoder during training and uses an already trained CLIP text encoder.
 
 With the previous components we nearly have the full Stable Diffusion inference architecture \cref{fig:stable_diffusion}. The stable diffusion model takes a latent seed and a text prompt as input. The latent seed is  used to generate initial random latents. The output of the U-Net is used to compute a denoised image representation with a scheduler algorithm. This process is repeated many to get better representations in each iteration. Finally, the latent image representation is decoded by the VAE decoder.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.6\linewidth]{images/diffusion/stable_diffusion.png}
-    \caption{Stable Diffusion inference architecture. Source: \url{https://github.com/huggingface/notebooks/blob/main/diffusers/stable_diffusion.ipynb}}
+    \caption{Stable Diffusion inference architecture.}
     \label{fig:stable_diffusion}
 \end{figure}
 
@@ -153,7 +220,7 @@ Multimodal training datasets with images and descriptions that include spatial r
   \label{fig:clevr_example}
 \end{figure}
 
-\textbf{NLVR} containins natural language sentences grounded in images \cite{suhr-etal-2017-corpus}. The task is to determine whether a sentence is true about a visual input. The data was collected through crowdsourcing, and solving the task requires reasoning about sets of objects, comparisons, and spatial relations. \cref{fig:nlvr_examples} shows two examples from NLVR.
+\textbf{NLVR} contains natural language sentences grounded in images \cite{suhr-etal-2017-corpus}. The task is to determine whether a sentence is true about a visual input. The data was collected through crowdsourcing, and solving the task requires reasoning about sets of objects, comparisons, and spatial relations. \cref{fig:nlvr_examples} shows two examples from NLVR.
 
 \begin{figure}[ht]
   \centering
