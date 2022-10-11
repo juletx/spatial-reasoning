@@ -1,9 +1,13 @@
-This chapter describes the Winoground \cite{thrush2022winoground} dataset and explains the metrics that are used for evaluation. Then, we explain the experiments we performed and the results we obtained.
+This chapter describes the Winoground \cite{thrush2022winoground} dataset and explains the metrics used for evaluation. We also describe a series of experiments performed over the Winoground dataset using state-of-the-art vision and language models. The Winoground dataset does not contain a training split, and therefore the experiments are conducted in a zero-shot fashion, where the models are trained on different datasets, and tested on Winoground.
 
-\section{Dataset}
+The original Winoground paper included zero-shot experiments with many pre-trained SOTA systems, and they concluded that, surprisingly, none of them does much better than chance \cite{thrush2022winoground}. From these experiments, the authors conclude that SOTA models are not as skilled at visio-linguistic compositional reasoning as we might have hoped.
 
-Each Winoground example contains two images and two captions, the goal
-is to match them correctly. Both captions contain a completely identical set of words in a different order. The dataset was created by expert annotators by creating captions and finding images on Getty Images. As it is a probing dataset, it only has 400 examples, with 800 unique captions and images. All examples are labeled with \textbf{linguistic tags} and some include \textbf{visual tags}. See \cref{tab:stats-tag-subset} for linguistic and visual tag counts.
+In this work, we extended the previous experiments with new models that obtained better results than those reported in the original paper. In previous experiments, only pre-trained models are tested. We extend this by testing some models that are fine-tuned for specific tasks such as image-text retrieval and visual reasoning. We compare pre-trained versions with fine-tuned versions of the same models.
+
+\section{Winoground Dataset}
+
+The Winoground dataset \cite{thrush2022winoground} comprises 400 examples that probe different aspects of visio-linguistic compositional reasoning. Each example contains two images and two captions, the goal
+is to match them correctly. Both captions contain a completely identical set of words or morphemes in a different order. Figures \cref{fig:winoground-examples,fig:winoground-examples-linguistic,fig:winoground-examples-visual} show some examples. The dataset was created by expert annotators by designing captions and finding images on Getty Images. All examples are labeled with \textbf{linguistic tags} and some include \textbf{visual tags}. See \cref{tab:stats-tag-subset} for linguistic and visual tag counts.
 
 \begin{table}[ht]
 \centering
@@ -22,11 +26,11 @@ is to match them correctly. Both captions contain a completely identical set of 
  & Pragmatics &  24\\
 \bottomrule
 \end{tabular}
-\caption{Linguistic and visual tag counts in the Winoground dataset. Every example has a linguistic tag; only examples that contain the visual phenomena have visual tags.}
+\caption{Linguistic and visual tag counts in the Winoground dataset. Every example has a linguistic tag; only examples that contain visual phenomena have visual tags.}
 \label{tab:stats-tag-subset}
 \end{table}
 
-On the one hand, there are 70 \textbf{linguistic tags} in total, which can be split into three groups: Object, Relation and Both. \textbf{Object} swaps consist in swapping noun phrases that refer to objects. \textbf{Relation} swaps reorder words that refer to objects such as verbs, adjectives, prepositions and adverbs. \textbf{Both} swaps involve changing both relations and objects. The annotators also tagged examples for \textbf{how many main predicates} were in the captions, which is independent of the swap type. See \cref{fig:winoground-examples} and \cref{fig:winoground-examples-linguistic} for examples of linguistic tags.
+On the one hand, there are 70 \textbf{linguistic tags} in total, which can be split into three groups: Object, Relation and Both. \textbf{Object} swaps consist in swapping noun phrases that refer to objects. \textbf{Relation} swaps reorder words that refer to objects such as verbs, adjectives, prepositions and adverbs. \textbf{Both} swaps involve changing both relations and objects. The annotators also tagged examples for \textbf{how many main predicates} were in the captions, which is independent of the swap type. See \cref{fig:winoground-examples,fig:winoground-examples-linguistic} for examples of linguistic tags.
 
 \begin{figure}[ht]
 \centering
@@ -169,9 +173,12 @@ On the other hand, there are three non-mutually exclusive \textbf{visual reasoni
         \end{subfigure}%    
         \caption*{\textit{Symbolic}}
     \end{minipage}
-    \caption{Examples from the Winoground dataset for the visual tags \textit{Pragmatics}, \textit{Series} and \textit{Symbolic} from left to right. They are additionally tagged with the \textit{Relation} tag, and 1, 2, and 1 main predicates from left to right.}
+    \caption{Examples from the Winoground dataset for the visual tags \textit{Pragmatics}, \textit{Series} and \textit{Symbolic} from left to right. They are additionally tagged with the \textit{Relation} tag, and 1, 2, and 1 main predicate from left to right.}
     \label{fig:winoground-examples-visual}
 \end{figure}
+
+Winoground is a probing dataset so it prioritizes expert annotations over size. Therefore, there is no training split, all examples are used to evaluate models. The dataset has 400 examples, with 800 unique captions and images. These contain 1600 image-text pairs in total,
+with 800 correct and 800 incorrect pairings.
 
 \section{Metrics}
 
@@ -243,6 +250,7 @@ The \textbf{group accuracy} in our framework is the mean of both accuracies:
         (ta(C_{0},I_{0},C_{1},I_{1}) + ia(C_{0},I_{0},C_{1},I_{1})) / 2\\
 \end{equation}
 
+\if0
 \section{Models} \label{sec:winoground_models}
 
 We introduce baseline models and our models. First, we provide an overview of all the models and then a short description of each model. We test more models and settings that were not included in the Winoground paper and manage to improve the scores of the best model.
@@ -283,10 +291,10 @@ We provide a high-level overview of the differences between the baseline models 
 \end{table}
 
 \subsection{Ours}
-We evaluate various configurations of the following multimodal transformers: OFA \cite{wang2022unifying}, BLIP \cite{li2022blip}, CLIP \cite{radford2021clip}, OpenCLIP \cite{ilharco_gabriel_2021_5143773}, FLAVA \cite{singh2022flava} and ViLT \cite{kim2021vilt}. OFA and BLIP were not included in the baseline evaluation. The other models were already included but we test more configurations. For example, we test ViLT models that are finetuned on Flickr30k, COCO, NLVR2 and VSR. We try different model sizes when they are available.
+In this project we extend previous experiments and evaluate various configurations of the following multimodal transformers: OFA \cite{wang2022unifying}, BLIP \cite{li2022blip}, CLIP \cite{radford2021clip}, OpenCLIP \cite{ilharco_gabriel_2021_5143773}, FLAVA \cite{singh2022flava} and ViLT \cite{kim2021vilt}. OFA and BLIP were not included in the baseline evaluation. The other models were already included but we test more configurations. For example, we test ViLT models that are finetuned on Flickr30k, COCO, NLVR2 and VSR. We try different model sizes when they are available.
 
 \paragraph{Overview.}
-We provide a high-level overview of the differences between our models in \cref{tab:model-types-ours} which includes pretraining datasets, architecture, and attention mechanisms between the modalities. We omit datasets that were only used to train backbones. We exclude the language embedding from this table as every model uses a pretrained BERT tokenizer, except CLIP, VSE++, and VSRN. The pretraining datasets include COCO \cite{lin2014microsoft}, Visual Genome (VG) \cite{krishna2016visual}, Conceptual Captions (CC) \cite{sharma2018conceptual}, SBU Captions \cite{ordonez2011im2text}, Flickr30k \cite{young2014image}, VQA 2.0 \cite{goyal2017making}, VCR \cite{zellers2019recognition}, NLVR2 \cite{suhr2017corpus}, SNLI-VE \cite{xie2018visual}, QNLI \cite{rajpurkar2016squad}, MLNI-mm \cite{williams2017broad}, QQP \cite{QQPDataset}, Localized Narratives (LN) \cite{pont-tuset2020localized-narratives}, Wikipedia Image Text (WIT) \cite{srinivasan2021wit}, Conceptual Captions 12M (CC 12M) \cite{changpinyo2021conceptual12m}, Red Caps (RC) \cite{desai2021redcaps}, YFCC100M \cite{thomee2016yfcc100m}, SST-2 \cite{Socher2013RecursiveDM}, LAION-400M \cite{schuhmann2021laion} and LAION-2B \cite{schuhmann2022laionb}. CLIP uses their own dataset for pretraining.
+Similar to \cref{model-types-baseline}, we provide a high-level overview of the differences between our models in \cref{tab:model-types-ours} which includes pretraining datasets, architecture, and attention mechanisms between the modalities. We omit datasets that were only used to train backbones. We exclude the language embedding from this table as every model uses a pretrained BERT tokenizer, except CLIP, VSE++, and VSRN. The pretraining datasets include COCO \cite{lin2014microsoft}, Visual Genome (VG) \cite{krishna2016visual}, Conceptual Captions (CC) \cite{sharma2018conceptual}, SBU Captions \cite{ordonez2011im2text}, Flickr30k \cite{young2014image}, VQA 2.0 \cite{goyal2017making}, VCR \cite{zellers2019recognition}, NLVR2 \cite{suhr2017corpus}, SNLI-VE \cite{xie2018visual}, QNLI \cite{rajpurkar2016squad}, MLNI-mm \cite{williams2017broad}, QQP \cite{QQPDataset}, Localized Narratives (LN) \cite{pont-tuset2020localized-narratives}, Wikipedia Image Text (WIT) \cite{srinivasan2021wit}, Conceptual Captions 12M (CC 12M) \cite{changpinyo2021conceptual12m}, Red Caps (RC) \cite{desai2021redcaps}, YFCC100M \cite{thomee2016yfcc100m}, SST-2 \cite{Socher2013RecursiveDM}, LAION-400M \cite{schuhmann2021laion} and LAION-2B \cite{schuhmann2022laionb}. CLIP uses their own dataset for pretraining.
 
 \begin{table}[ht]
     \centering
@@ -311,6 +319,7 @@ We provide a high-level overview of the differences between our models in \cref{
     \caption{A high-level overview of the differences between the models we evaluate by the pretraining datasets, architecture, and attention mechanisms between the modalities.}
     \label{tab:model-types-ours}
 \end{table}
+\fi
 
 \section{Results} \label{sec:winoground_results}
 
@@ -318,7 +327,7 @@ We provide a high-level overview of the differences between our models in \cref{
 
 \paragraph{Baseline}
 
-We show baseline results in \cref{tab:results_aggr_baseline}, which includes the following multimodal transformers: CLIP \cite{radford2021clip}, FLAVA \cite{singh2022flava}, LXMERT \cite{tan2020lxmert}, UniT \cite{hu2021unit}, UNITER \cite{chen2020uniter}, VILLA \cite{gan2020villa}, VinVL \cite{zhang2021vinvl}, ViLT \cite{kim2021vilt}, VisualBERT \cite{li2019visualbert} and ViLBERT \cite{lu2019vilbert}. They also evaluate several configurations of two types of RNN-based models: VSE++ \cite{faghri2018vse} and VSRN \cite{li2019vsrn}.
+We show baseline results from previous experiments \cite{thrush2022winoground} in \cref{tab:results_aggr_baseline}, which includes the following multimodal transformers: CLIP \cite{radford2021clip}, FLAVA \cite{singh2022flava}, LXMERT \cite{tan2020lxmert}, UniT \cite{hu2021unit}, UNITER \cite{chen2020uniter}, VILLA \cite{gan2020villa}, VinVL \cite{zhang2021vinvl}, ViLT \cite{kim2021vilt}, VisualBERT \cite{li2019visualbert} and ViLBERT \cite{lu2019vilbert}. Several configurations of two types of RNN-based models are also included: VSE++ \cite{faghri2018vse} and VSRN \cite{li2019vsrn}.
 
 \begin{table}[ht]
 \centering
@@ -357,7 +366,9 @@ We show baseline results in \cref{tab:results_aggr_baseline}, which includes the
 \label{tab:results_aggr_baseline}
 \end{table}
 
-On the one hand, \textbf{human performance} is high in all metrics, between 85\% and 90\% in \textbf{scores} and around 93\% in \textbf{accuracy}. On the other hand, most models perform below random chance in all scores and slightly above random chance in accuracy. 
+\textbf{Human performance} was computed using crowd workers on the Amazon Mechanical Turk platform. This establishes a more conservative human baseline than the expert annotator's perfect score \cite{thrush2022winoground}. Annotators are shown one image and one caption at a time and have to decide if they match. All 1600 combinations of images and captions are labelled by at least ten annotators. The image-caption score is computed as the ratio of annotators who say that they match.
+
+\cref{tab:results_aggr_baseline} shows that there is a large \textbf{performance gap} between humans and models. On the one hand, \textbf{human performance} is high in all metrics, between 85\% and 90\% in \textbf{scores} and around 93\% in \textbf{accuracy}. On the other hand, most models perform below random chance in all scores and slightly above random chance in accuracy.
 
 First, only some models are above random chance in \textbf{text score}: UNITER, VILLA, VinVL, ViLT, FLAVA, and CLIP. The larger versions of UNITER and VILLA, and VinVL are the models that perform best, and there is still more than 50\% difference with human performance.
 
@@ -366,8 +377,7 @@ Second, the performance on \textbf{image score} is even worse, where no model pe
 Last, \textbf{group score} is also below random chance for all models, while it is only a bit lower than other scores for humans. Similar to the image score, there is a 70\% difference between the human score and the best models, which are again FLAVA$_{ITM}$ and VinVL.
 
 \paragraph{Ours}
-
-We show our results in \cref{tab:results_aggr_ours}, which includes various configurations of the following multimodal transformers: OFA \cite{wang2022unifying}, BLIP \cite{li2022blip}, CLIP \cite{radford2021clip}, FLAVA \cite{singh2022flava} and ViLT \cite{kim2021vilt}.
+We show our results in \cref{tab:results_aggr_ours}, which includes various configurations of the following multimodal transformers: OFA \cite{wang2022unifying}, BLIP \cite{li2022blip}, CLIP \cite{radford2021clip}, FLAVA \cite{singh2022flava} and ViLT \cite{kim2021vilt}. OFA and BLIP were not included in the previous experiments. The other models were already included but we test more configurations. For example, we test ViLT models that are finetuned on Flickr30k, COCO, NLVR2 and VSR. All the models except ViLT$_{VSR}$ are already fine-tuned and publicly available.
 
 \begin{table}[ht]
 \centering
@@ -439,7 +449,9 @@ However, even the best model is still far from human performance in text, image 
 
 \paragraph{Baseline}
 
-See \cref{tab:results-by-ling-tag-baseline}
+\cref{tab:results-by-ling-tag-baseline} shows results from previous experiments \cite{thrush2022winoground} by linguistic tags. The highest \textbf{human performance} for \textbf{swap-dependent linguistic tags} is on \textbf{object}, followed by \textbf{relation} and then \textbf{both}. For the \textbf{swap-independent linguistic tags}, humans do better on examples with two main predicates, which tend to be longer and more complicated.
+
+\textbf{Models} perform much worse in all tags, but they show the \textbf{opposite pattern}. They perform better on examples with simpler and shorter sentences which often have morpheme-level swaps. Examples with the \textbf{both} tag have some of the shortest and least compositional captions. Many models get better than random performance on this tag, and CLIP even reaches human performance on text score. Image score remains lower than text score for all tags and models.
 
 \begin{table}[ht]
     \centering
