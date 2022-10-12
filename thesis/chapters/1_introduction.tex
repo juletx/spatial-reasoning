@@ -53,4 +53,29 @@ Research Tasks (RT) and Questions (RQ) are based on the objectives from the prev
 
 \section{Contributions}
 
+This section provides an overview of the main contributions of this work.
+
+\textbf{Improve the state of the art in compositional reasoning}. The original Winoground paper included zero-shot experiments with many pre-trained SOTA systems, and they concluded that, surprisingly, none of them does much better than chance \cite{thrush2022winoground}. In this work, we extended the previous experiments with new models that obtained better results than those reported in the original paper. In previous experiments, only pre-trained models are tested. We extend this by testing some models that are fine-tuned for specific tasks such as image-text retrieval and visual reasoning. We compare pre-trained versions with fine-tuned versions of the same models and find out that fine-tuning helps.
+
+\textbf{Investigate image generation using generative models.} With the aim of evaluating the compositional ability of diffusion models, we used the state-of-the-art Stable Diffusion model \cite{rombach2021highresolution} to generate images 9 images for each Winoground caption. The general conclusion is that Stable Diffusion is not good at this task. Most of the generated images do not match the captions. Therefore, using a diffusion model for data augmentation might not be robust enough. It would require generating many images to get the correct ones, and manual filtering to discard the wrong images.
+
+\textbf{Investigate image captioning for compositional reasoning.} With the aim of obtaining more insight into the Winoground examples, we decided to test image captioning. We used OFA \cite{wang2022unifying} and BLIP \cite{li2022blip} models of different sizes to generate captions for all Winoground images. The general conclusion is that most captions are quite good. They are very different from the original ones, but they describe the images correctly. They provide extra information about the images to the models, that is not included in the original captions.
+
+\textbf{Investigate image retrieval for compositional reasoning.} We used CLIP retrieval\footnote{\url{https://github.com/rom1504/clip-retrieval}} to retrieve images from LAION-5B \cite{schuhmann2022laionb} dataset. We used Winoground captions and images to get similar images. This system could be used to increase the size of our dataset. We could retrieve many similar images for our captions. We could also change the captions to retrieve images with different objects. Nevertheless, this would also require some filtering because there are many wrong images.
+
+\textbf{Perform zero-shot experiments in spatial reasoning.} VSR authors \cite{liu2022visual} train and test three popular VLMs: VisualBERT \cite{li2019visualbert}, LXMERT \cite{tan2020lxmert}, and
+ViLT \cite{kim2021vilt}. They conclude that there is still a large gap between model and human performance. We extend these experiments and evaluate ViLT \cite{kim2021vilt} and BLIP \cite{li2022blip} models fine-tuned on NLVR2. We show that performance drops a lot.
+
 \section{Structure}
+
+This section provides an overview of the next chapters in this work: \ref{cha:2_background} \nameref{cha:2_background}, \ref{cha:4_winoground} \nameref{cha:4_winoground}, \ref{cha:5_experiments} \nameref{cha:5_experiments}, \ref{cha:6_visual_spatial_reasoning} \nameref{cha:6_visual_spatial_reasoning} and \ref{cha:7_conclusions_future_work} \nameref{cha:7_conclusions_future_work}.
+
+First, \cref{cha:2_background} contains the background knowledge used in this project's development. This chapter includes two main sections: Multimodal Models and Visual Reasoning Datasets. \cref{sec:multimodal_models} explains the types of models that are related to this work. \cref{sec:visual_reasoning_datasets} includes synthetic and natural visual reasoning datasets and the datasets that we chose for this work.
+
+Second, \cref{cha:4_winoground} describes the Winoground \cite{thrush2022winoground} dataset (\cref{sec:winoground_dataset}) and explains the metrics used for evaluation. We also describe a series of previous and new experiments performed over the Winoground dataset using state-of-the-art vision and language models (\cref{sec:winoground_experiments_results}). The Winoground dataset does not contain a training split, and therefore the experiments are conducted in a zero-shot fashion, where the models are trained on different datasets, and tested on Winoground.
+
+Then, \cref{cha:5_experiments} includes more experiments that were performed on Winoground to gain more insight into the dataset and the tested models. These experiments include Text-to-Image Generation (\ref{text_to_image_generation}), Image Captioning (\ref{image_captioning}) and Image Retrieval (\ref{image_retrieval}).
+
+Next, \cref{cha:6_visual_spatial_reasoning} introduces the Visual Spatial Reasoning (VSR) \cite{liu2022visual} dataset (\cref{sec:vsr_dataset}) and the different data splits (\cref{sec:vsr_splits}) that are used for evaluation. We also explain previous experiments and new experiments we performed and the results we obtained in VSR (\cref{sec:vsr_experiments_results}).
+
+Finally, \cref{cha:7_conclusions_future_work} includes conclusions \cref{sec:conclusions} and future work areas for further research \cref{sec:future_work}.

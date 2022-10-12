@@ -1,6 +1,6 @@
-This chapter describes the Visual Spatial Reasoning (VSR) \cite{liu2022visual} dataset and the splits that are used for evaluation. We also explain the experiments we performed and the results we obtained in VSR.
+This chapter describes the Visual Spatial Reasoning (VSR) \cite{liu2022visual} dataset (\cref{sec:vsr_dataset}) and the different data splits (\cref{sec:vsr_splits}) that are used for evaluation. We also explain previous experiments and new experiments we performed and the results we obtained in VSR (\cref{sec:vsr_experiments_results}).
 
-\section{Dataset}
+\section{VSR Dataset} \label{sec:vsr_dataset}
 
 The objective of VSR is to \textbf{test spatial grounding} capabilities by covering \textbf{65 spatial relations} over natural images from COCO. Given an image and a caption which describes a spatial relation between two of the objects, the model has to infer if the relation is true or false.
 
@@ -136,7 +136,7 @@ In \cref{fig:vsr-examples-2} Adjacency, Projective and Orientation meta categori
     \label{fig:vsr-examples-2}
 \end{figure}
 
-\section{Dataset Splits}\label{sec:vsr_splits}
+\section{Dataset Splits} \label{sec:vsr_splits}
 
 The VSR dataset has two types of splits \cite{liu2022visual}, random and zero-shot. The statistics of the two splits are shown in \cref{tab:data_splits}.
 
@@ -164,28 +164,15 @@ This is done by randomly grouping concepts into three sets with the ratio of 50\
 This is a more challenging setup because the model has to learn concepts and relations in a compositional way instead of remembering the co-occurrence of the two.
 Moreover, having less training data is a disadvantage for the models, since not all the data can be used in this setting.
 
-\section{Metrics}
-
-The only metric used for evaluation is \textbf{accuracy}. Due to the fluctuations we observe, authors recommend always reporting the average performance of three runs to make sure the conclusion is
-reliable \cite{liu2022visual}. In general, models have larger standard deviations on the zero-shot split, probably because the zero-shot dev/test sets are smaller.
-
-\section{Models} \label{sec:vsr_models}
-
-We introduce baseline models and our models.
-
-\paragraph{Baselines.} VSR authors \cite{liu2022visual} test three popular VLMs: VisualBERT \cite{li2019visualbert}, 
-LXMERT \cite{tan2020lxmert}, and
-ViLT \cite{kim2021vilt}. All three models are stacked Transformers \cite{vaswani2017attention} that take image and text pairs as input. The difference mainly lies in how or whether they encode position information of objects. Checkpoints are saved every 100 iterations and the best checkpoint on the dev set is used for testing. All models are run three times using three random seeds.
-
-\paragraph{Ours.} We first test the same baseline models. We also evaluate a ViLT model that has only been finetuned on NLVR2. We evaluate BLIP \cite{li2022blip} trained on VSR and NLVR2.
-
-\section{Results} \label{sec:vsr_results}
+\section{Experiments and Results} \label{sec:vsr_experiments_results}
 
 \subsection{Compared To Humans}
 
-\paragraph{Baseline}
+\paragraph{Previous}
+VSR authors \cite{liu2022visual} test three popular VLMs: VisualBERT \cite{li2019visualbert}, LXMERT \cite{tan2020lxmert}, and
+ViLT \cite{kim2021vilt}. All three models are stacked Transformers \cite{vaswani2017attention} that take image and text pairs as input. The difference mainly lies in how or whether they encode position information of objects. Checkpoints are saved every 100 iterations and the best checkpoint on the dev set is used for testing. All models are run three times using three random seeds.
 
-See \cref{tab:vsr_results_base}. The gap between dev and tests becomes much greater on zero-shot split likely due to the smaller size of both dev and test sets.
+We show previous results in \cref{tab:vsr_results_base}. The only metric used for evaluation is \textbf{accuracy}. Due to the fluctuations, authors recommend always reporting the average performance of three runs to make sure the conclusion is reliable \cite{liu2022visual}. In general, models have larger standard deviations on the zero-shot split, probably because the zero-shot dev/test sets are smaller. The gap between dev and tests becomes much greater on zero-shot split likely due to the smaller size of both dev and test sets.
 
 \begin{table}[ht]
 \centering
@@ -210,9 +197,11 @@ ViLT & 71.9$_{\pm1.3}$  & 71.0$_{\pm0.7}$  & & 66.7$_{\pm1.7}$  & 62.4$_{\pm1.5}
 
 \paragraph{Ours}
 
+We first test the same previous models. We also evaluate a ViLT \cite{kim2021vilt} model that has only been finetuned on NLVR2. We evaluate BLIP \cite{li2022blip} trained on VSR and NLVR2.
+
 \subsection{Results By Relation}
 
-\paragraph{Baseline}
+\paragraph{Previous}
 
 See \cref{fig:performance_by_rel_base}
 
@@ -354,7 +343,7 @@ surrounding          &       5 &        40.0 &   100.0 &  60.0 &        40.0 &  
 
 \subsection{Results By Relation Meta Category}
 
-\paragraph{Baseline}
+\paragraph{Previous}
 
 See \cref{fig:performance_by_meta_cat_base}
 

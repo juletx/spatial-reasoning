@@ -357,11 +357,13 @@ The first pair of captions in \cref{fig:captioning-examples-visual} is wrong. In
         \end{subfigure}%    
         \caption*{\textit{Symbolic}}
     \end{minipage}
-    \caption{Image Captioning examples from the Winoground dataset for the visual tags \textit{Pragmatics}, \textit{Series} and \textit{Symbolic} from left to right. They are additionally tagged with the \textit{Relation} tag, and 1, 2, and 1 main predicates from left to right.}
+    \caption{Image Captioning examples from the Winoground dataset for the visual tags \textit{Pragmatics}, \textit{Series} and \textit{Symbolic} from left to right. They are additionally tagged with the \textit{Relation} tag, and 1, 2, and 1 main predicate from left to right.}
     \label{fig:captioning-examples-visual}
 \end{figure}
 
-The general conclusion is that most captions are quite good. They are very different from the original ones, but they describe the images correctly. They provide extra information about the images to the models, that is not included in the original captions. They could be used to improve the results of the models by incorporating them in the evaluation process. For example, we could compare the original and generated captions and pair them by similarity.
+The general conclusion is that most captions are quite good. They are very different from the original ones, but they describe the images correctly. They provide extra information about the images to the models, that is not included in the original captions. They could be used to improve the results of the models by incorporating them into the evaluation process. For example, we could compare the original and generated captions and pair them by similarity. 
+
+Captioning could also be applied for generating automatic descriptions of images. This would reduce the work needed to create training datasets targeted for compositional or spatial reasoning.
 
 It seems that these models are not that bad at describing images, but have more difficulties when pairing them with very similar captions. This suggests that text encoding might be their biggest limitation, and could be the main reason for their low performance on Winoground.
 
