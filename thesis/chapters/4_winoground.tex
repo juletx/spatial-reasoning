@@ -252,7 +252,9 @@ The \textbf{group accuracy} in our framework is the mean of both accuracies:
 
 \section{Experiments and Results} \label{sec:winoground_experiments_results}
 
-\subsection{Compared To Humans}
+In this section, we describe a series of previous and new experiments performed over the Winoground dataset using state-of-the-art vision and language models. We compare our results with the previous experiments and with human performance (\cref{sec:winoground_results_humans}). We also perform analysis by linguistic and visual tags and find that some tags are more challenging for models and others for humans (\cref{winoground_results_linguistic,winoground_results_visual}).
+
+\subsection{Compared To Humans} \label{sec:winoground_results_humans}
 
 \paragraph{Previous}
 
@@ -370,11 +372,13 @@ For \textbf{FLAVA} and \textbf{CLIP} we manage to replicate baseline results. We
 
 We test the 5 model sizes of \textbf{OFA}. Considering that this model gets state-of-the-art performance on many tasks, the performance is not very good. Even the biggest model is not better than the best baseline model. OFA is trained to generate "yes" or "no" when given an image and the text "Does the image describe <caption>?". This might explain why it does not perform that well on retrieval and Winoground.
 
-We test many configurations of \textbf{BLIP}, which include different training sizes, scoring, vision transformer sizes and finetuning datasets. ITM score is better than ITC score in all the cases. Even the 14M pretrained-only model is better than all the previously tested models. Finetuning for retrieval on COCO and Flickr30k improves the results even more, reaching nearly above random performance in text, image and group scores. The best scores are much better than baseline models, ~10\% in text score, ~4\% in image score and ~7\% in group score.
+We test many configurations of \textbf{BLIP}, which include different training sizes, scoring, vision transformer sizes and finetuning datasets. ITM score is better than ITC score in all the cases. Even the 14M \textbf{pretrained-only} model is better than all the previously tested models. When compared with the 129M pretrained model, we find that there is only a small difference in performance. This suggests that \textbf{pretraining on more data} might not be enough to increase performance. Using a \textbf{bigger vision backbone} (ViT-L/16) does not improve results either, getting similar or worse results when compared to ViT-B/16. Finally, using \textbf{caption filtering} (CapFilt-L) also provides worse results. This suggests that improving pretraining captions is not 
 
-However, even the best model is still far from human performance in text, image and group scores. There is still a ~40\% gap in text scores, and ~64\% in image and group scores. If we look at accuracy metrics, the gap is reduced, but the difference is still very big. Image score remains much lower than text score for all the models.
+\textbf{Finetuning BLIP} on different tasks increases results significantly. \textbf{Finetuning for retrieval} on COCO and Flickr30k improves the results a lot, reaching nearly above random performance in text, image and group scores. \textbf{Finetuning on NLVR2} is also very helpful, but a bit less than retrieval. This contrasts with ViLT, which gets the best results when finetuned on NLVR2. The best BLIP scores are much better than baseline models, ~10\% in text score, ~4\% in image score and ~7\% in group score.
 
-\subsection{Results By Linguistic Tag}
+However, even the best model is still \textbf{far from human performance} in text, image and group scores. There is still a ~40\% gap in text scores, and ~64\% in image and group scores. If we look at accuracy metrics, the gap is reduced, but the difference is still very big. Image score remains much lower than text score for all the models.
+
+\subsection{Results By Linguistic Tag} \label{winoground_results_linguistic}
 
 \paragraph{Previous}
 
@@ -423,7 +427,7 @@ However, even the best model is still far from human performance in text, image 
 
 \paragraph{Ours}
 
-See \cref{tab:results-by-ling-tag-ours}
+\cref{tab:results-by-ling-tag-ours} shows results from our experiments by linguistic tags. We see a similar pattern when compared with previous experiments. Models perform worse on more complicated sentences. BLIP is the best model in nearly all tags, performing above chance in most of them. The only exception is CLIP, which is better in \textbf{both} tag scores. Even the best BLIP model is far from random chance on image and group scores of examples with \textbf{2 main preds}, the tag where human performance is best. Finetuning helps with most tags and ITM remains better than ITC is most tags, with a few exceptions in both tag scores.
 
 \begin{table}[ht]
     \centering
@@ -479,11 +483,11 @@ See \cref{tab:results-by-ling-tag-ours}
     \label{tab:results-by-ling-tag-ours}
 \end{table}
 
-\subsection{Results By Visual Tag}
+\subsection{Results By Visual Tag} \label{winoground_results_visual}
 
 \paragraph{Previous}
 
-See \cref{tab:results-by-visual-tag-baseline}
+\cref{tab:results-by-visual-tag-baseline} shows results from previous experiments \cite{thrush2022winoground} by visual tags. First, humans and models are especially good at the \textbf{symbolic} examples. Some models even get above random chance in image and group scores but are still very far from humans. Next, human performance is very low on the \textbf{pragmatics} tag. Ten human crowdworkers probably didn't capture slight pragmatics preferences that the expert linguist annotators agreed on. Models are also quite bad on this tag, text scores are quite good but many of them get 0\% scores on image and group scores. There are a few exceptions that get good scores, even getting close to humans. Finally, humans are very good on \textbf{series} tag while models do worst on this tag. Similar to pragmatics, many get a 0\% group score. This means that models are always choosing the same image regardless of the caption. This is understandable because images from the same series tend to be very similar between them.
 
 \begin{table}[ht]
     \centering
@@ -493,7 +497,7 @@ See \cref{tab:results-by-visual-tag-baseline}
      &
       \multicolumn{3}{c|}{Symbolic} &
       \multicolumn{3}{c|}{Pragmatics} &
-      \multicolumn{3}{c}{Same Image Series} \\
+      \multicolumn{3}{c}{Series} \\
     Model & Text & Image & Group & Text & Image & Group & Text & Image & Group \\\midrule
  MTurk Human                  & \textbf{96.43} & \textbf{92.86} & \textbf{92.86} & \textbf{58.82} & \textbf{41.18} & \textbf{41.18} & \textbf{95.65} & \textbf{91.30} & \textbf{91.30} \\
  VinVL                        & 25.00          & 17.86          & 14.29          & \textbf{29.41} & 5.88           & 5.88           & \textbf{34.78} & 17.39          & 13.04          \\
@@ -524,7 +528,7 @@ See \cref{tab:results-by-visual-tag-baseline}
 
 \paragraph{Ours}
 
-See \cref{tab:results-by-visual-tag-ours}
+\cref{tab:results-by-visual-tag-ours} shows results from our experiments by visual tags. We see a similar pattern when compared with previous experiments. BLIP is again the best model in all tags, performing above chance in most of them. However, even the best BLIP model is far from random chance on image and group scores of examples with \textbf{series} tag. It also struggles a lot in \textbf{pragmatics}, where there are only a few exceptions that surpass random chance in group score. Finetuning helps with most tags and ITM remains better than ITC, with big differences in most cases.
 
 \begin{table}[ht]
     \centering
@@ -534,7 +538,7 @@ See \cref{tab:results-by-visual-tag-ours}
      &
       \multicolumn{3}{c|}{Symbolic} &
       \multicolumn{3}{c|}{Pragmatics} &
-      \multicolumn{3}{c}{Same Image Series} \\
+      \multicolumn{3}{c}{Series} \\
     Model & Text & Image & Group & Text & Image & Group & Text & Image & Group \\\midrule
  MTurk Human                  & \textbf{96.43} & \textbf{92.86} & \textbf{92.86} & \textbf{58.82} & \textbf{41.18} & \textbf{41.18} & \textbf{95.65} & \textbf{91.30} & \textbf{91.30} \\
  ViLT (ViT-B/32)                     & 21.43          & 7.14           & 3.57           & 17.65          & 5.88           & 5.88           & 17.39          & 8.70           & 4.35           \\
