@@ -262,6 +262,7 @@ We show baseline results from previous experiments \cite{thrush2022winoground} i
 
 \begin{table}[ht]
 \centering
+\begin{adjustbox}{max width=0.6\textwidth}
 \begin{tabular}{l|rrr|rrr}
 \toprule
  &
@@ -293,7 +294,8 @@ We show baseline results from previous experiments \cite{thrush2022winoground} i
  VSRN$_{Flickr30k}$           & 20.00          & 5.00           & 3.50           & \textbf{53.25} & \textbf{51.75} & \textbf{52.50} \\
 \bottomrule
 \end{tabular}
-\caption{Results on the Winoground dataset across the text, image and group score and accuracy metrics. Results above random chance in \textbf{bold}.}
+\end{adjustbox}
+\caption{Previous results on the Winoground dataset across the text, image and group score and accuracy metrics. Results above random chance in \textbf{bold}.}
 \label{tab:results_aggr_baseline}
 \end{table}
 
@@ -312,6 +314,7 @@ We show our results in \cref{tab:results_aggr_ours}, which includes various conf
 
 \begin{table}[ht]
 \centering
+\begin{adjustbox}{max width=0.6\textwidth}
 \begin{tabular}{l|rrr|rrr}
 \toprule
  &
@@ -334,6 +337,10 @@ We show our results in \cref{tab:results_aggr_ours}, which includes various conf
  CLIP (ViT-B/16)                     & 25.00          & 10.25          & 7.00           & \textbf{57.88} & \textbf{53.75} & \textbf{55.81} \\
  CLIP (ViT-L/14)                     & \textbf{28.50} & 11.00          & 8.00           & \textbf{60.38} & \textbf{54.62} & \textbf{57.50} \\
  CLIP (ViT-L/14-336)                 & \textbf{27.50} & 12.00          & 8.00           & \textbf{59.38} & \textbf{55.12} & \textbf{57.25} \\
+ OpenCLIP (ViT-B/32)            & \textbf{35.00} & 11.50          & 8.25           & \textbf{62.62} & \textbf{54.37} & \textbf{58.50} \\
+ OpenCLIP (ViT-L/14)            & \textbf{30.25} & 11.75          & 9.00           & \textbf{59.88} & \textbf{54.12} & \textbf{57.00} \\
+ OpenCLIP (ViT-H/14)            & \textbf{33.00} & 13.00          & 10.50          & \textbf{60.38} & \textbf{55.75} & \textbf{58.06} \\
+ OpenCLIP (ViT-g/14)            & \textbf{31.00} & 10.25          & 7.75           & \textbf{60.88} & \textbf{54.50} & \textbf{57.69} \\
  OFA$_{Tiny}$                        & 20.50          & 8.00           & 3.75           & \textbf{53.50} & \textbf{52.00} & \textbf{52.75} \\
  OFA$_{Base}$                        & \textbf{26.50} & 10.50          & 7.00           & \textbf{58.88} & \textbf{54.00} & \textbf{56.44} \\
  OFA$_{Medium}$                      & 22.75          & 9.00           & 5.50           & \textbf{54.25} & \textbf{52.75} & \textbf{53.50} \\
@@ -358,7 +365,8 @@ We show our results in \cref{tab:results_aggr_ours}, which includes various conf
  BLIP$_{NLVR2}$ (ViT-B/16)           & \textbf{40.25} & 25.00          & \textbf{18.50} & \textbf{64.62} & \textbf{61.62} & \textbf{63.12} \\
 \bottomrule
 \end{tabular}
-\caption{Results on the Winoground dataset across the text, image and group score and accuracy metrics. Results above random chance in \textbf{bold}.}
+\end{adjustbox}
+\caption{Our results on the Winoground dataset across the text, image and group score and accuracy metrics. Results above random chance in \textbf{bold}.}
 \label{tab:results_aggr_ours}
 \end{table}
 
@@ -421,7 +429,7 @@ However, even the best model is still \textbf{far from human performance} in tex
           \bottomrule
   \end{tabular}
   \end{adjustbox}
-  \caption{The results by linguistic tag. Results above chance are in \textbf{bold}.}
+  \caption{Previous results by linguistic tag. Results above chance are in \textbf{bold}.}
     \label{tab:results-by-ling-tag-baseline}
 \end{table}
 
@@ -442,7 +450,7 @@ However, even the best model is still \textbf{far from human performance} in tex
       \multicolumn{3}{c}{2 Main Preds}\\
     Model & Text & Image & Group & Text & Image & Group & Text & Image & Group & Text & Image & Group & Text & Image & Group \\\midrule
  MTurk Human                  & \textbf{92.20} & \textbf{90.78} & \textbf{88.65} & \textbf{89.27} & \textbf{90.56} & \textbf{86.70} & \textbf{76.92} & \textbf{57.69} & \textbf{57.69} & \textbf{87.33} & \textbf{85.62} & \textbf{82.53} & \textbf{95.37} & \textbf{96.30} & \textbf{93.52} \\
- ViLT (ViT-B/32)                     & \textbf{29.08} & 10.64          & 4.96           & \textbf{26.18} & 7.73           & 6.44           & \textbf{30.77} & 7.69           & 7.69           & \textbf{30.14} & 10.62          & 7.53           & 20.37          & 3.70           & 1.85           \\
+ViLT (ViT-B/32)                     & \textbf{29.08} & 10.64          & 4.96           & \textbf{26.18} & 7.73           & 6.44           & \textbf{30.77} & 7.69           & 7.69           & \textbf{30.14} & 10.62          & 7.53           & 20.37          & 3.70           & 1.85           \\
  ViLT$_{COCO}$ (ViT-B/32)            & \textbf{33.33} & 15.60          & 12.77          & \textbf{30.90} & 10.73          & 9.01           & \textbf{46.15} & \textbf{26.92} & \textbf{23.08} & \textbf{36.64} & 15.75          & 14.04          & 22.22          & 7.41           & 3.70           \\
  ViLT$_{Flickr30k}$ (ViT-B/32)       & \textbf{32.62} & 14.89          & 11.35          & \textbf{35.62} & 8.15           & 7.73           & \textbf{42.31} & 23.08          & \textbf{19.23} & \textbf{36.99} & 14.38          & 11.99          & \textbf{29.63} & 3.70           & 3.70           \\
  ViLT$_{NLVR2}$ (ViT-B/32)           & \textbf{39.01} & 16.31          & 14.18          & \textbf{36.48} & 14.59          & 10.30          & \textbf{46.15} & 15.38          & 15.38          & \textbf{39.73} & 18.15          & 15.07          & \textbf{33.33} & 7.41           & 3.70           \\
@@ -454,6 +462,10 @@ However, even the best model is still \textbf{far from human performance} in tex
  CLIP (ViT-B/16)                     & \textbf{27.66} & 10.64          & 5.67           & 19.31          & 6.44           & 4.29           & \textbf{61.54} & \textbf{42.31} & \textbf{38.46} & \textbf{30.14} & 11.99          & 8.90           & 11.11          & 5.56           & 1.85           \\
  CLIP (ViT-L/14)                     & \textbf{27.66} & 8.51           & 5.67           & \textbf{25.75} & 9.87           & 6.44           & \textbf{57.69} & \textbf{34.62} & \textbf{34.62} & \textbf{30.14} & 13.01          & 9.93           & 24.07          & 5.56           & 2.78           \\
  CLIP (ViT-L/14-336)                 & \textbf{32.62} & 12.77          & 9.22           & 21.03          & 8.15           & 4.29           & \textbf{57.69} & \textbf{42.31} & \textbf{34.62} & \textbf{30.48} & 14.04          & 10.62          & 19.44          & 6.48           & 0.93           \\
+ OpenCLIP (ViT-B/32)            & \textbf{39.01} & 11.35          & 9.93           & \textbf{30.90} & 9.44           & 5.15           & \textbf{50.00} & \textbf{30.77} & \textbf{26.92} & \textbf{37.33} & 13.36          & 10.27          & \textbf{28.70} & 6.48           & 2.78           \\
+ OpenCLIP (ViT-L/14)            & \textbf{34.04} & 12.06          & 9.22           & \textbf{25.32} & 8.58           & 6.01           & \textbf{53.85} & \textbf{38.46} & \textbf{34.62} & \textbf{32.19} & 14.73          & 11.64          & 25.00          & 3.70           & 1.85           \\
+ OpenCLIP (ViT-H/14)            & \textbf{39.01} & 12.77          & 10.64          & \textbf{26.61} & 9.44           & 6.87           & \textbf{57.69} & \textbf{46.15} & \textbf{42.31} & \textbf{36.30} & 17.12          & 14.38          & 24.07          & 1.85           & 0.00           \\
+ OpenCLIP (ViT-g/14)            & \textbf{33.33} & 9.93           & 6.38           & \textbf{25.75} & 8.58           & 6.44           & \textbf{65.38} & \textbf{26.92} & \textbf{26.92} & \textbf{35.96} & 12.67          & 9.93           & 17.59          & 3.70           & 1.85           \\
  OFA$_{Tiny}$                        & 22.70          & 6.38           & 2.13           & 17.17          & 6.87           & 3.43           & \textbf{38.46} & \textbf{26.92} & 15.38          & 23.97          & 8.22           & 4.45           & 11.11          & 7.41           & 1.85           \\
  OFA$_{Base}$                        & \textbf{25.53} & 14.18          & 7.09           & 24.46          & 6.87           & 5.15           & \textbf{50.00} & 23.08          & \textbf{23.08} & \textbf{28.77} & 12.67          & 8.56           & 20.37          & 4.63           & 2.78           \\
  OFA$_{Medium}$                      & 19.86          & 7.80           & 4.26           & 22.32          & 7.73           & 4.72           & \textbf{42.31} & \textbf{26.92} & \textbf{19.23} & 24.32          & 10.96          & 6.85           & 18.52          & 3.70           & 1.85           \\
@@ -475,11 +487,11 @@ However, even the best model is still \textbf{far from human performance} in tex
  BLIP$_{ITC COCO}$ (ViT-L/16)        & \textbf{36.88} & 14.18          & 11.35          & \textbf{36.05} & 11.16          & 7.30           & \textbf{57.69} & \textbf{34.62} & \textbf{34.62} & \textbf{41.10} & 16.44          & 13.36          & \textbf{28.70} & 6.48           & 2.78           \\
  BLIP$_{ITM Flickr30k}$ (ViT-L/16)   & \textbf{46.10} & 22.70          & 16.31          & \textbf{42.06} & 24.89          & \textbf{21.46} & \textbf{65.38} & \textbf{34.62} & \textbf{34.62} & \textbf{50.34} & \textbf{29.11} & \textbf{24.66} & \textbf{30.56} & 12.96          & 9.26           \\
  BLIP$_{ITC Flickr30k}$ (ViT-L/16)   & \textbf{39.01} & 19.86          & 15.60          & \textbf{30.47} & 11.59          & 9.44           & \textbf{69.23} & \textbf{38.46} & \textbf{38.46} & \textbf{39.38} & 20.55          & \textbf{17.12} & \textbf{26.85} & 4.63           & 3.70           \\
- BLIP$_{NLVR2}$ (ViT-B/16)           & \textbf{42.55} & 23.40          & \textbf{19.86} & \textbf{36.48} & \textbf{25.32} & \textbf{16.74} & \textbf{61.54} & \textbf{30.77} & \textbf{26.92} & \textbf{42.47} & \textbf{27.74} & \textbf{21.23} & \textbf{34.26} & 17.59          & 11.11    \\
+ BLIP$_{NLVR2}$ (ViT-B/16)           & \textbf{42.55} & 23.40          & \textbf{19.86} & \textbf{36.48} & \textbf{25.32} & \textbf{16.74} & \textbf{61.54} & \textbf{30.77} & \textbf{26.92} & \textbf{42.47} & \textbf{27.74} & \textbf{21.23} & \textbf{34.26} & 17.59          & 11.11          \\
           \bottomrule
   \end{tabular}
   \end{adjustbox}
-  \caption{The results by linguistic tag. Results above chance are in \textbf{bold}.}
+  \caption{Our results by linguistic tag. Results above chance are in \textbf{bold}.}
     \label{tab:results-by-ling-tag-ours}
 \end{table}
 
@@ -491,7 +503,7 @@ However, even the best model is still \textbf{far from human performance} in tex
 
 \begin{table}[ht]
     \centering
-   \begin{adjustbox}{max width=\textwidth}
+   \begin{adjustbox}{max width=0.8\textwidth}
   \begin{tabular}{l|rrr|rrr|rrr}
     \toprule
      &
@@ -522,7 +534,7 @@ However, even the best model is still \textbf{far from human performance} in tex
     \bottomrule
   \end{tabular}
   \end{adjustbox}
-  \caption{The results by visual tag. Results above chance are in \textbf{bold}.}
+  \caption{Previous results by visual tag. Results above chance are in \textbf{bold}.}
     \label{tab:results-by-visual-tag-baseline}
 \end{table}
 
@@ -532,7 +544,7 @@ However, even the best model is still \textbf{far from human performance} in tex
 
 \begin{table}[ht]
     \centering
-   \begin{adjustbox}{max width=\textwidth}
+   \begin{adjustbox}{max width=0.8\textwidth}
   \begin{tabular}{l|rrr|rrr|rrr}
     \toprule
      &
@@ -553,6 +565,10 @@ However, even the best model is still \textbf{far from human performance} in tex
  CLIP (ViT-B/16)                     & 21.43          & 3.57           & 3.57           & \textbf{29.41} & 11.76          & 11.76          & 4.35           & 4.35           & 0.00           \\
  CLIP (ViT-L/14)                     & \textbf{28.57} & 10.71          & 3.57           & 23.53          & 17.65          & 11.76          & 13.04          & 8.70           & 4.35           \\
  CLIP (ViT-L/14-336)                 & \textbf{28.57} & 14.29          & 7.14           & 17.65          & 17.65          & 5.88           & 13.04          & 4.35           & 0.00           \\
+ OpenCLIP (ViT-B/32)            & \textbf{35.71} & 10.71          & 10.71          & 23.53          & 5.88           & 5.88           & 17.39          & 4.35           & 0.00           \\
+ OpenCLIP (ViT-L/14)            & \textbf{32.14} & 3.57           & 3.57           & \textbf{35.29} & 11.76          & 5.88           & 8.70           & 4.35           & 0.00           \\
+ OpenCLIP (ViT-H/14)            & \textbf{35.71} & 10.71          & 10.71          & \textbf{35.29} & \textbf{29.41} & \textbf{17.65} & 17.39          & 0.00           & 0.00           \\
+ OpenCLIP (ViT-g/14)            & \textbf{39.29} & 10.71          & 7.14           & \textbf{41.18} & 17.65          & 11.76          & 21.74          & 0.00           & 0.00           \\
  OFA$_{Tiny}$                        & 21.43          & 7.14           & 7.14           & 11.76          & 17.65          & 0.00           & 21.74          & 8.70           & 0.00           \\
  OFA$_{Base}$                        & \textbf{28.57} & 10.71          & 10.71          & 23.53          & 5.88           & 5.88           & 21.74          & 13.04          & 4.35           \\
  OFA$_{Medium}$                      & \textbf{28.57} & 10.71          & 7.14           & 17.65          & 5.88           & 5.88           & 13.04          & 8.70           & 4.35           \\
@@ -578,7 +594,7 @@ However, even the best model is still \textbf{far from human performance} in tex
 \bottomrule
 \end{tabular}
   \end{adjustbox}
-  \caption{The results by visual tag. Results above chance are in \textbf{bold}.}
+  \caption{Our results by visual tag. Results above chance are in \textbf{bold}.}
     \label{tab:results-by-visual-tag-ours}
 \end{table}
 

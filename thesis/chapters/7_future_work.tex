@@ -2,7 +2,7 @@ This chapter provides an overview of future work areas for further research. \cr
 
 \section{Zero-shot Experiments} \label{sec:zero_shot}
 
-Future work could improve results on Winoground and VSR by training and fine-tuning better VLMs. We could also check if there is any new appropriate dataset to evaluate models. New SOTA systems might appear in the future and we could check if they improve results. We could conduct an in-depth quantitative and qualitative analysis of the results to explain the limitations of different types of VLMs.
+Future work could improve results on Winoground and VSR by training and fine-tuning better VLMs. We could also check if there is any other new dataset to evaluate models. New SOTA systems might appear in the future and we could check if they improve results. We could conduct an in-depth quantitative and qualitative analysis of the results to explain the limitations of different types of VLMs.
 
 In the future, we might investigate the use of \textbf{multi-tasking} and \textbf{multi-sourcing} to improve generalization properties. In a multi-task training paradigm, the model is forced to learn more than one task simultaneously, therefore improving its generalization capabilities. We could investigate multi-task settings to combine the verbalized dataset, the images produced by the generative VLMs, as well as traditional training data to obtain spatial-aware language models.
 
@@ -10,7 +10,7 @@ We could also improve \textbf{zero-shot} and \textbf{few-shot} generalization of
 
 \section{Synthetic Dataset Creation} \label{sec:synthetic_dataset}
 
-As to avoid the scarcity of multimodal datasets that explicitly describe spatial relations, we propose to automatically construct synthetic datasets. We could then use them to train existing language models in a self-supervised way, with the final aim of obtaining spatially grounded language models. We propose four options that could be combined to produce the synthetic datasets: explicit verbalization (\ref{sec:explicit_verbalization}), text-to-image (\ref{sec:text-to-image}), image-to-image (\ref{sec:image-to-image}) and image captioning and retrieval (\ref{sec:image_captioning_retrieval}).
+As to avoid the scarcity of multimodal datasets that explicitly describe spatial relations, we analyze further options to construct synthetic datasets. We could then use them to train existing language models in a self-supervised way, with the final aim of obtaining spatially grounded language models. We propose four options that could be combined to produce the synthetic datasets: explicit verbalization (\ref{sec:explicit_verbalization}), text-to-image (\ref{sec:text-to-image}), image-to-image (\ref{sec:image-to-image}) and image captioning and retrieval (\ref{sec:image_captioning_retrieval}).
 
 \subsection{Explicit Verbalization} \label{sec:explicit_verbalization}
 
@@ -46,6 +46,16 @@ The drawback of this approach is that spatial masks have to be specifically craf
     \includegraphics[width=\linewidth]{images/future/prompt-to-prompt.png}
     \caption{Prompt-to-Prompt editing operations: tuning the level of influence of an adjective word (left), making a local modification in the image by replacing or adding a word (middle), or specifying a global modification (right).}
     \label{fig:prompt-to-prompt}
+\end{figure}
+
+Another recent solution called Imagic \cite{kawar2022imagic} only uses an input image and a target text to edit images (see \cref{fig:imagic}). Imagic can apply complex semantic edits such as changing the posture and composition of one or multiple objects inside
+an image while preserving its original characteristics. For example, it can make a standing dog sit down or jump, cause a bird to spread its wings, etc. These are precisely the types of edits that we need to create a synthetic dataset.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{images/future/imagic.jpg}
+    \caption{Imagic can perform various text-based semantic edits on a single real input image, including highly complex non-rigid changes such as posture changes and editing multiple objects. Here, we show pairs of input images and edited outputs with their respective target texts.}
+    \label{fig:imagic}
 \end{figure}
 
 \subsection{Image Captioning and Retrieval} \label{sec:image_captioning_retrieval}
