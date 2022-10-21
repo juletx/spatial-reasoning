@@ -1,16 +1,12 @@
-This chapter provides an overview of future work areas for further research. \cref{sec:zero_shot} includes ideas for improving the state-of-the-art. We also propose four ideas for synthetic dataset generation (\cref{sec:synthetic_dataset}). Finally, we include some ideas for extending current datasets to be multilingual (\cref{sec:multilingual_datasets}).
-
-\section{Zero-shot Experiments} \label{sec:zero_shot}
-
-Future work could improve results on Winoground and VSR by training and fine-tuning better VLMs. We could also check if there is any other new dataset to evaluate models. New SOTA systems might appear in the future and we could check if they improve results. We could conduct an in-depth quantitative and qualitative analysis of the results to explain the limitations of different types of VLMs.
-
-In the future, we might investigate the use of \textbf{multi-tasking} and \textbf{multi-sourcing} to improve generalization properties. In a multi-task training paradigm, the model is forced to learn more than one task simultaneously, therefore improving its generalization capabilities. We could investigate multi-task settings to combine the verbalized dataset, the images produced by the generative VLMs, as well as traditional training data to obtain spatial-aware language models.
-
-We could also improve \textbf{zero-shot} and \textbf{few-shot} generalization of VLM models to obtain effective models in small data regimes of the spatial reasoning domain. Thus eliminating the necessity of explicitly annotating big quantities of spatial relations.
+This chapter provides an overview of future work areas for further research. We propose four ideas for synthetic dataset generation (\cref{sec:synthetic_dataset}): explicit verbalization (\ref{sec:explicit_verbalization}), text-to-image (\ref{sec:text-to-image}), image-to-image (\ref{sec:image-to-image}) and image captioning and retrieval (\ref{sec:image_captioning_retrieval}). We also include some ideas for extending current datasets to be multilingual (\cref{sec:multilingual_datasets}).
 
 \section{Synthetic Dataset Creation} \label{sec:synthetic_dataset}
 
 As to avoid the scarcity of multimodal datasets that explicitly describe spatial relations, we analyze further options to construct synthetic datasets. We could then use them to train existing language models in a self-supervised way, with the final aim of obtaining spatially grounded language models. We propose four options that could be combined to produce the synthetic datasets: explicit verbalization (\ref{sec:explicit_verbalization}), text-to-image (\ref{sec:text-to-image}), image-to-image (\ref{sec:image-to-image}) and image captioning and retrieval (\ref{sec:image_captioning_retrieval}).
+
+In the future, we might investigate the use of \textbf{multi-tasking} and \textbf{multi-sourcing} to improve generalization properties. In a multi-task training paradigm, the model is forced to learn more than one task simultaneously, therefore improving its generalization capabilities. We could investigate multi-task settings to combine the verbalized dataset, the images and captions produced by the generative VLMs, as well as traditional training data to obtain spatial-aware language models.
+
+We could also improve \textbf{zero-shot} and \textbf{few-shot} generalization of VLM models to obtain effective models in small data regimes of the spatial reasoning domain. Thus eliminating the necessity of explicitly annotating big quantities of data.
 
 \subsection{Explicit Verbalization} \label{sec:explicit_verbalization}
 
@@ -37,9 +33,19 @@ Another work \cite{anonymous2023trainingfree} proposes manipulating cross-attent
 
 Apart from text-to-image generation, diffusion models can also be used for image-to-image generation. Stable Diffusion \cite{rombach2021highresolution} could be used to generate new images as a data augmentation technique. For example, multiple image \textbf{variations} can be generated from an input image, to get similar images that still match the original caption. We could also change the caption if we are interested in getting similar images with different objects. 
 
-The problem with variations is that even a small change in the text prompt can lead to a completely different outcome. Usually, we only want to edit a small part of an image, without affecting the rest of the image. State-of-the-art methods solve this with \textbf{in-painting}, by using a spatial mask to localize the edit, leaving the rest of the image untouched.
+The problem with variations is that even a small change in the text prompt can lead to a completely different outcome. Usually, we only want to edit a small part of an image, without affecting the rest of the image. State-of-the-art methods solve this with \textbf{in-painting}, by using a spatial mask to localize the edit, leaving the rest of the image untouched. The drawback of this approach is that spatial masks have to be specifically crafted for each edit. 
 
-The drawback of this approach is that spatial masks have to be specifically crafted for each edit. A solution for this is to do image editing only using text prompts, that is, \textbf{prompt-to-prompt} editing \cite{hertz2022prompt}. This technique allows many types of edits such as localized editing by replacing a word, and global editing by adding a specification and controlling the extent to which a word is reflected in the image (\cref{fig:prompt-to-prompt}).
+A recent solution called CycleDiffusion \cite{wu2022unifying} can be applied to text-to-image diffusion models such as Stable Diffusion for zero-shot image editing (\cref{fig:cycle-diffusion}). The input is composed of three elements: a source image, a source text and a target text. Within each pair of source and target text, overlapping
+text spans are marked in purple in the source text and abbreviated as [. . .] in the target text.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{images/future/cycle-diffusion.png}
+    \caption{With CycleDiffusion text-to-image diffusion models can be used as zero-shot image-to-image editors. Source images are displayed with a purple margin and others are generated target images. CycleDiffusion achieves minimal editing that includes replacing objects, adding objects, changing image styles, and modifying attributes.}
+    \label{fig:cycle-diffusion}
+\end{figure}
+
+Another solution for this is to do image editing only using text prompts, that is, \textbf{prompt-to-prompt} editing \cite{hertz2022prompt}. This technique allows many types of edits such as localized editing by replacing a word, and global editing by adding a specification and controlling the extent to which a word is reflected in the image (\cref{fig:prompt-to-prompt}).
 
 \begin{figure}[ht]
     \centering
@@ -48,7 +54,7 @@ The drawback of this approach is that spatial masks have to be specifically craf
     \label{fig:prompt-to-prompt}
 \end{figure}
 
-Another recent solution called Imagic \cite{kawar2022imagic} only uses an input image and a target text to edit images (see \cref{fig:imagic}). Imagic can apply complex semantic edits such as changing the posture and composition of one or multiple objects inside
+Imagic \cite{kawar2022imagic} only uses an input image and a target text to edit images (see \cref{fig:imagic}). Imagic can apply complex semantic edits such as changing the posture and composition of one or multiple objects inside
 an image while preserving its original characteristics. For example, it can make a standing dog sit down or jump, cause a bird to spread its wings, etc. These are precisely the types of edits that we need to create a synthetic dataset.
 
 \begin{figure}[ht]
@@ -56,6 +62,15 @@ an image while preserving its original characteristics. For example, it can make
     \includegraphics[width=\linewidth]{images/future/imagic.jpg}
     \caption{Imagic can perform various text-based semantic edits on a single real input image, including highly complex non-rigid changes such as posture changes and editing multiple objects. Here, we show pairs of input images and edited outputs with their respective target texts.}
     \label{fig:imagic}
+\end{figure}
+
+UniTune \cite{valevski2022unitune} is another new text-driven image editing method. UniTune gets as input an image and a textual edit description, and carries out the edit while maintaining high semantic and visual fidelity to the input image (see \cref{fig:unitune}). UniTune proves that large text-to-image diffusion models can be fine-tuned on a single image, encouraging the model to maintain fidelity to the input image while still allowing expressive manipulations.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{images/future/unitune.jpg}
+    \caption{Samples showing UniTune’s ability to maintain semantic details even across broad visual changes, and to place edits in a logical manner.}
+    \label{fig:unitune}
 \end{figure}
 
 \subsection{Image Captioning and Retrieval} \label{sec:image_captioning_retrieval}

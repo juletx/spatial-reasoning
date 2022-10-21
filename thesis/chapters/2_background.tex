@@ -78,7 +78,7 @@ Multimodal transformers are state-of-the-art in many vision-language tasks, and 
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\linewidth]{images/models/unit.png}
+    \includegraphics[width=0.7\linewidth]{images/models/unit.png}
     \caption{An overview UniT, which jointly handles a wide range of tasks in different domains with a unified transformer encoder-decoder architecture.}
     \label{fig:unit}
 \end{figure}
@@ -214,7 +214,7 @@ Stable Diffusion is based on a type of diffusion model called Latent Diffusion \
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\linewidth]{images/diffusion/vae.png}
+    \includegraphics[width=0.7\linewidth]{images/diffusion/vae.png}
     \caption{Variational Autoencoder (VAE) training and generation processes.}
     \label{fig:vae}
 \end{figure}
@@ -223,7 +223,7 @@ Stable Diffusion is based on a type of diffusion model called Latent Diffusion \
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\linewidth]{images/diffusion/unet-model.png}
+    \includegraphics[width=0.7\linewidth]{images/diffusion/unet-model.png}
     \caption{The architecture of the U-Net model.}
     \label{fig:unet_model}
 \end{figure}
@@ -397,6 +397,6 @@ The problem with these datasets is that many different challenges are mixed. Sen
 
 To address the problem of mixed challenges, some datasets focus on a single challenge. For instance, \textbf{Winoground} \cite{thrush2022winoground} focuses on compositional reasoning and \textbf{Visual Spatial Reasoning (VSR)} \cite{liu2022visual} on spatial reasoning. They also contain tags, which enable an in-depth analysis of each visual reasoning challenge. We only provide a short description in this section, but we explain them in detail in the next chapters.
 
-On the one hand, \textbf{Winoground} dataset \cite{thrush2022winoground} is focused on \textbf{evaluating visio-linguistic compositional reasoning} in VLMs. Each instance in the dataset is composed of two images and two captions. Both captions contain a completely identical set of words in a different order. The task is then to match them correctly, which requires the systems to properly deal with composition in natural language. Previous works have shown that language transformers have \textbf{difficulties in learning word order} \cite{sinha2020unnatural,sinha2021matterslittle}. Winoground provides a means to test whether this is also true for multimodal models.
+On the one hand, \textbf{Winoground} dataset \cite{thrush2022winoground} is focused on \textbf{evaluating visio-linguistic compositional reasoning} in VLMs. Each instance in the dataset is composed of two images and two captions. Both captions contain a completely identical set of words in a different order. The task is then to match them correctly, which requires the systems to properly deal with composition in natural language. Previous works have shown that language transformers have \textbf{difficulties in learning word order} \cite{sinha2020unnatural,sinha2021matterslittle}. Winoground provides a means to test whether this is also true for multimodal models. We show some examples in \cref{cha:winoground_zero_shot} (\cref{fig:winoground-examples,fig:winoground-examples-linguistic,fig:winoground-examples-visual}).
 
-On the other hand, \textbf{Visual Spatial Reasoning (VSR)} \cite{liu2022visual}, whose objective is to test spatial grounding capabilities by covering 65 different spatial relations over natural images collected from COCO \cite{lin2014microsoft}. Given an image, VSR provides a caption which describes a spatial relation between two of the objects that appear in the image. That relation can be real or fake, and that is what the model has to infer. Another advantage of this dataset is that it is annotated by humans. Given its features, we believe VSR is a \textbf{good candidate to evaluate spatial grounding in LMs}.
+On the other hand, \textbf{Visual Spatial Reasoning (VSR)} \cite{liu2022visual}, whose objective is to test spatial grounding capabilities by covering 65 different spatial relations over natural images collected from COCO \cite{lin2014microsoft}. Given an image, VSR provides a caption which describes a spatial relation between two of the objects that appear in the image. That relation can be real or fake, and that is what the model has to infer. Another advantage of this dataset is that it is annotated by humans. Given its features, we believe VSR is a \textbf{good candidate to evaluate spatial grounding in LMs}. We show some examples of VSR in \cref{cha:vsr_zero_shot} (\cref{fig:vsr-examples,fig:vsr-examples-2}).

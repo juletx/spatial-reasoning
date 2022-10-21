@@ -1,0 +1,327 @@
+In the previous chapter, we have explained zero-shot experiments on Winoground, a dataset for visio-linguistic compositional reasoning. We managed to improve previous results, but there is still a large performance gap between humans and models. In this chapter, we will focus on Visual Spatial Reasoning \cite{liu2022visual}, a dataset for spatial reasoning (\cref{sec:vsr_dataset}). Unlike Winoground, VSR contains training and validation splits and can be used to train models (\cref{sec:vsr_splits}). However, we mainly focus on zero-shot experiments with models that are trained on other datasets. We explain previous and new experiments we performed and the results we obtained in VSR (\cref{sec:vsr_experiments_results}).
+
+\section{VSR Dataset} \label{sec:vsr_dataset}
+
+The objective of VSR is to \textbf{test spatial grounding} capabilities by covering \textbf{65 spatial relations} over natural images from COCO. Given an image and a caption which describes a spatial relation between two objects, the model has to infer if the relation is true or false.
+
+A \textbf{contrastive caption generation} approach was used in VSR to avoid choosing too many trivial relations. First, a pair of images that contain the same two concepts are selected from COCO. Second, an annotator had to choose a spatial relation that made the caption template correct for one image but incorrect for the other. Finally, every item is reviewed by at least two additional human annotators. If the agreement between annotators is not high enough, the data point is excluded.
+
+To get a more high-level understanding of the relations, they are grouped in \textbf{meta categories} \cite{marchi2021cross}: Adjacency, Directional, Orientation, Projective, Proximity, Topological and Unallocated (see \cref{tab:spatial_relations}). We show some examples to understand the differences between relation categories in \cref{fig:vsr-examples,fig:vsr-examples}.
+
+\begin{table}[ht]
+    \centering
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{l|l}
+    \toprule
+        \rowcolor{DarkGray}
+    Category & Spatial Relations \\
+    \midrule
+    Adjacency   & \makecell[l]{Adjacent to, alongside, at the side of, at the right side of, at the left side of, attached to, at the back of,\\ ahead of, against, at the edge of} \\
+    \rowcolor{Gray}
+ Directional & \makecell[l]{Off, past, toward, down, deep down$^\ast$, up$^\ast$, away from, along, around, from$^\ast$, into, to$^\ast$, across, across from, \\through$^\ast$, down from }\\
+    Orientation & Facing, facing away from, parallel to, perpendicular to\\
+    \rowcolor{Gray}
+    Projective & On top of, beneath, beside, behind, left of, right of, under, in front of, below, above, over, in the middle of\\
+    Proximity & By, close to, near, far from, far away from \\
+        \rowcolor{Gray}
+    Topological & \makecell[l]{Connected to, detached from, has as a part, part of, contains, within, at, on, in, with, surrounding, among, \\ consists of, out of, between, inside, outside, touching}\\
+    Unallocated & Beyond, next to, opposite to, after$^\ast$, among, enclosed by \\
+\bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{The available 71 spatial relations. 65 of them appear in the final dataset. Relations with $\ast$ are not used.}
+    % unused: 'up', 'through', 'deep down', 'from', 'to', 'after'
+    \label{tab:spatial_relations}
+\end{table}
+
+In \cref{fig:vsr-examples} we show examples of Adjacency, Projective and Topological meta categories. \textbf{Adjacency} examples involve identifying what is ahead of the cow and which is the edge of the table. The \textbf{Projective} images are paired with the same caption, but have different labels. \textbf{Topological} examples require understanding what being inside and touching are.
+
+\begin{figure}[ht]
+\centering
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000080336.jpg}
+        \caption{Caption: \textit{The person is ahead of the cow.} Label: \texttt{True}.}
+        \label{fig:person_cow}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000261511.jpg}
+        \caption{Caption: \textit{The pizza is at the edge of the dining table.} Label: \texttt{True}.}
+        \label{fig:pizza_table}
+        \end{subfigure}%
+        \caption*{\textit{Adjacency}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000119360.jpg}
+        \caption{Caption: \textit{The cat is behind the laptop.} Label: \texttt{True}.}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000310958.jpg}
+        \caption{Caption: \textit{The cat is behind the laptop.} Label: \texttt{False}.}
+        \end{subfigure}% 
+        \caption*{\textit{Projective}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000292365.jpg}
+        \caption{Caption: \textit{The cat is inside the toilet.} Label: \texttt{False}.}
+        \label{fig:cat_toilet_true}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000092020.jpg}
+        \caption{Caption: \textit{The person is touching the hair drier.} Label: \texttt{True}.}
+        \label{fig:cat_toilet}
+        \end{subfigure}%
+        \caption*{\textit{Topological}}
+    \end{minipage}%
+    \caption{Examples from the VSR dataset for the relation meta categories \textit{Adjacency}, \textit{Projective} and \textit{Topological} from left to right.}
+    \label{fig:vsr-examples}
+\end{figure}
+
+In \cref{fig:vsr-examples-2} Adjacency, Projective and Orientation meta categories. The first \textbf{Adjacency} example is tricky, it requires knowing which is the right side of the bench. The second one is even more difficult because the cow both the cow appears in the car’s side mirror. \textbf{Projective} examples involve knowing where is the front of the person and below the cat. \textbf{Orientation} examples require understanding the orientations of the hair drier and the fire hydrant.
+
+\begin{figure}[ht]
+\centering
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000259555.jpg}
+        \caption{Caption: \textit{The potted plant is at the right side of the bench.} Label: \texttt{True}.}
+        \label{fig:potted_plant_bench}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000512796.jpg}
+        \caption{Caption: \textit{The cow is at the back of the car.} Label: \texttt{True}.}
+        \end{subfigure}%
+        \caption*{\textit{Adjacency}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000434410.jpg}
+        \caption{Caption: \textit{The bench is in front of the person.} Label: \texttt{True}.}
+        \label{fig:bench_front_person}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000420344.jpg}
+        \caption{Caption: \textit{The keyboard is below the cat.} Label: \texttt{True}.}
+        \end{subfigure}%
+        \caption*{\textit{Projective}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{.30\textwidth}
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000134738.jpg}
+        \caption{Caption: \textit{The hair drier is facing away from the person.} Label: \texttt{False}.}
+        \label{fig:hair_drier_facing}
+        \end{subfigure}\\
+        \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[height=3cm]{000000147270.jpg}
+        \caption{Caption: \textit{The fire hydrant is facing away from the person.} Label: \texttt{True}.}
+        \label{fig:fire_hydrant_has_face}
+        \end{subfigure}% 
+        \caption*{\textit{Orientation}}
+    \end{minipage}%
+    \caption{Examples from the VSR dataset for the relation meta categories \textit{Adjacency}, \textit{Projective} and \textit{Orientation} from left to right.}
+    \label{fig:vsr-examples-2}
+\end{figure}
+
+\section{Dataset Splits} \label{sec:vsr_splits}
+
+The VSR dataset has two types of splits \cite{liu2022visual}, random and zero-shot. The statistics of the two splits are shown in \cref{tab:data_splits}.
+
+\begin{table}[ht]
+\small
+\centering
+\begin{tabular}{lllll}
+\toprule
+ split & train & dev & test & total   \\
+\midrule
+\textit{random} & 7,083 & 1,012 & 2,024 & 10,119 \\
+\textit{zero-shot} & 5,440 & 259 & 731  & 6,430\\
+\bottomrule
+\end{tabular}
+\caption{Data statistics of the \textit{random} and \textit{zero-shot} splits. }
+\label{tab:data_splits}
+\end{table}
+
+\paragraph{Random split.}
+The dataset is split randomly into train/dev/test with a ratio of 70\%/10\%/20\%. All the validated data points are used in this split.
+
+\paragraph{Zero-shot split.}
+It is a concept zero-shot split where train/dev/test have no overlapping concepts. That is, each concept can only appear in one of the sets.
+This is done by randomly grouping concepts into three sets with a ratio of 50\%/20\%/30\%.
+This is a more challenging setup because the model has to learn concepts and relations in a compositional way instead of remembering the co-occurrence of the two.
+Moreover, having less training data is a disadvantage for the models, since not all the data can be used in this setting.
+
+\section{Experiments and Results} \label{sec:vsr_experiments_results}
+
+In this section, we describe a series of previous and new experiments performed over VSR dataset using state-of-the-art vision and language models. We compare our results with the previous experiments and with human performance (\cref{sec:vsr_results_humans}). We also perform analysis by relation and relation meta category (\cref{vsr_results_relation,vsr_results_meta}).
+
+\subsection{Compared To Humans} \label{sec:vsr_results_humans}
+
+\paragraph{Previous.}
+VSR authors \cite{liu2022visual} test three popular VLMs: VisualBERT \cite{li2019visualbert}, LXMERT \cite{tan2020lxmert}, and
+ViLT \cite{kim2021vilt}. All three models are stacked Transformers \cite{vaswani2017attention} that take image and text pairs as input. The difference mainly lies in how or whether they encode position information of objects. Checkpoints are saved every 100 iterations and the best checkpoint on the dev set is used for testing. All models are run three times using three random seeds. The only metric used for evaluation is \textbf{accuracy}.
+
+We show previous results in \cref{tab:vsr_results_previous}, which includes development and test performance of random and zero-shot splits \cite{liu2022visual}. On \textbf{random split}, LXMERT and ViLT are the best models , reaching 70\% of accuracy in dev and test. VisualBERT is below 60\% , just slightly better than random chance. On \textbf{zero-shot split}, performance declines significantly and the best model LXMERT only obtains 63.2\% accuracy in test. This means that concept zero-shot learning is fundamentally a hard task for current models. When compared to \textbf{human performance}, there is a gap of more than 20\% with the best models. Two annotators labelled 500 examples from the test set to calculate human performance.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lcccccc}
+\toprule
+& \multicolumn{2}{c}{random split} &  & \multicolumn{2}{c}{zero-shot split} \\
+\cmidrule(l){2-3} 	\cmidrule(l){4-6}
+model$\downarrow$ & dev & test & & dev & test  \\
+\midrule
+human & \multicolumn{5}{c}{95.4}   \\
+\midrule
+VisualBERT & 59.2$_{\pm0.9}$ & 57.4$_{\pm0.9}$ & & 57.4$_{\pm2.2}$  & 54.0$_{\pm1.3}$  \\ 
+LXMERT & \textbf{73.8}$_{\pm1.2}$  & \textbf{72.5}$_{\pm1.4}$ & & \textbf{69.2}$_{\pm1.0}$  & \textbf{63.2}$_{\pm1.7}$  \\ 
+ViLT & 71.9$_{\pm1.3}$  & 71.0$_{\pm0.7}$  & & 66.7$_{\pm1.7}$  & 62.4$_{\pm1.5}$ \\ 
+\bottomrule
+\end{tabular}
+\caption{Previous model performance on VSR. Results of both random and zero-shot splits, both validation and tests are listed.}
+\label{tab:vsr_results_previous}
+\end{table}
+
+\begin{figure}[ht]
+    \centering
+\begin{subfigure}[b]{\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/visual-spatial-reasoning/performance_by_relation_random_split_v2.png}
+    \vspace{-1cm}
+    \caption{random split}
+\end{subfigure}
+\begin{subfigure}[b]{\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/visual-spatial-reasoning/performance_by_relation_zeroshot_split_v2.png}
+    \vspace{-1cm}
+    \caption{zero-shot split}
+\end{subfigure}
+\caption{Previous model performance by relation on the random (upper) and zero-shot (lower) split test sets. Relation order sorted by frequency (high to low from left to right). Only relations with more than 15 and 5 occurrences on the random and zero-shot tests respectively are shown. }
+    \label{fig:performance_by_rel_base}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+\begin{subfigure}[b]{\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/visual-spatial-reasoning/performance_rel_random.png}
+    \vspace{-1cm}
+    \caption{random split}
+\end{subfigure}
+\begin{subfigure}[b]{\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/visual-spatial-reasoning/performance_rel_zeroshot.png}
+    \vspace{-1cm}
+    \caption{zero-shot split}
+\end{subfigure}
+\caption{Our model performance by relation on the random (upper) and zero-shot (lower) split test sets. Relation order sorted by frequency (high to low from left to right). Only relations with more than 15 and 5 occurrences on the random and zero-shot tests respectively are shown. }
+    \label{fig:performance_by_rel}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+\begin{subfigure}[b]{0.49\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/visual-spatial-reasoning/performance_by_meta_cat_random_split_v2.png}
+    \caption{random split}
+\end{subfigure}
+\begin{subfigure}[b]{0.49\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/visual-spatial-reasoning/performance_by_meta_cat_zeroshot_split_v2.png}
+    \caption{zero-shot split}
+\end{subfigure}
+\caption{Previous model performance by meta categories of relations, on the random (left) and zero-shot (right) split test sets.}
+    \label{fig:performance_by_meta_cat_base}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[b]{0.49\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/visual-spatial-reasoning/performance_rel_meta_cat_random.png}
+    \caption{random split}
+     \end{subfigure}
+     \begin{subfigure}[b]{0.49\linewidth}
+         \centering
+    \includegraphics[width=\linewidth]{images/visual-spatial-reasoning/performance_rel_meta_cat_zeroshot.png}
+         \caption{zero-shot split}
+     \end{subfigure}
+\caption{Our model performance by meta categories of relations, on the random (left) and zero-shot (right) split test sets.}
+    \label{fig:performance_by_meta_cat}
+\end{figure}
+
+\textbf{Sensitiveness to random seeds.} In general, models have larger standard deviations on the zero-shot split, probably because the zero-shot dev/test sets are smaller. The gap between dev and test sets becomes much greater on zero-shot split likely because of the same reason. Due to the \textbf{fluctuations}, authors recommend always reporting the average performance of three runs to make sure the conclusion is reliable \cite{liu2022visual}.
+
+\textbf{Explicit positional information matters.} LXMERT and ViLT outperform VisualBERT by more than 10\% on both splits \cite{liu2022visual}. This is expected because LXMERT and ViLT encode explicit positional information, and VisualBERT does not. LXMERT has position features as part of the input which encodes the relative coordinates of objects. ViLT slices an image into patches and uses positional encoding to signal the patches' relative positions.
+
+\paragraph{Ours.}
+
+We first test the same previous models. We also evaluate ViLT \cite{kim2021vilt} and BLIP \cite{li2022blip} models that have been fine-tuned on NLVR2. We show our results in \cref{tab:vsr_results_ours}, which includes development and test performance of random and zero-shot splits. Results are very similar to previous ones for VisualBERT, LXMERT and ViLT, the differences can be attributed to fluctuations. Regarding zero-shot NLVR2 results, performance drops a lot. This is understandable because NLVR2 contains some spatial relations, but are only a small part of the dataset. Moreover, NLVR2 examples contain two images, and VSR examples have only one image. To evaluate on VSR, we need to pass the same image twice, or change the caption to mention one of the images.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lcccccc}
+\toprule
+& \multicolumn{2}{c}{random split} &  & \multicolumn{2}{c}{zero-shot split} \\
+\cmidrule(l){2-3} 	\cmidrule(l){4-6}
+model$\downarrow$ & dev & test & & dev & test  \\
+\midrule
+human & \multicolumn{5}{c}{95.4}   \\
+\midrule
+VisualBERT & 60.1 & 55.1 & & 56.8 & 50.8  \\ 
+LXMERT & \textbf{73.3} & \textbf{73.9} & & \textbf{70.3} & \textbf{65.5}   \\ 
+ViLT & 72.7 & 71.2 & & 66.0 & 61.6  \\ 
+ViLT NLVR2 & 57.9 & 59.1 & & 56.4 & 52.8  \\ 
+BLIP NLVR2 & 60.9 & 60.1 & & 57.9 & 53.9  \\ 
+\bottomrule
+\end{tabular}
+\caption{Our model performance on VSR. Results of both random and zero-shot splits, both validation and tests are listed.}
+\label{tab:vsr_results_ours}
+\end{table}
+
+We see that there is still a gap between random and zero-shot splits when testing models that are trained on NLVR2. This suggests that the dev and test sets of the zero-shot split are more difficult than random ones. Therefore, the difference in accuracy can not be attributed only to the unseen concepts. The gap between dev and test sets is also maintained in the zero-shot split, which might mean that the test set is inherently more difficult.
+
+\subsection{Results By Relation} \label{vsr_results_relation}
+
+\paragraph{Previous.}
+\cref{fig:performance_by_rel_base} shows performance by relation of previous models on random and zero-shot splits \cite{liu2022visual}. Only the most common relations are shown and they are sorted from left to right by frequency. It seems that there is no correlation between performance and frequency. This suggests that some relations are harder than others, regardless of the training examples.
+
+Any relation that requires recognising \textbf{orientations} or \textbf{facing directions} of objects is very hard, e.g., ``facing'', ``facing away from'', ``parallel to'' and ``at the back of''. For example, LXMERT failed on the examples  in \cref{fig:hair_drier_facing,fig:bench_front_person}, which require understanding the front of a hair drier and a person respectively.
+
+\textbf{Left and right} relations such as ``at the left/right side of'' and ``left/right of'' are also difficult because they can refer to either viewer's or object's \textbf{reference frames}. For instance, in \cref{fig:potted_plant_bench}, all three models predicted \texttt{False} since the potted plant is at the left of the bench if the viewer is the reference frame. However, if using the bench as the reference frame, the potted plant is at the right.
+
+While generally speaking orientation has been hard, the tested VLMs do well on some seemingly hard cases. As an example, all models correctly predicted \cref{fig:fire_hydrant_has_face}, a case that requires compositional zero-shot generalisation capability. Models need to generalise the concept of ``face'' to a fire hydrant by identifying eyes.
+
+\paragraph{Ours.}
+We show performance by relation of our models on random and zero-shot splits in \cref{fig:performance_by_rel}. Only the most common relations are shown and they are sorted from left to right by frequency. Results for VisualBERT, LXMERT and ViLT are similar to the previous experiments. LXMERT and ViLT are clearly better than VisualBERT in both random and zero-shot splits, with very few exceptions. ViLT and BLIP models that are fine-tuned on NLVR2 are generally better than VisualBERT but worse than the other models. There are some relations where they get similar and a few relations where they even get better results. This could be because these relations might be more common in NLVR2. We show VSR result tables of each split by relation in \cref{vsr_results_relation_tables}.
+
+\subsection{Results By Meta Category} \label{vsr_results_meta}
+
+\paragraph{Previous.}
+
+Previous results by relation meta category are shown in \cref{fig:performance_by_meta_cat_base}. Relations are grouped into categories to get a more high-level understanding of the relations' performance. \cref{tab:spatial_relations} shows relations included in each meta category: ``Adjacency'', ``Directional'', ``Orientation'', ``Projective'', ``Proximity'', ``Topological'' and ``Unallocated''. \textbf{``Orientation''} is the worst category on both splits, and on average all performances are at chance level \cite{liu2022visual}.
+
+Performance decreases when comparing \textbf{random} and \textbf{zero-shot} splits for almost all categories and models. ``Proximity'' is the category that decreases the most, from close to 75\% accuracy in random split to chance level in the zero-shot split. ``Proximity'' contains relations like ``close to'', ``near'' and ``far from''. Authors think it is due to proximity being relative and very dependent on the concept and its context \cite{liu2022visual}. As zero-shot split concepts are different in each set, models have more difficulties.
+
+\paragraph{Ours.}
+
+\cref{fig:performance_by_meta_cat} shows our results by relation meta category. Results for VisualBERT, LXMERT and ViLT are similar to the previous experiments. LXMERT and ViLT are superior to the other models for both splits in most categories. NLVR2 models are generally better than VisualBERT in the random split. In the zero-shot split there are bigger differences between the models. NLVR2 models are very bad in the ''Directional'' and ''Proximity'' categories and better than other models in the ''Unallocated'' category. We show VSR result tables of each split by relation meta category in \cref{vsr_results_meta_tables}.
